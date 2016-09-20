@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0 (Jython 2.7.0 on java1.8.0_101)" generated="20160920 10:35:13.609">
+<suite source="/home/jddm11/workspace/tallerprogra-g2-2016/test/client_suite_x.txt" name="Client Suite X" id="s1">
+<test name="Creating user with invalid identification" id="s1-t1">
+<kw name="Create user">
+<arguments>
+<arg>123</arg>
+<arg>jhon</arg>
+<arg>doe</arg>
+<arg>nowhere</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="create">
+<arguments>
+<arg>${ci}</arg>
+<arg>${firstname}</arg>
+<arg>${lastname}</arg>
+<arg>${address}</arg>
+</arguments>
+<assign>
+<var>${message} =</var>
+</assign>
+<msg level="FAIL" timestamp="20160920 10:35:13.946">No keyword with name 'create' found. Did you mean:
+    Create User
+    BuiltIn.Create List</msg>
+<status endtime="20160920 10:35:13.948" starttime="20160920 10:35:13.941" status="FAIL"></status>
+</kw>
+<status endtime="20160920 10:35:13.951" starttime="20160920 10:35:13.920" status="FAIL"></status>
+</kw>
+<status critical="yes" endtime="20160920 10:35:13.953" starttime="20160920 10:35:13.915" status="FAIL">No keyword with name 'create' found. Did you mean:
+    Create User
+    BuiltIn.Create List</status>
+</test>
+<test name="Creating user with invalid name" id="s1-t2">
+<kw name="Create user">
+<arguments>
+<arg>1234567</arg>
+<arg>jhonsnowrickrobotclarkkenthor</arg>
+<arg>doe</arg>
+<arg>nowhere</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="create">
+<arguments>
+<arg>${ci}</arg>
+<arg>${firstname}</arg>
+<arg>${lastname}</arg>
+<arg>${address}</arg>
+</arguments>
+<assign>
+<var>${message} =</var>
+</assign>
+<msg level="FAIL" timestamp="20160920 10:35:13.981">No keyword with name 'create' found. Did you mean:
+    Create User
+    BuiltIn.Create List</msg>
+<status endtime="20160920 10:35:13.982" starttime="20160920 10:35:13.978" status="FAIL"></status>
+</kw>
+<status endtime="20160920 10:35:13.983" starttime="20160920 10:35:13.960" status="FAIL"></status>
+</kw>
+<status critical="yes" endtime="20160920 10:35:13.985" starttime="20160920 10:35:13.957" status="FAIL">No keyword with name 'create' found. Did you mean:
+    Create User
+    BuiltIn.Create List</status>
+</test>
+<test name="Creating user with invalid lastname" id="s1-t3">
+<kw name="Create user">
+<arguments>
+<arg>1234567</arg>
+<arg>jhon</arg>
+<arg>k</arg>
+<arg>nowhere</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="create">
+<arguments>
+<arg>${ci}</arg>
+<arg>${firstname}</arg>
+<arg>${lastname}</arg>
+<arg>${address}</arg>
+</arguments>
+<assign>
+<var>${message} =</var>
+</assign>
+<msg level="FAIL" timestamp="20160920 10:35:14.006">No keyword with name 'create' found. Did you mean:
+    Create User
+    BuiltIn.Create List</msg>
+<status endtime="20160920 10:35:14.007" starttime="20160920 10:35:14.002" status="FAIL"></status>
+</kw>
+<status endtime="20160920 10:35:14.009" starttime="20160920 10:35:13.990" status="FAIL"></status>
+</kw>
+<status critical="yes" endtime="20160920 10:35:14.011" starttime="20160920 10:35:13.987" status="FAIL">No keyword with name 'create' found. Did you mean:
+    Create User
+    BuiltIn.Create List</status>
+</test>
+<status endtime="20160920 10:35:14.019" starttime="20160920 10:35:13.620" status="FAIL"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="3">Critical Tests</stat>
+<stat pass="0" fail="3">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="3" name="Client Suite X" id="s1">Client Suite X</stat>
+</suite>
+</statistics>
+<errors>
+<msg level="ERROR" timestamp="20160920 10:35:13.908">Error in file '/home/jddm11/workspace/tallerprogra-g2-2016/test/client_suite_x.txt': Importing test library 'bo.edu.ucbcba.videoclub.controller.ClientController' failed: ImportError: No module named bo
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  /home/jddm11/workspace/tallerprogra-g2-2016/Lib
+  /home/jddm11/workspace/tallerprogra-g2-2016/robotframework-3.0.jar/Lib
+  __classpath__
+  __pyclasspath__/
+CLASSPATH:
+  ../../robotframework-3.0.jar</msg>
+</errors>
+</robot>

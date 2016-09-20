@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="bo.edu.ucbcba.videoclub.view.LoginForm">
+  <grid id="27dc6" binding="rootPane" layout-manager="GridLayoutManager" row-count="7" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="40" left="100" bottom="40" right="60"/>
+    <constraints>
+      <xy x="20" y="20" width="643" height="400"/>
+    </constraints>
+    <properties>
+      <background color="-3090213"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <component id="e6b91" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="1" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-12828863"/>
+          <font name="Courier New" size="28" style="1"/>
+          <foreground color="-4477584"/>
+          <text value="Login Yourself"/>
+        </properties>
+      </component>
+      <component id="be3" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-12828863"/>
+          <font name="Courier New" size="18" style="1"/>
+          <foreground color="-4486332"/>
+          <text value="Username:"/>
+        </properties>
+      </component>
+      <component id="31f1c" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-12828863"/>
+          <font name="Courier New" size="18" style="1"/>
+          <foreground color="-4486332"/>
+          <text value="Password:"/>
+        </properties>
+      </component>
+      <component id="66687" class="javax.swing.JTextField" binding="usernameField">
+        <constraints>
+          <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="350" height="30"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-4477584"/>
+          <font name="Courier New" size="16"/>
+          <foreground color="-12504532"/>
+        </properties>
+      </component>
+      <component id="2b0d5" class="javax.swing.JPasswordField" binding="passwordField">
+        <constraints>
+          <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="350" height="30"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-4477584"/>
+          <font name="Courier New" size="16"/>
+          <foreground color="-12504532"/>
+        </properties>
+      </component>
+      <component id="35f41" class="javax.swing.JButton" binding="loginButton">
+        <constraints>
+          <grid row="6" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <minimum-size width="120" height="30"/>
+            <maximum-size width="120" height="30"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-12828863"/>
+          <font name="Courier New" size="18"/>
+          <foreground color="-4486332"/>
+          <text value="Login"/>
+        </properties>
+      </component>
+      <component id="3d997" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-12828863"/>
+          <font name="Courier New" size="32" style="1"/>
+          <foreground color="-8692948"/>
+          <text value="Welcome to Sakila 2.0"/>
+        </properties>
+      </component>
+      <vspacer id="9e340">
+        <constraints>
+          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+            <minimum-size width="20" height="20"/>
+            <preferred-size width="20" height="20"/>
+            <maximum-size width="20" height="20"/>
+          </grid>
+        </constraints>
+      </vspacer>
+      <vspacer id="5d47c">
+        <constraints>
+          <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+            <minimum-size width="10" height="10"/>
+            <preferred-size width="10" height="10"/>
+            <maximum-size width="10" height="10"/>
+          </grid>
+        </constraints>
+      </vspacer>
+    </children>
+  </grid>
+</form>

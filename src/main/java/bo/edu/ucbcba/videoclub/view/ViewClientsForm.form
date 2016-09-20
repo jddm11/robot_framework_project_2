@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="bo.edu.ucbcba.videoclub.view.ViewClientsForm">
+  <grid id="27dc6" binding="rootPanel" layout-manager="GridLayoutManager" row-count="5" column-count="7" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="30" left="20" bottom="20" right="10"/>
+    <constraints>
+      <xy x="20" y="20" width="1110" height="503"/>
+    </constraints>
+    <properties>
+      <background color="-3090213"/>
+      <foreground color="-3090213"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <component id="76c75" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="6" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Courier New" size="30" style="1"/>
+          <foreground color="-4477584"/>
+          <text value="Clients List"/>
+        </properties>
+      </component>
+      <component id="3061a" class="javax.swing.JTable" binding="clientsTable">
+        <constraints>
+          <grid row="3" column="0" row-span="2" col-span="6" vsize-policy="6" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="800" height="300"/>
+          </grid>
+        </constraints>
+        <properties>
+          <enabled value="false"/>
+          <focusable value="true"/>
+          <font name="Courier New" size="16"/>
+          <foreground color="-11948357"/>
+          <rowHeight value="20"/>
+          <updateSelectionOnSort value="false"/>
+          <verifyInputWhenFocusTarget value="true"/>
+        </properties>
+      </component>
+      <component id="7c4e6" class="javax.swing.JTextField" binding="searchText">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="6" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Courier New" size="16"/>
+        </properties>
+      </component>
+      <component id="b6b82" class="javax.swing.JButton" binding="searchButton" default-binding="true">
+        <constraints>
+          <grid row="1" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <minimum-size width="-1" height="35"/>
+            <preferred-size width="-1" height="35"/>
+            <maximum-size width="-1" height="35"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-12828863"/>
+          <font name="Courier New" size="18" style="1"/>
+          <foreground color="-4486332"/>
+          <icon value="icons/magnifier.png"/>
+          <text value="Search"/>
+        </properties>
+      </component>
+      <component id="8772e" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Courier New" size="18" style="1"/>
+          <foreground color="-4486332"/>
+          <text value="CI"/>
+        </properties>
+      </component>
+      <component id="8f96" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Courier New" size="18" style="1"/>
+          <foreground color="-4486332"/>
+          <text value="Last Name"/>
+        </properties>
+      </component>
+      <component id="4c0c7" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="2" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Courier New" size="18" style="1"/>
+          <foreground color="-4486332"/>
+          <text value="Address"/>
+        </properties>
+      </component>
+      <component id="6759b" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Courier New" size="18" style="1"/>
+          <foreground color="-4486332"/>
+          <text value="First Name"/>
+        </properties>
+      </component>
+      <component id="904a3" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value=" "/>
+        </properties>
+      </component>
+      <component id="f99" class="javax.swing.JButton" binding="Export">
+        <constraints>
+          <grid row="3" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <minimum-size width="-1" height="40"/>
+            <preferred-size width="-1" height="40"/>
+            <maximum-size width="-1" height="40"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-12828863"/>
+          <font name="Courier New" size="16" style="1"/>
+          <foreground color="-4486332"/>
+          <icon value="icons/spreadsheet-cell-row.png"/>
+          <text value="Export Current List"/>
+        </properties>
+      </component>
+      <component id="9973d" class="javax.swing.JButton" binding="Print">
+        <constraints>
+          <grid row="4" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <minimum-size width="-1" height="35"/>
+            <preferred-size width="-1" height="35"/>
+            <maximum-size width="-1" height="35"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-12828863"/>
+          <font name="Courier New" size="18" style="1"/>
+          <foreground color="-4486332"/>
+          <icon value="icons/printer.png"/>
+          <text value="Print"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>
