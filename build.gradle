@@ -16,6 +16,7 @@ jar {
 task fatJar(type: Jar) {
   manifest.from jar.manifest
   classifier = 'all'
+  baseName = 'videoclub'
   from {
     configurations.runtime.collect { it.isDirectory() ? it : zipTree(it) }
   } 
