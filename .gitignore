@@ -3,6 +3,7 @@ hs_err_pid*
 .gradle/
 build/
 VideoClub/
+derby.log
 gradle-app.setting
 .gradletasknamecache
 *.iml

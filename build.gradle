@@ -29,3 +29,5 @@ dependencies {
     runtime 'org.robotframework:robotframework:3.0'
     testCompile 'junit:junit:4.11'
 }
+
+build.dependsOn runTest
