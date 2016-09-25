@@ -19,7 +19,6 @@ About this project
 	*** Settings ***
 	
 	Library  bo.edu.ucbcba.videoclub.controller.ClientController
-	Library  BuiltIn
 	
 	*** Variables ***
 	${USERNAME}             janedoe
