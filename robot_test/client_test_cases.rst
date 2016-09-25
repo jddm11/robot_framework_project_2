@@ -5,7 +5,7 @@ Robot Framework Project by Pablo Sanabria and Juan Diego Diaz
 =============================================================
 
 .. contents:: Table of contents:
-   :ClientController:
+   :local:
    :depth: 2
 
 Introduction
@@ -14,12 +14,39 @@ Introduction
 About this project
 ------------------
 
+VideoClub is a JAVA application built using the MVC architecture.
+It consists ......................
+
+
+Robot Framework overview
+------------------------
+
+`Robot Framework`_ is a generic open source test automation framework for
+acceptance testing and acceptance test-driven development (ATDD). It has
+easy-to-use tabular test data syntax and it utilizes the keyword-driven
+testing approach. Its testing capabilities can be extended by test libraries
+implemented either with Python or Java, and users can create new higher-level
+keywords from existing ones using the same syntax that is used for creating
+test cases.
+
+Robot Framework is operating system and application independent. The core
+framework is implemented using `Python <http://python.org>`_ and runs also on
+`Jython <http://jython.org>`_ (JVM) and `IronPython <http://ironpython.net>`_
+(.NET). The framework has a rich ecosystem around it consisting of various
+generic test libraries and tools that are developed as separate projects.
+
+For more information about Robot Framework and the ecosystem, see
+http://robotframework.org. There you can find plenty more documentation,
+demo projects, list of available test libraries and other tools, and so on.
+
+Project application
+-------------------
+
 .. code:: robotframework
 
 	*** Settings ***
 	
 	Library  bo.edu.ucbcba.videoclub.controller.ClientController
-	Library  BuiltIn
 	
 	*** Variables ***
 	${USERNAME}             janedoe
