@@ -8,5 +8,4 @@ gradle-app.setting
 *.iml
 /.idea/
 /local.properties
-/.idea/
 .DS_Store

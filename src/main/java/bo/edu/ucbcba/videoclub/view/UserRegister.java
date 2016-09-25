@@ -75,7 +75,7 @@ public class UserRegister extends JDialog {
     private void launchImage() {
         BufferedImage myPicture = null;
         try {
-            myPicture = ImageIO.read(new File("probando5.jpg"));
+            myPicture = ImageIO.read(getClass().getResourceAsStream("/images/probando5.jpg"));
         } catch (IOException e) {
             e.printStackTrace();
         }

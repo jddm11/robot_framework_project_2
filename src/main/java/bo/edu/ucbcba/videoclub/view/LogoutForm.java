@@ -45,7 +45,7 @@ public class LogoutForm extends JFrame {
     private void launchImage() {
         BufferedImage myPicture = null;
         try {
-            myPicture = ImageIO.read(new File("probando4.jpg"));
+            myPicture = ImageIO.read(getClass().getResourceAsStream("/images/probando4.jpg"));
         } catch (IOException e) {
             e.printStackTrace();
         }

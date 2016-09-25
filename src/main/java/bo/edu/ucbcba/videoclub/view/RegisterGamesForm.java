@@ -134,7 +134,7 @@ public class RegisterGamesForm extends JDialog {
     private void launchImage() {
         BufferedImage myPicture = null;
         try {
-            myPicture = ImageIO.read(new File("fondo.jpg"));
+            myPicture = ImageIO.read(getClass().getResourceAsStream("/images/fondo.jpg"));
         } catch (IOException e) {
             e.printStackTrace();
         }

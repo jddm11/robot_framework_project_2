@@ -147,7 +147,7 @@ public class InitialForm extends JFrame {
     private void launchImage() {
         BufferedImage myPicture = null;
         try {
-            myPicture = ImageIO.read(new File("probando2.jpg"));
+            myPicture = ImageIO.read(InitialForm.class.getResourceAsStream("/images/probando2.jpg"));
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -101,7 +101,7 @@ public class RegisterCompanyForm extends JDialog {
     private void launchImage() {
         BufferedImage myPicture = null;
         try {
-            myPicture = ImageIO.read(new File("companyBG.jpg"));
+            myPicture = ImageIO.read(getClass().getResourceAsStream("/images/companyBG.jpg"));
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -68,7 +68,7 @@ public class ViewClientsForm extends JFrame {
     private void launchImage() {
         BufferedImage myPicture = null;
         try {
-            myPicture = ImageIO.read(new File("probando10.jpg"));
+            myPicture = ImageIO.read(getClass().getResourceAsStream("/images/probando10.jpg"));
         } catch (IOException e) {
             e.printStackTrace();
         }

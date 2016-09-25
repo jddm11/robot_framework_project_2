@@ -71,7 +71,7 @@ public class ClientRegister extends JDialog {
     private void launchImage() {
         BufferedImage myPicture = null;
         try {
-            myPicture = ImageIO.read(new File("probando9.jpg"));
+            myPicture = ImageIO.read(getClass().getResourceAsStream("/images/probando9.jpg"));
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -1,7 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.0 (Jython 2.7.0 on java1.8.0_101)" generated="20160920 13:01:37.382">
-<suite source="/home/jddm11/workspace/tallerprogra-g2-2016/test/client_test_cases.rst" name="Client Test Cases" id="s1">
-<test name="Creating user with invalid firstname should fail" id="s1-t1">
+<robot generator="Robot 3.0 (Jython 2.7.0 on java1.8.0_101)" generated="20160924 22:24:00.204">
+<suite source="/Users/pablo/Projects/University/robot_framework_project/robot_test" name="Robot Test" id="s1">
+<suite source="/Users/pablo/Projects/University/robot_framework_project/robot_test/client_suite.txt" name="Client Suite" id="s1-s1">
+<test name="MyTestCase" id="s1-s1-t1">
+<kw library="bo.edu.ucbcba.videoclub.controller.ClientController" name="Create">
+<arguments>
+<arg>123</arg>
+<arg>juan</arg>
+<arg>diaz</arg>
+<arg>cra18</arg>
+</arguments>
+<assign>
+<var>${message}</var>
+</assign>
+<msg level="FAIL" timestamp="20160924 22:24:00.563">ValidationException: Validation error: CI can't have less than 7 characters</msg>
+<status endtime="20160924 22:24:00.565" starttime="20160924 22:24:00.539" status="FAIL"></status>
+</kw>
+<status critical="yes" endtime="20160924 22:24:00.568" starttime="20160924 22:24:00.534" status="FAIL">ValidationException: Validation error: CI can't have less than 7 characters</status>
+</test>
+<test name="Creating user with invalid identification uno" id="s1-s1-t2">
+<kw name="Create user">
+<arguments>
+<arg>123</arg>
+<arg>jhon</arg>
+<arg>doe</arg>
+<arg>nowhere</arg>
+</arguments>
+<assign>
+<var>${message}</var>
+</assign>
+<msg level="FAIL" timestamp="20160924 22:24:00.579">Keyword 'Create user' expected 0 arguments, got 4.</msg>
+<status endtime="20160924 22:24:00.580" starttime="20160924 22:24:00.575" status="FAIL"></status>
+</kw>
+<status critical="yes" endtime="20160924 22:24:00.582" starttime="20160924 22:24:00.571" status="FAIL">Keyword 'Create user' expected 0 arguments, got 4.</status>
+</test>
+<test name="Creating user" id="s1-s1-t3">
+<kw name="Creating user with invalid identification">
+<arguments>
+<arg>123</arg>
+</arguments>
+<msg level="FAIL" timestamp="20160924 22:24:00.600">No keyword with name 'Creating user with invalid identification' found.</msg>
+<status endtime="20160924 22:24:00.602" starttime="20160924 22:24:00.599" status="FAIL"></status>
+</kw>
+<status critical="yes" endtime="20160924 22:24:00.603" starttime="20160924 22:24:00.586" status="FAIL">No keyword with name 'Creating user with invalid identification' found.</status>
+</test>
+<status endtime="20160924 22:24:00.611" starttime="20160924 22:24:00.479" status="FAIL"></status>
+</suite>
+<suite source="/Users/pablo/Projects/University/robot_framework_project/robot_test/client_suite_x.txt" name="Client Suite X" id="s1-s2">
+<test name="Creating user with invalid firstname should fail" id="s1-s2-t1">
 <kw name="Invalid firstname">
 <arguments>
 <arg>jhonsnowrickrobotclarkkenthor</arg>
@@ -27,19 +73,19 @@
 <arg>hawking</arg>
 <arg>nowhere</arg>
 </arguments>
-<msg level="FAIL" timestamp="20160920 13:01:37.679">ValidationException: Validation error: First Name is too long, must have less than 25 characters</msg>
-<status endtime="20160920 13:01:37.680" starttime="20160920 13:01:37.659" status="FAIL"></status>
+<msg level="FAIL" timestamp="20160924 22:24:00.711">ValidationException: Validation error: First Name is too long, must have less than 25 characters</msg>
+<status endtime="20160924 22:24:00.713" starttime="20160924 22:24:00.686" status="FAIL"></status>
 </kw>
-<msg level="INFO" timestamp="20160920 13:01:37.686">${message} = ValidationException: Validation error: First Name is too long, must have less than 25 characters</msg>
-<status endtime="20160920 13:01:37.687" starttime="20160920 13:01:37.653" status="PASS"></status>
+<msg level="INFO" timestamp="20160924 22:24:00.716">${message} = ValidationException: Validation error: First Name is too long, must have less than 25 characters</msg>
+<status endtime="20160924 22:24:00.717" starttime="20160924 22:24:00.680" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Log">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${message}</arg>
 </arguments>
-<msg level="INFO" timestamp="20160920 13:01:37.691">ValidationException: Validation error: First Name is too long, must have less than 25 characters</msg>
-<status endtime="20160920 13:01:37.692" starttime="20160920 13:01:37.688" status="PASS"></status>
+<msg level="INFO" timestamp="20160924 22:24:00.721">ValidationException: Validation error: First Name is too long, must have less than 25 characters</msg>
+<status endtime="20160924 22:24:00.723" starttime="20160924 22:24:00.718" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Should Be Equal">
 <doc>Fails if the given objects are unequal.</doc>
@@ -47,9 +93,9 @@
 <arg>${message}</arg>
 <arg>ValidationException: Validation error: ${error}</arg>
 </arguments>
-<status endtime="20160920 13:01:37.697" starttime="20160920 13:01:37.693" status="PASS"></status>
+<status endtime="20160924 22:24:00.733" starttime="20160924 22:24:00.726" status="PASS"></status>
 </kw>
-<status endtime="20160920 13:01:37.698" starttime="20160920 13:01:37.648" status="PASS"></status>
+<status endtime="20160924 22:24:00.734" starttime="20160924 22:24:00.674" status="PASS"></status>
 </kw>
 <kw name="Invalid firstname">
 <arguments>
@@ -76,19 +122,19 @@
 <arg>hawking</arg>
 <arg>nowhere</arg>
 </arguments>
-<msg level="FAIL" timestamp="20160920 13:01:37.723">ValidationException: Validation error: First Name is too short, must have more than 2 characters</msg>
-<status endtime="20160920 13:01:37.724" starttime="20160920 13:01:37.707" status="FAIL"></status>
+<msg level="FAIL" timestamp="20160924 22:24:00.763">ValidationException: Validation error: First Name is too short, must have more than 2 characters</msg>
+<status endtime="20160924 22:24:00.765" starttime="20160924 22:24:00.744" status="FAIL"></status>
 </kw>
-<msg level="INFO" timestamp="20160920 13:01:37.725">${message} = ValidationException: Validation error: First Name is too short, must have more than 2 characters</msg>
-<status endtime="20160920 13:01:37.726" starttime="20160920 13:01:37.703" status="PASS"></status>
+<msg level="INFO" timestamp="20160924 22:24:00.766">${message} = ValidationException: Validation error: First Name is too short, must have more than 2 characters</msg>
+<status endtime="20160924 22:24:00.768" starttime="20160924 22:24:00.739" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Log">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${message}</arg>
 </arguments>
-<msg level="INFO" timestamp="20160920 13:01:37.731">ValidationException: Validation error: First Name is too short, must have more than 2 characters</msg>
-<status endtime="20160920 13:01:37.732" starttime="20160920 13:01:37.728" status="PASS"></status>
+<msg level="INFO" timestamp="20160924 22:24:00.772">ValidationException: Validation error: First Name is too short, must have more than 2 characters</msg>
+<status endtime="20160924 22:24:00.773" starttime="20160924 22:24:00.769" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Should Be Equal">
 <doc>Fails if the given objects are unequal.</doc>
@@ -96,13 +142,13 @@
 <arg>${message}</arg>
 <arg>ValidationException: Validation error: ${error}</arg>
 </arguments>
-<status endtime="20160920 13:01:37.767" starttime="20160920 13:01:37.733" status="PASS"></status>
+<status endtime="20160924 22:24:00.777" starttime="20160924 22:24:00.774" status="PASS"></status>
 </kw>
-<status endtime="20160920 13:01:37.769" starttime="20160920 13:01:37.700" status="PASS"></status>
+<status endtime="20160924 22:24:00.779" starttime="20160924 22:24:00.736" status="PASS"></status>
 </kw>
-<status critical="yes" endtime="20160920 13:01:37.776" starttime="20160920 13:01:37.643" status="PASS"></status>
+<status critical="yes" endtime="20160924 22:24:00.780" starttime="20160924 22:24:00.671" status="PASS"></status>
 </test>
-<test name="Creating user with invalid lastname should fail" id="s1-t2">
+<test name="Creating user with invalid lastname should fail" id="s1-s2-t2">
 <kw name="Invalid lastname">
 <arguments>
 <arg>hawkingsnowrickrobotclarkkenthor</arg>
@@ -128,19 +174,19 @@
 <arg>${lastname}</arg>
 <arg>nowhere</arg>
 </arguments>
-<msg level="FAIL" timestamp="20160920 13:01:37.807">ValidationException: Validation error: Last Name is too long, must have less than 25 characters</msg>
-<status endtime="20160920 13:01:37.809" starttime="20160920 13:01:37.791" status="FAIL"></status>
+<msg level="FAIL" timestamp="20160924 22:24:00.815">ValidationException: Validation error: Last Name is too long, must have less than 25 characters</msg>
+<status endtime="20160924 22:24:00.816" starttime="20160924 22:24:00.798" status="FAIL"></status>
 </kw>
-<msg level="INFO" timestamp="20160920 13:01:37.810">${message} = ValidationException: Validation error: Last Name is too long, must have less than 25 characters</msg>
-<status endtime="20160920 13:01:37.810" starttime="20160920 13:01:37.786" status="PASS"></status>
+<msg level="INFO" timestamp="20160924 22:24:00.820">${message} = ValidationException: Validation error: Last Name is too long, must have less than 25 characters</msg>
+<status endtime="20160924 22:24:00.821" starttime="20160924 22:24:00.794" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Log">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${message}</arg>
 </arguments>
-<msg level="INFO" timestamp="20160920 13:01:37.814">ValidationException: Validation error: Last Name is too long, must have less than 25 characters</msg>
-<status endtime="20160920 13:01:37.815" starttime="20160920 13:01:37.811" status="PASS"></status>
+<msg level="INFO" timestamp="20160924 22:24:00.826">ValidationException: Validation error: Last Name is too long, must have less than 25 characters</msg>
+<status endtime="20160924 22:24:00.828" starttime="20160924 22:24:00.822" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Should Be Equal">
 <doc>Fails if the given objects are unequal.</doc>
@@ -148,9 +194,9 @@
 <arg>${message}</arg>
 <arg>ValidationException: Validation error: ${error}</arg>
 </arguments>
-<status endtime="20160920 13:01:37.820" starttime="20160920 13:01:37.816" status="PASS"></status>
+<status endtime="20160924 22:24:00.834" starttime="20160924 22:24:00.829" status="PASS"></status>
 </kw>
-<status endtime="20160920 13:01:37.821" starttime="20160920 13:01:37.782" status="PASS"></status>
+<status endtime="20160924 22:24:00.835" starttime="20160924 22:24:00.787" status="PASS"></status>
 </kw>
 <kw name="Invalid lastname">
 <arguments>
@@ -177,19 +223,19 @@
 <arg>${lastname}</arg>
 <arg>nowhere</arg>
 </arguments>
-<msg level="FAIL" timestamp="20160920 13:01:37.843">ValidationException: Validation error: Last Name is too short, must have more than 2 characters</msg>
-<status endtime="20160920 13:01:37.845" starttime="20160920 13:01:37.830" status="FAIL"></status>
+<msg level="FAIL" timestamp="20160924 22:24:00.858">ValidationException: Validation error: Last Name is too short, must have more than 2 characters</msg>
+<status endtime="20160924 22:24:00.859" starttime="20160924 22:24:00.842" status="FAIL"></status>
 </kw>
-<msg level="INFO" timestamp="20160920 13:01:37.846">${message} = ValidationException: Validation error: Last Name is too short, must have more than 2 characters</msg>
-<status endtime="20160920 13:01:37.847" starttime="20160920 13:01:37.825" status="PASS"></status>
+<msg level="INFO" timestamp="20160924 22:24:00.861">${message} = ValidationException: Validation error: Last Name is too short, must have more than 2 characters</msg>
+<status endtime="20160924 22:24:00.862" starttime="20160924 22:24:00.839" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Log">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${message}</arg>
 </arguments>
-<msg level="INFO" timestamp="20160920 13:01:37.850">ValidationException: Validation error: Last Name is too short, must have more than 2 characters</msg>
-<status endtime="20160920 13:01:37.852" starttime="20160920 13:01:37.848" status="PASS"></status>
+<msg level="INFO" timestamp="20160924 22:24:00.866">ValidationException: Validation error: Last Name is too short, must have more than 2 characters</msg>
+<status endtime="20160924 22:24:00.867" starttime="20160924 22:24:00.863" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Should Be Equal">
 <doc>Fails if the given objects are unequal.</doc>
@@ -197,13 +243,13 @@
 <arg>${message}</arg>
 <arg>ValidationException: Validation error: ${error}</arg>
 </arguments>
-<status endtime="20160920 13:01:37.857" starttime="20160920 13:01:37.853" status="PASS"></status>
+<status endtime="20160924 22:24:00.873" starttime="20160924 22:24:00.869" status="PASS"></status>
 </kw>
-<status endtime="20160920 13:01:37.859" starttime="20160920 13:01:37.822" status="PASS"></status>
+<status endtime="20160924 22:24:00.874" starttime="20160924 22:24:00.836" status="PASS"></status>
 </kw>
-<status critical="yes" endtime="20160920 13:01:37.860" starttime="20160920 13:01:37.779" status="PASS"></status>
+<status critical="yes" endtime="20160924 22:24:00.875" starttime="20160924 22:24:00.783" status="PASS"></status>
 </test>
-<test name="Creating user with invalid identification should fail" id="s1-t3">
+<test name="Creating user with invalid identification should fail" id="s1-s2-t3">
 <kw name="Invalid identification">
 <arguments>
 <arg>12345678910</arg>
@@ -229,19 +275,19 @@
 <arg>hawking</arg>
 <arg>nowhere</arg>
 </arguments>
-<msg level="FAIL" timestamp="20160920 13:01:37.883">ValidationException: Validation error: CI can't have more than 10 characters</msg>
-<status endtime="20160920 13:01:37.884" starttime="20160920 13:01:37.873" status="FAIL"></status>
+<msg level="FAIL" timestamp="20160924 22:24:00.906">ValidationException: Validation error: CI can't have more than 10 characters</msg>
+<status endtime="20160924 22:24:00.907" starttime="20160924 22:24:00.890" status="FAIL"></status>
 </kw>
-<msg level="INFO" timestamp="20160920 13:01:37.885">${message} = ValidationException: Validation error: CI can't have more than 10 characters</msg>
-<status endtime="20160920 13:01:37.886" starttime="20160920 13:01:37.869" status="PASS"></status>
+<msg level="INFO" timestamp="20160924 22:24:00.908">${message} = ValidationException: Validation error: CI can't have more than 10 characters</msg>
+<status endtime="20160924 22:24:00.909" starttime="20160924 22:24:00.885" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Log">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${message}</arg>
 </arguments>
-<msg level="INFO" timestamp="20160920 13:01:37.890">ValidationException: Validation error: CI can't have more than 10 characters</msg>
-<status endtime="20160920 13:01:37.891" starttime="20160920 13:01:37.887" status="PASS"></status>
+<msg level="INFO" timestamp="20160924 22:24:00.913">ValidationException: Validation error: CI can't have more than 10 characters</msg>
+<status endtime="20160924 22:24:00.914" starttime="20160924 22:24:00.910" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Should Be Equal">
 <doc>Fails if the given objects are unequal.</doc>
@@ -249,9 +295,9 @@
 <arg>${message}</arg>
 <arg>ValidationException: Validation error: ${error}</arg>
 </arguments>
-<status endtime="20160920 13:01:37.896" starttime="20160920 13:01:37.893" status="PASS"></status>
+<status endtime="20160924 22:24:00.919" starttime="20160924 22:24:00.916" status="PASS"></status>
 </kw>
-<status endtime="20160920 13:01:37.898" starttime="20160920 13:01:37.865" status="PASS"></status>
+<status endtime="20160924 22:24:00.921" starttime="20160924 22:24:00.882" status="PASS"></status>
 </kw>
 <kw name="Invalid identification">
 <arguments>
@@ -278,19 +324,19 @@
 <arg>hawking</arg>
 <arg>nowhere</arg>
 </arguments>
-<msg level="FAIL" timestamp="20160920 13:01:37.915">ValidationException: Validation error: CI can't have less than 7 characters</msg>
-<status endtime="20160920 13:01:37.916" starttime="20160920 13:01:37.905" status="FAIL"></status>
+<msg level="FAIL" timestamp="20160924 22:24:00.943">ValidationException: Validation error: CI can't have less than 7 characters</msg>
+<status endtime="20160924 22:24:00.944" starttime="20160924 22:24:00.930" status="FAIL"></status>
 </kw>
-<msg level="INFO" timestamp="20160920 13:01:37.918">${message} = ValidationException: Validation error: CI can't have less than 7 characters</msg>
-<status endtime="20160920 13:01:37.918" starttime="20160920 13:01:37.902" status="PASS"></status>
+<msg level="INFO" timestamp="20160924 22:24:00.946">${message} = ValidationException: Validation error: CI can't have less than 7 characters</msg>
+<status endtime="20160924 22:24:00.947" starttime="20160924 22:24:00.926" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Log">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${message}</arg>
 </arguments>
-<msg level="INFO" timestamp="20160920 13:01:37.922">ValidationException: Validation error: CI can't have less than 7 characters</msg>
-<status endtime="20160920 13:01:37.923" starttime="20160920 13:01:37.920" status="PASS"></status>
+<msg level="INFO" timestamp="20160924 22:24:00.952">ValidationException: Validation error: CI can't have less than 7 characters</msg>
+<status endtime="20160924 22:24:00.953" starttime="20160924 22:24:00.949" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Should Be Equal">
 <doc>Fails if the given objects are unequal.</doc>
@@ -298,13 +344,13 @@
 <arg>${message}</arg>
 <arg>ValidationException: Validation error: ${error}</arg>
 </arguments>
-<status endtime="20160920 13:01:37.928" starttime="20160920 13:01:37.924" status="PASS"></status>
+<status endtime="20160924 22:24:00.960" starttime="20160924 22:24:00.954" status="PASS"></status>
 </kw>
-<status endtime="20160920 13:01:37.929" starttime="20160920 13:01:37.899" status="PASS"></status>
+<status endtime="20160924 22:24:00.961" starttime="20160924 22:24:00.921" status="PASS"></status>
 </kw>
-<status critical="yes" endtime="20160920 13:01:37.930" starttime="20160920 13:01:37.862" status="PASS"></status>
+<status critical="yes" endtime="20160924 22:24:00.962" starttime="20160924 22:24:00.878" status="PASS"></status>
 </test>
-<test name="Creating user with valid information" id="s1-t4">
+<test name="Creating user with valid information" id="s1-s2-t4">
 <kw name="Create user">
 <arguments>
 <arg>1299456745</arg>
@@ -322,40 +368,36 @@
 <assign>
 <var>${message}</var>
 </assign>
-<msg level="INFO" timestamp="20160920 13:01:40.090">[EL Info]: transaction: 2016-09-20 13:01:38.156--ServerSession(1634001207)--property eclipselink.jdbc.driver is deprecated, property javax.persistence.jdbc.driver should be used instead.
-[EL Info]: transaction: 2016-09-20 13:01:38.162--ServerSession(1634001207)--property eclipselink.jdbc.url is deprecated, property javax.persistence.jdbc.url should be used instead.
-[EL Info]: transaction: 2016-09-20 13:01:38.557--ServerSession(1634001207)--property eclipselink.jdbc.driver is deprecated, property javax.persistence.jdbc.driver should be used instead.
-[EL Info]: transaction: 2016-09-20 13:01:38.557--ServerSession(1634001207)--property eclipselink.jdbc.url is deprecated, property javax.persistence.jdbc.url should be used instead.
-[EL Info]: 2016-09-20 13:01:38.567--ServerSession(1634001207)--EclipseLink, version: Eclipse Persistence Services - 2.6.3.v20160428-59c81c5
-[EL Info]: connection: 2016-09-20 13:01:39.254--ServerSession(1634001207)--/file:/home/jddm11/workspace/tallerprogra-g2-2016/build/libs/videoclub-1.0-SNAPSHOT-all.jar_VideoClub login successful
-[EL Warning]: 2016-09-20 13:01:39.803--ServerSession(1634001207)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.3.v20160428-59c81c5): org.eclipse.persistence.exceptions.DatabaseException
-Internal Exception: SQL Exception: Constraint 'MOVIE_DIRECTOR_ID' already exists in Schema 'APP'.
-Error Code: 30000
-Call: ALTER TABLE MOVIE ADD CONSTRAINT MOVIE_DIRECTOR_ID FOREIGN KEY (DIRECTOR_ID) REFERENCES DIRECTOR (ID)
-Query: DataModifyQuery(sql="ALTER TABLE MOVIE ADD CONSTRAINT MOVIE_DIRECTOR_ID FOREIGN KEY (DIRECTOR_ID) REFERENCES DIRECTOR (ID)")
-[EL Warning]: 2016-09-20 13:01:39.839--ServerSession(1634001207)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.3.v20160428-59c81c5): org.eclipse.persistence.exceptions.DatabaseException
-Internal Exception: SQL Exception: Constraint 'FK_GAME_COMPANY_ID' already exists in Schema 'APP'.
-Error Code: 30000
-Call: ALTER TABLE GAME ADD CONSTRAINT FK_GAME_COMPANY_ID FOREIGN KEY (COMPANY_ID) REFERENCES COMPANY (ID)
-Query: DataModifyQuery(sql="ALTER TABLE GAME ADD CONSTRAINT FK_GAME_COMPANY_ID FOREIGN KEY (COMPANY_ID) REFERENCES COMPANY (ID)")
-[EL Warning]: 2016-09-20 13:01:39.872--ServerSession(1634001207)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.3.v20160428-59c81c5): org.eclipse.persistence.exceptions.DatabaseException
-Internal Exception: SQL Exception: Constraint 'COMPANYGAMEGAMESID' already exists in Schema 'APP'.
-Error Code: 30000
-Call: ALTER TABLE COMPANY_GAME ADD CONSTRAINT COMPANYGAMEgamesID FOREIGN KEY (games_ID) REFERENCES GAME (ID)
-Query: DataModifyQuery(sql="ALTER TABLE COMPANY_GAME ADD CONSTRAINT COMPANYGAMEgamesID FOREIGN KEY (games_ID) REFERENCES GAME (ID)")
-[EL Warning]: 2016-09-20 13:01:39.905--ServerSession(1634001207)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.6.3.v20160428-59c81c5): org.eclipse.persistence.exceptions.DatabaseException
-Internal Exception: SQL Exception: Constraint 'DRCTORMOVIEMVIESID' already exists in Schema 'APP'.
-Error Code: 30000
-Call: ALTER TABLE DIRECTOR_MOVIE ADD CONSTRAINT DRCTORMOVIEmviesID FOREIGN KEY (movies_ID) REFERENCES MOVIE (ID)
-Query: DataModifyQuery(sql="ALTER TABLE DIRECTOR_MOVIE ADD CONSTRAINT DRCTORMOVIEmviesID FOREIGN KEY (movies_ID) REFERENCES MOVIE (ID)")</msg>
-<msg level="FAIL" timestamp="20160920 13:01:40.108">ValidationException: Validation error: Already exist a Client with CI: '1299456745'</msg>
-<status endtime="20160920 13:01:40.110" starttime="20160920 13:01:37.938" status="FAIL"></status>
+<msg level="INFO" timestamp="20160924 22:24:03.408">[EL Info]: transaction: 2016-09-24 22:24:01.233--ServerSession(2120816164)--property eclipselink.jdbc.driver is deprecated, property javax.persistence.jdbc.driver should be used instead.
+[EL Info]: transaction: 2016-09-24 22:24:01.242--ServerSession(2120816164)--property eclipselink.jdbc.url is deprecated, property javax.persistence.jdbc.url should be used instead.
+[EL Info]: transaction: 2016-09-24 22:24:01.547--ServerSession(2120816164)--property eclipselink.jdbc.driver is deprecated, property javax.persistence.jdbc.driver should be used instead.
+[EL Info]: transaction: 2016-09-24 22:24:01.547--ServerSession(2120816164)--property eclipselink.jdbc.url is deprecated, property javax.persistence.jdbc.url should be used instead.
+[EL Info]: 2016-09-24 22:24:01.568--ServerSession(2120816164)--EclipseLink, version: Eclipse Persistence Services - 2.6.3.v20160428-59c81c5
+[EL Info]: connection: 2016-09-24 22:24:02.544--ServerSession(2120816164)--/file:/Users/pablo/Projects/University/robot_framework_project/build/resources/main/_VideoClub login successful</msg>
+<msg level="INFO" timestamp="20160924 22:24:03.412">${message} = None</msg>
+<status endtime="20160924 22:24:03.413" starttime="20160924 22:24:00.977" status="PASS"></status>
 </kw>
-<status endtime="20160920 13:01:40.113" starttime="20160920 13:01:37.935" status="FAIL"></status>
+<kw library="BuiltIn" name="Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${message}</arg>
+</arguments>
+<msg level="INFO" timestamp="20160924 22:24:03.418">None</msg>
+<status endtime="20160924 22:24:03.422" starttime="20160924 22:24:03.414" status="PASS"></status>
 </kw>
-<status critical="yes" endtime="20160920 13:01:40.115" starttime="20160920 13:01:37.932" status="FAIL">ValidationException: Validation error: Already exist a Client with CI: '1299456745'</status>
+<kw library="BuiltIn" name="Should Be Equal">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${message}</arg>
+<arg>${None}</arg>
+</arguments>
+<status endtime="20160924 22:24:03.427" starttime="20160924 22:24:03.423" status="PASS"></status>
+</kw>
+<status endtime="20160924 22:24:03.429" starttime="20160924 22:24:00.971" status="PASS"></status>
+</kw>
+<status critical="yes" endtime="20160924 22:24:03.430" starttime="20160924 22:24:00.967" status="PASS"></status>
 </test>
-<test name="Creating user already exists should fail" id="s1-t5">
+<test name="Creating user already exists should fail" id="s1-s2-t5">
 <kw name="Create user duplicated">
 <arguments>
 <arg>111111114</arg>
@@ -363,30 +405,80 @@ Query: DataModifyQuery(sql="ALTER TABLE DIRECTOR_MOVIE ADD CONSTRAINT DRCTORMOVI
 </arguments>
 <kw library="bo.edu.ucbcba.videoclub.controller.ClientController" name="Create">
 <arguments>
-<arg>${ci} jhon_doe</arg>
+<arg>${ci}</arg>
+<arg>jhon_doe</arg>
 <arg>hawking</arg>
 <arg>nowhere</arg>
 </arguments>
-<msg level="FAIL" timestamp="20160920 13:01:40.130">Keyword 'bo.edu.ucbcba.videoclub.controller.ClientController.Create' expected 4 arguments, got 3.</msg>
-<status endtime="20160920 13:01:40.131" starttime="20160920 13:01:40.128" status="FAIL"></status>
+<status endtime="20160924 22:24:03.448" starttime="20160924 22:24:03.439" status="PASS"></status>
 </kw>
-<status endtime="20160920 13:01:40.133" starttime="20160920 13:01:40.124" status="FAIL"></status>
+<kw library="BuiltIn" name="Run Keyword And Expect Error">
+<doc>Runs the keyword and checks that the expected error occurred.</doc>
+<arguments>
+<arg>*</arg>
+<arg>create</arg>
+<arg>${ci}</arg>
+<arg>jhon_doe</arg>
+<arg>hawking</arg>
+<arg>nowhere</arg>
+</arguments>
+<assign>
+<var>${message}</var>
+</assign>
+<kw library="bo.edu.ucbcba.videoclub.controller.ClientController" name="Create">
+<arguments>
+<arg>${ci}</arg>
+<arg>jhon_doe</arg>
+<arg>hawking</arg>
+<arg>nowhere</arg>
+</arguments>
+<msg level="FAIL" timestamp="20160924 22:24:03.471">ValidationException: Validation error: Already exist a Client with CI: '111111114'</msg>
+<status endtime="20160924 22:24:03.472" starttime="20160924 22:24:03.452" status="FAIL"></status>
 </kw>
-<status critical="yes" endtime="20160920 13:01:40.134" starttime="20160920 13:01:40.118" status="FAIL">Keyword 'bo.edu.ucbcba.videoclub.controller.ClientController.Create' expected 4 arguments, got 3.</status>
+<msg level="INFO" timestamp="20160924 22:24:03.473">${message} = ValidationException: Validation error: Already exist a Client with CI: '111111114'</msg>
+<status endtime="20160924 22:24:03.474" starttime="20160924 22:24:03.449" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${message}</arg>
+</arguments>
+<msg level="INFO" timestamp="20160924 22:24:03.476">ValidationException: Validation error: Already exist a Client with CI: '111111114'</msg>
+<status endtime="20160924 22:24:03.477" starttime="20160924 22:24:03.474" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Should Be Equal">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${message}</arg>
+<arg>ValidationException: Validation error: ${error} '${ci}'</arg>
+</arguments>
+<status endtime="20160924 22:24:03.480" starttime="20160924 22:24:03.477" status="PASS"></status>
+</kw>
+<status endtime="20160924 22:24:03.482" starttime="20160924 22:24:03.437" status="PASS"></status>
+</kw>
+<status critical="yes" endtime="20160924 22:24:03.483" starttime="20160924 22:24:03.432" status="PASS"></status>
 </test>
-<status endtime="20160920 13:01:40.140" starttime="20160920 13:01:37.392" status="FAIL"></status>
+<status endtime="20160924 22:24:03.489" starttime="20160924 22:24:00.637" status="PASS"></status>
+</suite>
+<status endtime="20160924 22:24:03.514" starttime="20160924 22:24:00.217" status="FAIL"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="3" fail="2">Critical Tests</stat>
-<stat pass="3" fail="2">All Tests</stat>
+<stat pass="5" fail="3">Critical Tests</stat>
+<stat pass="5" fail="3">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="3" fail="2" name="Client Test Cases" id="s1">Client Test Cases</stat>
+<stat pass="5" fail="3" name="Robot Test" id="s1">Robot Test</stat>
+<stat pass="0" fail="3" name="Client Suite" id="s1-s1">Robot Test.Client Suite</stat>
+<stat pass="5" fail="0" name="Client Suite X" id="s1-s2">Robot Test.Client Suite X</stat>
 </suite>
 </statistics>
 <errors>
+<msg level="ERROR" timestamp="20160924 22:24:00.075">Error in file '/Users/pablo/Projects/University/robot_framework_project/robot_test/client_suite.txt': Invalid syntax in keyword 'Create user': Setting '[Arguments]' used multiple times.</msg>
+<msg level="ERROR" timestamp="20160924 22:24:00.080">Error in file '/Users/pablo/Projects/University/robot_framework_project/robot_test/client_suite.txt': Invalid syntax in keyword 'Create user': Setting '[Arguments]' used multiple times.</msg>
+<msg level="ERROR" timestamp="20160924 22:24:00.084">Error in file '/Users/pablo/Projects/University/robot_framework_project/robot_test/client_suite.txt': Invalid syntax in keyword 'Create user': Setting '[Arguments]' used multiple times.</msg>
+<msg level="ERROR" timestamp="20160924 22:24:00.496">Error in file '/Users/pablo/Projects/University/robot_framework_project/robot_test/client_suite.txt': Test library '/bo/edu/ucbcba/videoclub/controller/ClientController.class' does not exist.</msg>
 </errors>
 </robot>

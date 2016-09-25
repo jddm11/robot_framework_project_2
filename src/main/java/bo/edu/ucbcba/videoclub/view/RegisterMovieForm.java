@@ -133,7 +133,7 @@ public class RegisterMovieForm extends JFrame {
     private void launchImage() {
         BufferedImage myPicture = null;
         try {
-            myPicture = ImageIO.read(new File("fondoM.jpg"));
+            myPicture = ImageIO.read(getClass().getResourceAsStream("/images/fondoM.jpg"));
         } catch (IOException e) {
             e.printStackTrace();
         }

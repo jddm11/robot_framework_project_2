@@ -5,22 +5,16 @@ apply plugin: 'application'
 
 mainClassName = 'bo.edu.ucbcba.videoclub.Main'
 
-jar {
-  manifest {
-    attributes(
-      'Main-Class': 'bo.edu.ucbcba.videoclub.Main',
-    )
-  }
+task cleanDB(type: Delete) {
+    delete 'VideoClub'
 }
 
-task fatJar(type: Jar) {
-  manifest.from jar.manifest
-  classifier = 'all'
-  baseName = 'videoclub'
-  from {
-    configurations.runtime.collect { it.isDirectory() ? it : zipTree(it) }
-  } 
-  with jar
+task runTest(type: JavaExec) {
+    dependsOn cleanDB
+    classpath = sourceSets.main.runtimeClasspath
+    main = 'org.robotframework.RobotFramework'
+    args '--outputdir', "$buildDir/robot_output"
+    args 'robot_test'
 }
 
 repositories {
@@ -31,5 +25,7 @@ dependencies {
     compile 'org.apache.derby:derby:10.1.1.0'
     compile 'org.eclipse.persistence:eclipselink:2.6.3'
     compile 'com.intellij:forms_rt:7.0.3'
+    runtime 'org.nuiton.jrst:docutils:2.2'
+    runtime 'org.robotframework:robotframework:3.0'
     testCompile 'junit:junit:4.11'
 }
