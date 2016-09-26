@@ -43,7 +43,7 @@ public class UserController {
         if(password.matches("[0-9]+")){
             throw new ValidationException("Password can't be only a number, must have letters");
         }
-        if(password.matches("[a-zA-Z]")){
+        if(password.matches("[a-zA-Z]+")){
             throw new ValidationException("Password can't be only a letters, must have numbers");
         }
         else{
