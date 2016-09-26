@@ -56,74 +56,112 @@ To test this project you need to use the following command::
 
 .. code:: robotframework
 
-	*** Settings ***
-	
-	Library  bo.edu.ucbcba.videoclub.controller.ClientController  WITH NAME  client
-	
-	*** Variables ***
-	${FIRSTNAME TOO LONG}   First Name is too long, must have less than 25 characters
-	${FIRSTNAME TOO SHORT}  First Name is too short, must have more than 2 characters
-	${LASTNAME TOO LONG}    Last Name is too long, must have less than 25 characters
-	${LASTNAME TOO SHORT}   Last Name is too short, must have more than 2 characters
-	${CI TOO LONG}		    CI can't have more than 10 characters
-	${CI TOO SHORT}		    CI can't have less than 7 characters
-	${ALREADY CLIENT}		Already exist a Client with CI:
-	
-	*** Test Cases ***
-	Creating client with invalid firstname should fail
-	    [Template]			   Invalid firstname
-	    jhonsnowrickrobotclarkkenthor  ${FIRSTNAME TOO LONG}
-	    k            		   ${FIRSTNAME TOO SHORT}  
-	
-	Creating client with invalid lastname should fail
-	    [Template]    		      Invalid lastname
-	    hawkingsnowrickrobotclarkkenthor  ${LASTNAME TOO LONG}
-	    D  				      ${LASTNAME TOO SHORT}
-	
-	Creating client with invalid identification should fail
-	    [Template]	    Invalid identification
-	    12345678910     ${CI TOO LONG}
-	    12345  	    ${CI TOO SHORT}
-	    
-	Creating client with valid information
-		Create user  1299456745  juan_d  perez  nowhere
-		
-	Creating client already exists should fail
-		Create user duplicated  111111114  ${ALREADY CLIENT}	    
-		
-	*** Keywords ***
-	Invalid firstname
-	    [Arguments]    ${firstname}    ${error}
-	    ${message} =  Run Keyword And Expect Error	*  client.create  12345678  ${firstname}  hawking  nowhere
-	    log  ${message}
-	    Should Be Equal  ${message}  ValidationException: Validation error: ${error}
-	    
-	Invalid lastname
-	    [Arguments]    ${lastname}    ${error}
-	    ${message} =  Run Keyword And Expect Error  *  client.create  12345678  jhon_doe  ${lastname}  nowhere
-	    log  ${message}
-	    Should Be Equal  ${message}  ValidationException: Validation error: ${error}
-	    
-	Invalid identification
-	    [Arguments]    ${ci}    ${error}
-	    ${message} =  Run Keyword And Expect Error	*  client.create  ${ci}  jhon_doe  hawking  nowhere
-	    log  ${message}
-	    Should Be Equal  ${message}  ValidationException: Validation error: ${error}  
-	          
-	Create user
-	    [Arguments]  ${ci}  ${firstname}  ${lastname}  ${address}
-	    ${message} =  client.create  ${ci}  ${firstname}  ${lastname}  ${address}
-	    log  ${message}
-	    Should Be Equal  ${message}  ${None}
-	    
-	Create user duplicated
-	    [Arguments]  ${ci}  ${error}
-	    		    client.create  ${ci}  jhon_doe  hawking  nowhere
-	    ${message} =    Run Keyword And Expect Error  *  client.create  ${ci}  jhon_doe  hawking  nowhere
-	    log  ${message}
-	    Should Be Equal  ${message}  ValidationException: Validation error: ${error} '${ci}'
-		
+   *** Settings ***
+   Library  bo.edu.ucbcba.videoclub.controller.ClientController  WITH NAME client
 
+   *** Variables ***
+   ${FIRST_NAME TOO LONG}   First Name is too long, must have less than 25 characters
+   ${FIRST_NAME TOO SHORT}  First Name is too short, must have more than 2 characters
+   ${FIRST_NAME BLANK}      First Name can't be blank
+   ${LAST_NAME TOO LONG}    Last Name is too long, must have less than 25 characters
+   ${LAST_NAME TOO SHORT}   Last Name is too short, must have more than 2 characters
+   ${LAST_NAME BLANK}       Last Name can't be blank
+   ${CI TOO LONG}		    CI can't have more than 10 characters
+   ${CI TOO SHORT}		    CI can't have less than 7 characters
+   ${CI BLANK}              CI can't be blank
+   ${ALREADY CLIENT}		Already exist a Client with CI:
+   ${BLANK}
+
+   *** Test Cases ***
+   Creating client with blank first name should fail
+       Create client with invalid first name   ${BLANK}    ${FIRST_NAME BLANK}
+
+   Creating client with long first name should fail
+       Create client with invalid first name   jhonsnowrickrobotclarkkenthor   ${FIRST_NAME TOO LONG}
+
+   Creating client with short first name should fail
+       Create client with invalid first name   k   ${FIRST_NAME TOO SHORT}
+
+   Creating client with blank last name should fail
+       Create client with invalid last name    ${BLANK}    ${LAST_NAME BLANK}
+
+   Creating client with long last name should fail
+       Create client with invalid last name    hawkingsnowrickrobotclarkkenthor    ${LAST_NAME TOO LONG}
+
+   Creating client with short last name should fail
+       Create client with invalid last name    D   ${LAST_NAME TOO SHORT}
+
+   Creating client with blank CI should fail
+       Create client with invalid CI  ${BLANK}    ${CI_BLANK}
+
+   Creating client with long CI should fail
+       Create client with invalid CI  12929388177    ${CI TOO LONG}
+
+   Creating client with short CI should fail
+       Create client with invalid CI  123    ${CI TOO SHORT}
+
+   Creating client with valid information
+       ${clients} =    Count clients
+       Create client  1299456745  juan_d  perez  nowhere
+       ${clients_new} =    Count clients
+       ${diff} =   Evaluate    $clients_new-$clients
+       Should Be Equal As Integers     ${diff}  1
+
+   Creating client already exists should fail
+       Create client duplicated  111111114  ${ALREADY CLIENT}
+
+   Delete non existant user
+       ${response} =   client.deleteClient    123
+       Should Be Equal As Integers    ${response}     2
+
+   Delete existant user
+       Create client  1299456746  juan_d  perez  nowhere
+       ${clients} =    Count clients
+       ${response} =   client.deleteClient    1299456746
+       Should Be Equal As Integers    ${response}     1
+       ${clients_new} =    Count clients
+       ${diff} =   Evaluate    $clients_new-$clients
+       Should Be Equal As Integers     ${diff}  -1
+
+   *** Keywords ***
+   Create client with invalid first name
+       [Arguments]    ${firstname}    ${error}
+       ${message} =  Run Keyword And Expect Error	*  client.create  12345678  ${firstname}  hawking  nowhere
+       log  ${message}
+       Should Be Equal  ${message}  ValidationException: Validation error: ${error}
+
+   Create client with invalid last name
+       [Arguments]    ${lastname}    ${error}
+       ${message} =  Run Keyword And Expect Error  *  client.create  12345678  jhon_doe  ${lastname}  nowhere
+       log  ${message}
+       Should Be Equal  ${message}  ValidationException: Validation error: ${error}
+
+   Create client with invalid CI
+       [Arguments]    ${ci}    ${error}
+       ${message} =  Run Keyword And Expect Error	*  client.create  ${ci}  jhon_doe  hawking  nowhere
+       log  ${message}
+       Should Be Equal  ${message}  ValidationException: Validation error: ${error}
+
+   Create client
+       [Arguments]  ${ci}  ${firstname}  ${lastname}  ${address}
+       ${message} =  client.create  ${ci}  ${firstname}  ${lastname}  ${address}
+       log  ${message}
+       Should Be Equal  ${message}  ${None}
+
+   Create client duplicated
+       [Arguments]  ${ci}  ${error}
+       deleteClient    ${ci}
+       client.create  ${ci}  jhon_doe  hawking  nowhere
+       ${message} =    Run Keyword And Expect Error  *  client.create  ${ci}  jhon_doe  hawking  nowhere
+       log  ${message}
+       Should Be Equal  ${message}  ValidationException: Validation error: ${error} '${ci}'
+
+   Count clients
+       ${clients} =    client.searchClient  ${EMPTY}
+       ${size} =   client.Get Length   ${clients}
+       [Return]    ${size}
+	   
+	   
 .. code:: robotframework
 
 	*** Settings ***

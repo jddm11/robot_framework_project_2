@@ -2,11 +2,11 @@
 hs_err_pid*
 .gradle/
 build/
-VideoClub/
+/VideoClub/
 derby.log
 gradle-app.setting
 .gradletasknamecache
 *.iml
-/.idea/
+.idea/
 /local.properties
 .DS_Store
