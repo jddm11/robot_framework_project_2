@@ -60,7 +60,7 @@ Test Cases
 ----------
 
 Client Controller
-.................
+..................
 
 This controller is in charged of create and delete clients who are going to buy videogames and movies. 	
 
@@ -173,7 +173,7 @@ This controller is in charged of create and delete clients who are going to buy 
 
 
 Company Controller
-==================
+...................
 
 This controller is in charged of create companies which are going to be used in the software. 		   
 
@@ -226,7 +226,7 @@ This controller is in charged of create companies which are going to be used in 
 
 
 User Controller
-===============
+................
 
 This controller is in charged of create users who are going to use the differents features of the software. 		   
 
@@ -313,11 +313,12 @@ This controller is in charged of create users who are going to use the different
         [Return]    ${size}
 
 Directors Controller
-====================
+....................
 
 This controller is in charged of create directors for the movies that the software needs for movies
 
 .. code:: robotframework
+
     *** Settings ***
 
     Library     bo.edu.ucbcba.videoclub.controller.DirectorController  WITH NAME   director
