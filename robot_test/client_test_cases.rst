@@ -57,7 +57,7 @@ To test this project you need to use the following command::
 .. code:: robotframework
 
    *** Settings ***
-   Library  bo.edu.ucbcba.videoclub.controller.ClientController  WITH NAME client
+   Library  bo.edu.ucbcba.videoclub.controller.ClientController  WITH NAME  client
 
    *** Variables ***
    ${FIRST_NAME TOO LONG}   First Name is too long, must have less than 25 characters
@@ -158,7 +158,7 @@ To test this project you need to use the following command::
 
    Count clients
        ${clients} =    client.searchClient  ${EMPTY}
-       ${size} =   client.Get Length   ${clients}
+       ${size} =   Get Length   ${clients}
        [Return]    ${size}
 	   
 	   
