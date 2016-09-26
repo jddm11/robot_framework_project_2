@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.0 (Jython 2.7.0 on java1.7.0_79)" generated="20160925 23:23:10.419">
-<suite source="C:\Users\jddm11\Documents\workspace\robot_framework_project\robot_test" id="s1" name="Robot Test">
-<suite source="C:\Users\jddm11\Documents\workspace\robot_framework_project\robot_test\client_test_cases.rst" id="s1-s1" name="Client Test Cases">
-<test id="s1-s1-t1" name="Creating client with blank first name should fail">
+<robot generator="Robot 3.0 (Jython 2.7.0 on java1.8.0_101)" generated="20160926 00:34:36.870">
+<suite source="/Users/pablo/Projects/University/robot_framework_project/robot_test" name="Robot Test" id="s1">
+<suite source="/Users/pablo/Projects/University/robot_framework_project/robot_test/client_test_cases.rst" name="Client Test Cases" id="s1-s1">
+<test name="Creating client with blank first name should fail" id="s1-s1-t1">
 <kw name="Create client with invalid first name">
 <arguments>
 <arg>${BLANK}</arg>
@@ -28,19 +28,19 @@
 <arg>hawking</arg>
 <arg>nowhere</arg>
 </arguments>
-<msg timestamp="20160925 23:23:10.778" level="FAIL">ValidationException: Validation error: First Name can't be blank</msg>
-<status status="FAIL" endtime="20160925 23:23:10.778" starttime="20160925 23:23:10.747"></status>
+<msg level="FAIL" timestamp="20160926 00:34:37.492">ValidationException: Validation error: First Name can't be blank</msg>
+<status endtime="20160926 00:34:37.494" starttime="20160926 00:34:37.462" status="FAIL"></status>
 </kw>
-<msg timestamp="20160925 23:23:10.794" level="INFO">${message} = ValidationException: Validation error: First Name can't be blank</msg>
-<status status="PASS" endtime="20160925 23:23:10.794" starttime="20160925 23:23:10.747"></status>
+<msg level="INFO" timestamp="20160926 00:34:37.501">${message} = ValidationException: Validation error: First Name can't be blank</msg>
+<status endtime="20160926 00:34:37.506" starttime="20160926 00:34:37.452" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Log">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${message}</arg>
 </arguments>
-<msg timestamp="20160925 23:23:10.794" level="INFO">ValidationException: Validation error: First Name can't be blank</msg>
-<status status="PASS" endtime="20160925 23:23:10.794" starttime="20160925 23:23:10.794"></status>
+<msg level="INFO" timestamp="20160926 00:34:37.515">ValidationException: Validation error: First Name can't be blank</msg>
+<status endtime="20160926 00:34:37.518" starttime="20160926 00:34:37.509" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Should Be Equal">
 <doc>Fails if the given objects are unequal.</doc>
@@ -48,13 +48,13 @@
 <arg>${message}</arg>
 <arg>ValidationException: Validation error: ${error}</arg>
 </arguments>
-<status status="PASS" endtime="20160925 23:23:10.810" starttime="20160925 23:23:10.794"></status>
+<status endtime="20160926 00:34:37.529" starttime="20160926 00:34:37.520" status="PASS"></status>
 </kw>
-<status status="PASS" endtime="20160925 23:23:10.810" starttime="20160925 23:23:10.731"></status>
+<status endtime="20160926 00:34:37.531" starttime="20160926 00:34:37.441" status="PASS"></status>
 </kw>
-<status status="PASS" critical="yes" endtime="20160925 23:23:10.810" starttime="20160925 23:23:10.731"></status>
+<status critical="yes" endtime="20160926 00:34:37.534" starttime="20160926 00:34:37.429" status="PASS"></status>
 </test>
-<test id="s1-s1-t2" name="Creating client with long first name should fail">
+<test name="Creating client with long first name should fail" id="s1-s1-t2">
 <kw name="Create client with invalid first name">
 <arguments>
 <arg>jhonsnowrickrobotclarkkenthor</arg>
@@ -80,19 +80,19 @@
 <arg>hawking</arg>
 <arg>nowhere</arg>
 </arguments>
-<msg timestamp="20160925 23:23:10.888" level="FAIL">ValidationException: Validation error: First Name is too long, must have less than 25 characters</msg>
-<status status="FAIL" endtime="20160925 23:23:10.888" starttime="20160925 23:23:10.841"></status>
+<msg level="FAIL" timestamp="20160926 00:34:37.585">ValidationException: Validation error: First Name is too long, must have less than 25 characters</msg>
+<status endtime="20160926 00:34:37.586" starttime="20160926 00:34:37.559" status="FAIL"></status>
 </kw>
-<msg timestamp="20160925 23:23:10.888" level="INFO">${message} = ValidationException: Validation error: First Name is too long, must have less than 25 characters</msg>
-<status status="PASS" endtime="20160925 23:23:10.888" starttime="20160925 23:23:10.825"></status>
+<msg level="INFO" timestamp="20160926 00:34:37.588">${message} = ValidationException: Validation error: First Name is too long, must have less than 25 characters</msg>
+<status endtime="20160926 00:34:37.590" starttime="20160926 00:34:37.554" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Log">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${message}</arg>
 </arguments>
-<msg timestamp="20160925 23:23:10.888" level="INFO">ValidationException: Validation error: First Name is too long, must have less than 25 characters</msg>
-<status status="PASS" endtime="20160925 23:23:10.888" starttime="20160925 23:23:10.888"></status>
+<msg level="INFO" timestamp="20160926 00:34:37.595">ValidationException: Validation error: First Name is too long, must have less than 25 characters</msg>
+<status endtime="20160926 00:34:37.597" starttime="20160926 00:34:37.591" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Should Be Equal">
 <doc>Fails if the given objects are unequal.</doc>
@@ -100,13 +100,13 @@
 <arg>${message}</arg>
 <arg>ValidationException: Validation error: ${error}</arg>
 </arguments>
-<status status="PASS" endtime="20160925 23:23:10.903" starttime="20160925 23:23:10.888"></status>
+<status endtime="20160926 00:34:37.605" starttime="20160926 00:34:37.601" status="PASS"></status>
 </kw>
-<status status="PASS" endtime="20160925 23:23:10.903" starttime="20160925 23:23:10.825"></status>
+<status endtime="20160926 00:34:37.607" starttime="20160926 00:34:37.546" status="PASS"></status>
 </kw>
-<status status="PASS" critical="yes" endtime="20160925 23:23:10.903" starttime="20160925 23:23:10.810"></status>
+<status critical="yes" endtime="20160926 00:34:37.608" starttime="20160926 00:34:37.541" status="PASS"></status>
 </test>
-<test id="s1-s1-t3" name="Creating client with short first name should fail">
+<test name="Creating client with short first name should fail" id="s1-s1-t3">
 <kw name="Create client with invalid first name">
 <arguments>
 <arg>k</arg>
@@ -132,19 +132,19 @@
 <arg>hawking</arg>
 <arg>nowhere</arg>
 </arguments>
-<msg timestamp="20160925 23:23:10.935" level="FAIL">ValidationException: Validation error: First Name is too short, must have more than 2 characters</msg>
-<status status="FAIL" endtime="20160925 23:23:10.950" starttime="20160925 23:23:10.919"></status>
+<msg level="FAIL" timestamp="20160926 00:34:37.678">ValidationException: Validation error: First Name is too short, must have more than 2 characters</msg>
+<status endtime="20160926 00:34:37.682" starttime="20160926 00:34:37.637" status="FAIL"></status>
 </kw>
-<msg timestamp="20160925 23:23:10.950" level="INFO">${message} = ValidationException: Validation error: First Name is too short, must have more than 2 characters</msg>
-<status status="PASS" endtime="20160925 23:23:10.950" starttime="20160925 23:23:10.903"></status>
+<msg level="INFO" timestamp="20160926 00:34:37.686">${message} = ValidationException: Validation error: First Name is too short, must have more than 2 characters</msg>
+<status endtime="20160926 00:34:37.687" starttime="20160926 00:34:37.621" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Log">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${message}</arg>
 </arguments>
-<msg timestamp="20160925 23:23:10.950" level="INFO">ValidationException: Validation error: First Name is too short, must have more than 2 characters</msg>
-<status status="PASS" endtime="20160925 23:23:10.950" starttime="20160925 23:23:10.950"></status>
+<msg level="INFO" timestamp="20160926 00:34:37.691">ValidationException: Validation error: First Name is too short, must have more than 2 characters</msg>
+<status endtime="20160926 00:34:37.692" starttime="20160926 00:34:37.688" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Should Be Equal">
 <doc>Fails if the given objects are unequal.</doc>
@@ -152,13 +152,13 @@
 <arg>${message}</arg>
 <arg>ValidationException: Validation error: ${error}</arg>
 </arguments>
-<status status="PASS" endtime="20160925 23:23:10.950" starttime="20160925 23:23:10.950"></status>
+<status endtime="20160926 00:34:37.699" starttime="20160926 00:34:37.694" status="PASS"></status>
 </kw>
-<status status="PASS" endtime="20160925 23:23:10.950" starttime="20160925 23:23:10.903"></status>
+<status endtime="20160926 00:34:37.701" starttime="20160926 00:34:37.616" status="PASS"></status>
 </kw>
-<status status="PASS" critical="yes" endtime="20160925 23:23:10.950" starttime="20160925 23:23:10.903"></status>
+<status critical="yes" endtime="20160926 00:34:37.703" starttime="20160926 00:34:37.610" status="PASS"></status>
 </test>
-<test id="s1-s1-t4" name="Creating client with blank last name should fail">
+<test name="Creating client with blank last name should fail" id="s1-s1-t4">
 <kw name="Create client with invalid last name">
 <arguments>
 <arg>${BLANK}</arg>
@@ -184,19 +184,19 @@
 <arg>${lastname}</arg>
 <arg>nowhere</arg>
 </arguments>
-<msg timestamp="20160925 23:23:11.002" level="FAIL">ValidationException: Validation error: Last Name can't be blank</msg>
-<status status="FAIL" endtime="20160925 23:23:11.004" starttime="20160925 23:23:10.966"></status>
+<msg level="FAIL" timestamp="20160926 00:34:37.743">ValidationException: Validation error: Last Name can't be blank</msg>
+<status endtime="20160926 00:34:37.750" starttime="20160926 00:34:37.723" status="FAIL"></status>
 </kw>
-<msg timestamp="20160925 23:23:11.005" level="INFO">${message} = ValidationException: Validation error: Last Name can't be blank</msg>
-<status status="PASS" endtime="20160925 23:23:11.005" starttime="20160925 23:23:10.966"></status>
+<msg level="INFO" timestamp="20160926 00:34:37.752">${message} = ValidationException: Validation error: Last Name can't be blank</msg>
+<status endtime="20160926 00:34:37.754" starttime="20160926 00:34:37.718" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Log">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${message}</arg>
 </arguments>
-<msg timestamp="20160925 23:23:11.009" level="INFO">ValidationException: Validation error: Last Name can't be blank</msg>
-<status status="PASS" endtime="20160925 23:23:11.010" starttime="20160925 23:23:11.006"></status>
+<msg level="INFO" timestamp="20160926 00:34:37.759">ValidationException: Validation error: Last Name can't be blank</msg>
+<status endtime="20160926 00:34:37.760" starttime="20160926 00:34:37.756" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Should Be Equal">
 <doc>Fails if the given objects are unequal.</doc>
@@ -204,13 +204,13 @@
 <arg>${message}</arg>
 <arg>ValidationException: Validation error: ${error}</arg>
 </arguments>
-<status status="PASS" endtime="20160925 23:23:11.014" starttime="20160925 23:23:11.011"></status>
+<status endtime="20160926 00:34:37.767" starttime="20160926 00:34:37.762" status="PASS"></status>
 </kw>
-<status status="PASS" endtime="20160925 23:23:11.015" starttime="20160925 23:23:10.966"></status>
+<status endtime="20160926 00:34:37.768" starttime="20160926 00:34:37.711" status="PASS"></status>
 </kw>
-<status status="PASS" critical="yes" endtime="20160925 23:23:11.016" starttime="20160925 23:23:10.950"></status>
+<status critical="yes" endtime="20160926 00:34:37.770" starttime="20160926 00:34:37.706" status="PASS"></status>
 </test>
-<test id="s1-s1-t5" name="Creating client with long last name should fail">
+<test name="Creating client with long last name should fail" id="s1-s1-t5">
 <kw name="Create client with invalid last name">
 <arguments>
 <arg>hawkingsnowrickrobotclarkkenthor</arg>
@@ -236,19 +236,19 @@
 <arg>${lastname}</arg>
 <arg>nowhere</arg>
 </arguments>
-<msg timestamp="20160925 23:23:11.052" level="FAIL">ValidationException: Validation error: Last Name is too long, must have less than 25 characters</msg>
-<status status="FAIL" endtime="20160925 23:23:11.052" starttime="20160925 23:23:11.020"></status>
+<msg level="FAIL" timestamp="20160926 00:34:37.825">ValidationException: Validation error: Last Name is too long, must have less than 25 characters</msg>
+<status endtime="20160926 00:34:37.827" starttime="20160926 00:34:37.802" status="FAIL"></status>
 </kw>
-<msg timestamp="20160925 23:23:11.052" level="INFO">${message} = ValidationException: Validation error: Last Name is too long, must have less than 25 characters</msg>
-<status status="PASS" endtime="20160925 23:23:11.052" starttime="20160925 23:23:11.020"></status>
+<msg level="INFO" timestamp="20160926 00:34:37.829">${message} = ValidationException: Validation error: Last Name is too long, must have less than 25 characters</msg>
+<status endtime="20160926 00:34:37.830" starttime="20160926 00:34:37.792" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Log">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${message}</arg>
 </arguments>
-<msg timestamp="20160925 23:23:11.052" level="INFO">ValidationException: Validation error: Last Name is too long, must have less than 25 characters</msg>
-<status status="PASS" endtime="20160925 23:23:11.052" starttime="20160925 23:23:11.052"></status>
+<msg level="INFO" timestamp="20160926 00:34:37.834">ValidationException: Validation error: Last Name is too long, must have less than 25 characters</msg>
+<status endtime="20160926 00:34:37.836" starttime="20160926 00:34:37.831" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Should Be Equal">
 <doc>Fails if the given objects are unequal.</doc>
@@ -256,13 +256,13 @@
 <arg>${message}</arg>
 <arg>ValidationException: Validation error: ${error}</arg>
 </arguments>
-<status status="PASS" endtime="20160925 23:23:11.067" starttime="20160925 23:23:11.052"></status>
+<status endtime="20160926 00:34:37.845" starttime="20160926 00:34:37.839" status="PASS"></status>
 </kw>
-<status status="PASS" endtime="20160925 23:23:11.067" starttime="20160925 23:23:11.020"></status>
+<status endtime="20160926 00:34:37.846" starttime="20160926 00:34:37.784" status="PASS"></status>
 </kw>
-<status status="PASS" critical="yes" endtime="20160925 23:23:11.067" starttime="20160925 23:23:11.018"></status>
+<status critical="yes" endtime="20160926 00:34:37.848" starttime="20160926 00:34:37.772" status="PASS"></status>
 </test>
-<test id="s1-s1-t6" name="Creating client with short last name should fail">
+<test name="Creating client with short last name should fail" id="s1-s1-t6">
 <kw name="Create client with invalid last name">
 <arguments>
 <arg>D</arg>
@@ -288,19 +288,19 @@
 <arg>${lastname}</arg>
 <arg>nowhere</arg>
 </arguments>
-<msg timestamp="20160925 23:23:11.114" level="FAIL">ValidationException: Validation error: Last Name is too short, must have more than 2 characters</msg>
-<status status="FAIL" endtime="20160925 23:23:11.114" starttime="20160925 23:23:11.083"></status>
+<msg level="FAIL" timestamp="20160926 00:34:37.879">ValidationException: Validation error: Last Name is too short, must have more than 2 characters</msg>
+<status endtime="20160926 00:34:37.881" starttime="20160926 00:34:37.863" status="FAIL"></status>
 </kw>
-<msg timestamp="20160925 23:23:11.114" level="INFO">${message} = ValidationException: Validation error: Last Name is too short, must have more than 2 characters</msg>
-<status status="PASS" endtime="20160925 23:23:11.114" starttime="20160925 23:23:11.067"></status>
+<msg level="INFO" timestamp="20160926 00:34:37.882">${message} = ValidationException: Validation error: Last Name is too short, must have more than 2 characters</msg>
+<status endtime="20160926 00:34:37.883" starttime="20160926 00:34:37.858" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Log">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${message}</arg>
 </arguments>
-<msg timestamp="20160925 23:23:11.114" level="INFO">ValidationException: Validation error: Last Name is too short, must have more than 2 characters</msg>
-<status status="PASS" endtime="20160925 23:23:11.114" starttime="20160925 23:23:11.114"></status>
+<msg level="INFO" timestamp="20160926 00:34:37.887">ValidationException: Validation error: Last Name is too short, must have more than 2 characters</msg>
+<status endtime="20160926 00:34:37.889" starttime="20160926 00:34:37.884" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Should Be Equal">
 <doc>Fails if the given objects are unequal.</doc>
@@ -308,13 +308,13 @@
 <arg>${message}</arg>
 <arg>ValidationException: Validation error: ${error}</arg>
 </arguments>
-<status status="PASS" endtime="20160925 23:23:11.130" starttime="20160925 23:23:11.130"></status>
+<status endtime="20160926 00:34:37.902" starttime="20160926 00:34:37.891" status="PASS"></status>
 </kw>
-<status status="PASS" endtime="20160925 23:23:11.130" starttime="20160925 23:23:11.067"></status>
+<status endtime="20160926 00:34:37.904" starttime="20160926 00:34:37.853" status="PASS"></status>
 </kw>
-<status status="PASS" critical="yes" endtime="20160925 23:23:11.130" starttime="20160925 23:23:11.067"></status>
+<status critical="yes" endtime="20160926 00:34:37.905" starttime="20160926 00:34:37.850" status="PASS"></status>
 </test>
-<test id="s1-s1-t7" name="Creating client with blank CI should fail">
+<test name="Creating client with blank CI should fail" id="s1-s1-t7">
 <kw name="Create client with invalid CI">
 <arguments>
 <arg>${BLANK}</arg>
@@ -340,19 +340,19 @@
 <arg>hawking</arg>
 <arg>nowhere</arg>
 </arguments>
-<msg timestamp="20160925 23:23:11.161" level="FAIL">ValidationException: Validation error: CI can't be blank</msg>
-<status status="FAIL" endtime="20160925 23:23:11.177" starttime="20160925 23:23:11.145"></status>
+<msg level="FAIL" timestamp="20160926 00:34:37.943">ValidationException: Validation error: CI can't be blank</msg>
+<status endtime="20160926 00:34:37.944" starttime="20160926 00:34:37.922" status="FAIL"></status>
 </kw>
-<msg timestamp="20160925 23:23:11.177" level="INFO">${message} = ValidationException: Validation error: CI can't be blank</msg>
-<status status="PASS" endtime="20160925 23:23:11.177" starttime="20160925 23:23:11.130"></status>
+<msg level="INFO" timestamp="20160926 00:34:37.946">${message} = ValidationException: Validation error: CI can't be blank</msg>
+<status endtime="20160926 00:34:37.947" starttime="20160926 00:34:37.919" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Log">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${message}</arg>
 </arguments>
-<msg timestamp="20160925 23:23:11.177" level="INFO">ValidationException: Validation error: CI can't be blank</msg>
-<status status="PASS" endtime="20160925 23:23:11.177" starttime="20160925 23:23:11.177"></status>
+<msg level="INFO" timestamp="20160926 00:34:37.953">ValidationException: Validation error: CI can't be blank</msg>
+<status endtime="20160926 00:34:37.956" starttime="20160926 00:34:37.951" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Should Be Equal">
 <doc>Fails if the given objects are unequal.</doc>
@@ -360,13 +360,13 @@
 <arg>${message}</arg>
 <arg>ValidationException: Validation error: ${error}</arg>
 </arguments>
-<status status="PASS" endtime="20160925 23:23:11.177" starttime="20160925 23:23:11.177"></status>
+<status endtime="20160926 00:34:37.973" starttime="20160926 00:34:37.967" status="PASS"></status>
 </kw>
-<status status="PASS" endtime="20160925 23:23:11.177" starttime="20160925 23:23:11.130"></status>
+<status endtime="20160926 00:34:37.974" starttime="20160926 00:34:37.912" status="PASS"></status>
 </kw>
-<status status="PASS" critical="yes" endtime="20160925 23:23:11.192" starttime="20160925 23:23:11.130"></status>
+<status critical="yes" endtime="20160926 00:34:37.975" starttime="20160926 00:34:37.908" status="PASS"></status>
 </test>
-<test id="s1-s1-t8" name="Creating client with long CI should fail">
+<test name="Creating client with long CI should fail" id="s1-s1-t8">
 <kw name="Create client with invalid CI">
 <arguments>
 <arg>12929388177</arg>
@@ -392,19 +392,19 @@
 <arg>hawking</arg>
 <arg>nowhere</arg>
 </arguments>
-<msg timestamp="20160925 23:23:11.224" level="FAIL">ValidationException: Validation error: CI can't have more than 10 characters</msg>
-<status status="FAIL" endtime="20160925 23:23:11.224" starttime="20160925 23:23:11.192"></status>
+<msg level="FAIL" timestamp="20160926 00:34:38.015">ValidationException: Validation error: CI can't have more than 10 characters</msg>
+<status endtime="20160926 00:34:38.017" starttime="20160926 00:34:37.997" status="FAIL"></status>
 </kw>
-<msg timestamp="20160925 23:23:11.224" level="INFO">${message} = ValidationException: Validation error: CI can't have more than 10 characters</msg>
-<status status="PASS" endtime="20160925 23:23:11.239" starttime="20160925 23:23:11.192"></status>
+<msg level="INFO" timestamp="20160926 00:34:38.019">${message} = ValidationException: Validation error: CI can't have more than 10 characters</msg>
+<status endtime="20160926 00:34:38.020" starttime="20160926 00:34:37.987" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Log">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${message}</arg>
 </arguments>
-<msg timestamp="20160925 23:23:11.239" level="INFO">ValidationException: Validation error: CI can't have more than 10 characters</msg>
-<status status="PASS" endtime="20160925 23:23:11.239" starttime="20160925 23:23:11.239"></status>
+<msg level="INFO" timestamp="20160926 00:34:38.026">ValidationException: Validation error: CI can't have more than 10 characters</msg>
+<status endtime="20160926 00:34:38.027" starttime="20160926 00:34:38.024" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Should Be Equal">
 <doc>Fails if the given objects are unequal.</doc>
@@ -412,13 +412,13 @@
 <arg>${message}</arg>
 <arg>ValidationException: Validation error: ${error}</arg>
 </arguments>
-<status status="PASS" endtime="20160925 23:23:11.239" starttime="20160925 23:23:11.239"></status>
+<status endtime="20160926 00:34:38.034" starttime="20160926 00:34:38.029" status="PASS"></status>
 </kw>
-<status status="PASS" endtime="20160925 23:23:11.255" starttime="20160925 23:23:11.192"></status>
+<status endtime="20160926 00:34:38.035" starttime="20160926 00:34:37.983" status="PASS"></status>
 </kw>
-<status status="PASS" critical="yes" endtime="20160925 23:23:11.255" starttime="20160925 23:23:11.192"></status>
+<status critical="yes" endtime="20160926 00:34:38.036" starttime="20160926 00:34:37.978" status="PASS"></status>
 </test>
-<test id="s1-s1-t9" name="Creating client with short CI should fail">
+<test name="Creating client with short CI should fail" id="s1-s1-t9">
 <kw name="Create client with invalid CI">
 <arguments>
 <arg>123</arg>
@@ -444,19 +444,19 @@
 <arg>hawking</arg>
 <arg>nowhere</arg>
 </arguments>
-<msg timestamp="20160925 23:23:11.286" level="FAIL">ValidationException: Validation error: CI can't have less than 7 characters</msg>
-<status status="FAIL" endtime="20160925 23:23:11.286" starttime="20160925 23:23:11.270"></status>
+<msg level="FAIL" timestamp="20160926 00:34:38.157">ValidationException: Validation error: CI can't have less than 7 characters</msg>
+<status endtime="20160926 00:34:38.160" starttime="20160926 00:34:38.093" status="FAIL"></status>
 </kw>
-<msg timestamp="20160925 23:23:11.286" level="INFO">${message} = ValidationException: Validation error: CI can't have less than 7 characters</msg>
-<status status="PASS" endtime="20160925 23:23:11.286" starttime="20160925 23:23:11.255"></status>
+<msg level="INFO" timestamp="20160926 00:34:38.166">${message} = ValidationException: Validation error: CI can't have less than 7 characters</msg>
+<status endtime="20160926 00:34:38.168" starttime="20160926 00:34:38.050" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Log">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${message}</arg>
 </arguments>
-<msg timestamp="20160925 23:23:11.286" level="INFO">ValidationException: Validation error: CI can't have less than 7 characters</msg>
-<status status="PASS" endtime="20160925 23:23:11.286" starttime="20160925 23:23:11.286"></status>
+<msg level="INFO" timestamp="20160926 00:34:38.182">ValidationException: Validation error: CI can't have less than 7 characters</msg>
+<status endtime="20160926 00:34:38.185" starttime="20160926 00:34:38.172" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Should Be Equal">
 <doc>Fails if the given objects are unequal.</doc>
@@ -464,13 +464,13 @@
 <arg>${message}</arg>
 <arg>ValidationException: Validation error: ${error}</arg>
 </arguments>
-<status status="PASS" endtime="20160925 23:23:11.286" starttime="20160925 23:23:11.286"></status>
+<status endtime="20160926 00:34:38.205" starttime="20160926 00:34:38.187" status="PASS"></status>
 </kw>
-<status status="PASS" endtime="20160925 23:23:11.286" starttime="20160925 23:23:11.255"></status>
+<status endtime="20160926 00:34:38.206" starttime="20160926 00:34:38.044" status="PASS"></status>
 </kw>
-<status status="PASS" critical="yes" endtime="20160925 23:23:11.302" starttime="20160925 23:23:11.255"></status>
+<status critical="yes" endtime="20160926 00:34:38.207" starttime="20160926 00:34:38.040" status="PASS"></status>
 </test>
-<test id="s1-s1-t10" name="Creating client with valid information">
+<test name="Creating client with valid information" id="s1-s1-t10">
 <kw name="Count clients">
 <assign>
 <var>${clients}</var>
@@ -482,14 +482,14 @@
 <assign>
 <var>${clients}</var>
 </assign>
-<msg timestamp="20160925 23:23:21.860" level="INFO">[EL Info]: transaction: 2016-09-25 23:23:11.505--ServerSession(865367522)--property eclipselink.jdbc.driver is deprecated, property javax.persistence.jdbc.driver should be used instead.
-[EL Info]: transaction: 2016-09-25 23:23:11.52--ServerSession(865367522)--property eclipselink.jdbc.url is deprecated, property javax.persistence.jdbc.url should be used instead.
-[EL Info]: transaction: 2016-09-25 23:23:11.708--ServerSession(865367522)--property eclipselink.jdbc.driver is deprecated, property javax.persistence.jdbc.driver should be used instead.
-[EL Info]: transaction: 2016-09-25 23:23:11.708--ServerSession(865367522)--property eclipselink.jdbc.url is deprecated, property javax.persistence.jdbc.url should be used instead.
-[EL Info]: 2016-09-25 23:23:11.724--ServerSession(865367522)--EclipseLink, version: Eclipse Persistence Services - 2.6.3.v20160428-59c81c5
-[EL Info]: connection: 2016-09-25 23:23:16.781--ServerSession(865367522)--/file:/C:/Users/jddm11/Documents/workspace/robot_framework_project/build/resources/main/_VideoClub login successful</msg>
-<msg timestamp="20160925 23:23:21.875" level="INFO">${clients} = []</msg>
-<status status="PASS" endtime="20160925 23:23:21.875" starttime="20160925 23:23:11.302"></status>
+<msg level="INFO" timestamp="20160926 00:34:42.258">[EL Info]: transaction: 2016-09-26 00:34:39.127--ServerSession(2095335823)--property eclipselink.jdbc.driver is deprecated, property javax.persistence.jdbc.driver should be used instead.
+[EL Info]: transaction: 2016-09-26 00:34:39.138--ServerSession(2095335823)--property eclipselink.jdbc.url is deprecated, property javax.persistence.jdbc.url should be used instead.
+[EL Info]: transaction: 2016-09-26 00:34:39.599--ServerSession(2095335823)--property eclipselink.jdbc.driver is deprecated, property javax.persistence.jdbc.driver should be used instead.
+[EL Info]: transaction: 2016-09-26 00:34:39.599--ServerSession(2095335823)--property eclipselink.jdbc.url is deprecated, property javax.persistence.jdbc.url should be used instead.
+[EL Info]: 2016-09-26 00:34:39.632--ServerSession(2095335823)--EclipseLink, version: Eclipse Persistence Services - 2.6.3.v20160428-59c81c5
+[EL Info]: connection: 2016-09-26 00:34:40.941--ServerSession(2095335823)--/file:/Users/pablo/Projects/University/robot_framework_project/build/resources/main/_VideoClub login successful</msg>
+<msg level="INFO" timestamp="20160926 00:34:42.263">${clients} = []</msg>
+<status endtime="20160926 00:34:42.264" starttime="20160926 00:34:38.220" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Get Length">
 <doc>Returns and logs the length of the given item as an integer.</doc>
@@ -499,12 +499,12 @@
 <assign>
 <var>${size}</var>
 </assign>
-<msg timestamp="20160925 23:23:21.891" level="INFO">Length is 0</msg>
-<msg timestamp="20160925 23:23:21.891" level="INFO">${size} = 0</msg>
-<status status="PASS" endtime="20160925 23:23:21.891" starttime="20160925 23:23:21.875"></status>
+<msg level="INFO" timestamp="20160926 00:34:42.274">Length is 0</msg>
+<msg level="INFO" timestamp="20160926 00:34:42.275">${size} = 0</msg>
+<status endtime="20160926 00:34:42.280" starttime="20160926 00:34:42.270" status="PASS"></status>
 </kw>
-<msg timestamp="20160925 23:23:21.891" level="INFO">${clients} = 0</msg>
-<status status="PASS" endtime="20160925 23:23:21.891" starttime="20160925 23:23:11.302"></status>
+<msg level="INFO" timestamp="20160926 00:34:42.283">${clients} = 0</msg>
+<status endtime="20160926 00:34:42.283" starttime="20160926 00:34:38.217" status="PASS"></status>
 </kw>
 <kw name="Create client">
 <arguments>
@@ -523,16 +523,16 @@
 <assign>
 <var>${message}</var>
 </assign>
-<msg timestamp="20160925 23:23:21.938" level="INFO">${message} = None</msg>
-<status status="PASS" endtime="20160925 23:23:21.938" starttime="20160925 23:23:21.906"></status>
+<msg level="INFO" timestamp="20160926 00:34:42.382">${message} = None</msg>
+<status endtime="20160926 00:34:42.383" starttime="20160926 00:34:42.299" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Log">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${message}</arg>
 </arguments>
-<msg timestamp="20160925 23:23:21.938" level="INFO">None</msg>
-<status status="PASS" endtime="20160925 23:23:21.938" starttime="20160925 23:23:21.938"></status>
+<msg level="INFO" timestamp="20160926 00:34:42.393">None</msg>
+<status endtime="20160926 00:34:42.394" starttime="20160926 00:34:42.385" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Should Be Equal">
 <doc>Fails if the given objects are unequal.</doc>
@@ -540,9 +540,9 @@
 <arg>${message}</arg>
 <arg>${None}</arg>
 </arguments>
-<status status="PASS" endtime="20160925 23:23:21.953" starttime="20160925 23:23:21.953"></status>
+<status endtime="20160926 00:34:42.402" starttime="20160926 00:34:42.395" status="PASS"></status>
 </kw>
-<status status="PASS" endtime="20160925 23:23:21.953" starttime="20160925 23:23:21.891"></status>
+<status endtime="20160926 00:34:42.403" starttime="20160926 00:34:42.284" status="PASS"></status>
 </kw>
 <kw name="Count clients">
 <assign>
@@ -555,8 +555,8 @@
 <assign>
 <var>${clients}</var>
 </assign>
-<msg timestamp="20160925 23:23:21.969" level="INFO">${clients} = [bo.edu.ucbcba.videoclub.model.Client@cd7435e]</msg>
-<status status="PASS" endtime="20160925 23:23:21.969" starttime="20160925 23:23:21.953"></status>
+<msg level="INFO" timestamp="20160926 00:34:42.418">${clients} = [bo.edu.ucbcba.videoclub.model.Client@6d911985]</msg>
+<status endtime="20160926 00:34:42.420" starttime="20160926 00:34:42.408" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Get Length">
 <doc>Returns and logs the length of the given item as an integer.</doc>
@@ -566,12 +566,12 @@
 <assign>
 <var>${size}</var>
 </assign>
-<msg timestamp="20160925 23:23:21.969" level="INFO">Length is 1</msg>
-<msg timestamp="20160925 23:23:21.969" level="INFO">${size} = 1</msg>
-<status status="PASS" endtime="20160925 23:23:21.969" starttime="20160925 23:23:21.969"></status>
+<msg level="INFO" timestamp="20160926 00:34:42.425">Length is 1</msg>
+<msg level="INFO" timestamp="20160926 00:34:42.426">${size} = 1</msg>
+<status endtime="20160926 00:34:42.426" starttime="20160926 00:34:42.422" status="PASS"></status>
 </kw>
-<msg timestamp="20160925 23:23:21.985" level="INFO">${clients_new} = 1</msg>
-<status status="PASS" endtime="20160925 23:23:21.985" starttime="20160925 23:23:21.953"></status>
+<msg level="INFO" timestamp="20160926 00:34:42.428">${clients_new} = 1</msg>
+<status endtime="20160926 00:34:42.429" starttime="20160926 00:34:42.404" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Evaluate">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -581,8 +581,8 @@
 <assign>
 <var>${diff}</var>
 </assign>
-<msg timestamp="20160925 23:23:22.000" level="INFO">${diff} = 1</msg>
-<status status="PASS" endtime="20160925 23:23:22.000" starttime="20160925 23:23:21.985"></status>
+<msg level="INFO" timestamp="20160926 00:34:42.457">${diff} = 1</msg>
+<status endtime="20160926 00:34:42.458" starttime="20160926 00:34:42.431" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Should Be Equal As Integers">
 <doc>Fails if objects are unequal after converting them to integers.</doc>
@@ -590,14 +590,14 @@
 <arg>${diff}</arg>
 <arg>1</arg>
 </arguments>
-<msg timestamp="20160925 23:23:22.000" level="INFO">Argument types are:
+<msg level="INFO" timestamp="20160926 00:34:42.461">Argument types are:
 &lt;type 'int'&gt;
 &lt;type 'unicode'&gt;</msg>
-<status status="PASS" endtime="20160925 23:23:22.016" starttime="20160925 23:23:22.000"></status>
+<status endtime="20160926 00:34:42.464" starttime="20160926 00:34:42.459" status="PASS"></status>
 </kw>
-<status status="PASS" critical="yes" endtime="20160925 23:23:22.020" starttime="20160925 23:23:11.302"></status>
+<status critical="yes" endtime="20160926 00:34:42.466" starttime="20160926 00:34:38.214" status="PASS"></status>
 </test>
-<test id="s1-s1-t11" name="Creating client already exists should fail">
+<test name="Creating client already exists should fail" id="s1-s1-t11">
 <kw name="Create client duplicated">
 <arguments>
 <arg>111111114</arg>
@@ -607,7 +607,7 @@
 <arguments>
 <arg>${ci}</arg>
 </arguments>
-<status status="PASS" endtime="20160925 23:23:22.036" starttime="20160925 23:23:22.030"></status>
+<status endtime="20160926 00:34:42.487" starttime="20160926 00:34:42.483" status="PASS"></status>
 </kw>
 <kw library="client" name="Create">
 <arguments>
@@ -616,7 +616,7 @@
 <arg>hawking</arg>
 <arg>nowhere</arg>
 </arguments>
-<status status="PASS" endtime="20160925 23:23:22.047" starttime="20160925 23:23:22.038"></status>
+<status endtime="20160926 00:34:42.499" starttime="20160926 00:34:42.491" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Run Keyword And Expect Error">
 <doc>Runs the keyword and checks that the expected error occurred.</doc>
@@ -638,19 +638,19 @@
 <arg>hawking</arg>
 <arg>nowhere</arg>
 </arguments>
-<msg timestamp="20160925 23:23:22.092" level="FAIL">ValidationException: Validation error: Already exist a Client with CI: '111111114'</msg>
-<status status="FAIL" endtime="20160925 23:23:22.092" starttime="20160925 23:23:22.058"></status>
+<msg level="FAIL" timestamp="20160926 00:34:42.522">ValidationException: Validation error: Already exist a Client with CI: '111111114'</msg>
+<status endtime="20160926 00:34:42.523" starttime="20160926 00:34:42.505" status="FAIL"></status>
 </kw>
-<msg timestamp="20160925 23:23:22.092" level="INFO">${message} = ValidationException: Validation error: Already exist a Client with CI: '111111114'</msg>
-<status status="PASS" endtime="20160925 23:23:22.092" starttime="20160925 23:23:22.048"></status>
+<msg level="INFO" timestamp="20160926 00:34:42.525">${message} = ValidationException: Validation error: Already exist a Client with CI: '111111114'</msg>
+<status endtime="20160926 00:34:42.526" starttime="20160926 00:34:42.501" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Log">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${message}</arg>
 </arguments>
-<msg timestamp="20160925 23:23:22.092" level="INFO">ValidationException: Validation error: Already exist a Client with CI: '111111114'</msg>
-<status status="PASS" endtime="20160925 23:23:22.092" starttime="20160925 23:23:22.092"></status>
+<msg level="INFO" timestamp="20160926 00:34:42.532">ValidationException: Validation error: Already exist a Client with CI: '111111114'</msg>
+<status endtime="20160926 00:34:42.536" starttime="20160926 00:34:42.527" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Should Be Equal">
 <doc>Fails if the given objects are unequal.</doc>
@@ -658,13 +658,13 @@
 <arg>${message}</arg>
 <arg>ValidationException: Validation error: ${error} '${ci}'</arg>
 </arguments>
-<status status="PASS" endtime="20160925 23:23:22.108" starttime="20160925 23:23:22.092"></status>
+<status endtime="20160926 00:34:42.552" starttime="20160926 00:34:42.537" status="PASS"></status>
 </kw>
-<status status="PASS" endtime="20160925 23:23:22.108" starttime="20160925 23:23:22.026"></status>
+<status endtime="20160926 00:34:42.554" starttime="20160926 00:34:42.480" status="PASS"></status>
 </kw>
-<status status="PASS" critical="yes" endtime="20160925 23:23:22.108" starttime="20160925 23:23:22.023"></status>
+<status critical="yes" endtime="20160926 00:34:42.556" starttime="20160926 00:34:42.468" status="PASS"></status>
 </test>
-<test id="s1-s1-t12" name="Delete non existent client">
+<test name="Delete non existent client" id="s1-s1-t12">
 <kw library="client" name="Delete Client">
 <arguments>
 <arg>123</arg>
@@ -672,8 +672,8 @@
 <assign>
 <var>${response}</var>
 </assign>
-<msg timestamp="20160925 23:23:22.124" level="INFO">${response} = 2</msg>
-<status status="PASS" endtime="20160925 23:23:22.124" starttime="20160925 23:23:22.108"></status>
+<msg level="INFO" timestamp="20160926 00:34:42.568">${response} = 2</msg>
+<status endtime="20160926 00:34:42.569" starttime="20160926 00:34:42.564" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Should Be Equal As Integers">
 <doc>Fails if objects are unequal after converting them to integers.</doc>
@@ -681,14 +681,14 @@
 <arg>${response}</arg>
 <arg>2</arg>
 </arguments>
-<msg timestamp="20160925 23:23:22.124" level="INFO">Argument types are:
+<msg level="INFO" timestamp="20160926 00:34:42.572">Argument types are:
 &lt;type 'int'&gt;
 &lt;type 'unicode'&gt;</msg>
-<status status="PASS" endtime="20160925 23:23:22.124" starttime="20160925 23:23:22.124"></status>
+<status endtime="20160926 00:34:42.574" starttime="20160926 00:34:42.570" status="PASS"></status>
 </kw>
-<status status="PASS" critical="yes" endtime="20160925 23:23:22.124" starttime="20160925 23:23:22.108"></status>
+<status critical="yes" endtime="20160926 00:34:42.582" starttime="20160926 00:34:42.561" status="PASS"></status>
 </test>
-<test id="s1-s1-t13" name="Delete existent client">
+<test name="Delete existent client" id="s1-s1-t13">
 <kw name="Create client">
 <arguments>
 <arg>1299456746</arg>
@@ -706,16 +706,16 @@
 <assign>
 <var>${message}</var>
 </assign>
-<msg timestamp="20160925 23:23:22.139" level="INFO">${message} = None</msg>
-<status status="PASS" endtime="20160925 23:23:22.139" starttime="20160925 23:23:22.139"></status>
+<msg level="INFO" timestamp="20160926 00:34:42.602">${message} = None</msg>
+<status endtime="20160926 00:34:42.603" starttime="20160926 00:34:42.593" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Log">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${message}</arg>
 </arguments>
-<msg timestamp="20160925 23:23:22.139" level="INFO">None</msg>
-<status status="PASS" endtime="20160925 23:23:22.155" starttime="20160925 23:23:22.139"></status>
+<msg level="INFO" timestamp="20160926 00:34:42.606">None</msg>
+<status endtime="20160926 00:34:42.607" starttime="20160926 00:34:42.604" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Should Be Equal">
 <doc>Fails if the given objects are unequal.</doc>
@@ -723,9 +723,9 @@
 <arg>${message}</arg>
 <arg>${None}</arg>
 </arguments>
-<status status="PASS" endtime="20160925 23:23:22.155" starttime="20160925 23:23:22.155"></status>
+<status endtime="20160926 00:34:42.613" starttime="20160926 00:34:42.608" status="PASS"></status>
 </kw>
-<status status="PASS" endtime="20160925 23:23:22.155" starttime="20160925 23:23:22.139"></status>
+<status endtime="20160926 00:34:42.614" starttime="20160926 00:34:42.589" status="PASS"></status>
 </kw>
 <kw name="Count clients">
 <assign>
@@ -738,8 +738,8 @@
 <assign>
 <var>${clients}</var>
 </assign>
-<msg timestamp="20160925 23:23:22.171" level="INFO">${clients} = [bo.edu.ucbcba.videoclub.model.Client@78f15297, bo.edu.ucbcba.videoclub.model.Client@2d600046, bo.edu.ucbcba.videoclub.model.Client@79b20aef]</msg>
-<status status="PASS" endtime="20160925 23:23:22.171" starttime="20160925 23:23:22.155"></status>
+<msg level="INFO" timestamp="20160926 00:34:42.623">${clients} = [bo.edu.ucbcba.videoclub.model.Client@e8fb390, bo.edu.ucbcba.videoclub.model.Client@5cdf61d, bo.edu.ucbcba.videoclub.model.Client@4509414e]</msg>
+<status endtime="20160926 00:34:42.624" starttime="20160926 00:34:42.617" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Get Length">
 <doc>Returns and logs the length of the given item as an integer.</doc>
@@ -749,12 +749,12 @@
 <assign>
 <var>${size}</var>
 </assign>
-<msg timestamp="20160925 23:23:22.171" level="INFO">Length is 3</msg>
-<msg timestamp="20160925 23:23:22.171" level="INFO">${size} = 3</msg>
-<status status="PASS" endtime="20160925 23:23:22.171" starttime="20160925 23:23:22.171"></status>
+<msg level="INFO" timestamp="20160926 00:34:42.627">Length is 3</msg>
+<msg level="INFO" timestamp="20160926 00:34:42.629">${size} = 3</msg>
+<status endtime="20160926 00:34:42.630" starttime="20160926 00:34:42.625" status="PASS"></status>
 </kw>
-<msg timestamp="20160925 23:23:22.171" level="INFO">${clients} = 3</msg>
-<status status="PASS" endtime="20160925 23:23:22.171" starttime="20160925 23:23:22.155"></status>
+<msg level="INFO" timestamp="20160926 00:34:42.632">${clients} = 3</msg>
+<status endtime="20160926 00:34:42.633" starttime="20160926 00:34:42.615" status="PASS"></status>
 </kw>
 <kw library="client" name="Delete Client">
 <arguments>
@@ -763,8 +763,8 @@
 <assign>
 <var>${response}</var>
 </assign>
-<msg timestamp="20160925 23:23:22.202" level="INFO">${response} = 1</msg>
-<status status="PASS" endtime="20160925 23:23:22.202" starttime="20160925 23:23:22.171"></status>
+<msg level="INFO" timestamp="20160926 00:34:42.668">${response} = 1</msg>
+<status endtime="20160926 00:34:42.669" starttime="20160926 00:34:42.634" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Should Be Equal As Integers">
 <doc>Fails if objects are unequal after converting them to integers.</doc>
@@ -772,10 +772,10 @@
 <arg>${response}</arg>
 <arg>1</arg>
 </arguments>
-<msg timestamp="20160925 23:23:22.202" level="INFO">Argument types are:
+<msg level="INFO" timestamp="20160926 00:34:42.673">Argument types are:
 &lt;type 'int'&gt;
 &lt;type 'unicode'&gt;</msg>
-<status status="PASS" endtime="20160925 23:23:22.202" starttime="20160925 23:23:22.202"></status>
+<status endtime="20160926 00:34:42.675" starttime="20160926 00:34:42.670" status="PASS"></status>
 </kw>
 <kw name="Count clients">
 <assign>
@@ -788,8 +788,8 @@
 <assign>
 <var>${clients}</var>
 </assign>
-<msg timestamp="20160925 23:23:22.202" level="INFO">${clients} = [bo.edu.ucbcba.videoclub.model.Client@50736c69, bo.edu.ucbcba.videoclub.model.Client@49d28ac2]</msg>
-<status status="PASS" endtime="20160925 23:23:22.202" starttime="20160925 23:23:22.202"></status>
+<msg level="INFO" timestamp="20160926 00:34:42.685">${clients} = [bo.edu.ucbcba.videoclub.model.Client@66ce4b4, bo.edu.ucbcba.videoclub.model.Client@58df2864]</msg>
+<status endtime="20160926 00:34:42.687" starttime="20160926 00:34:42.679" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Get Length">
 <doc>Returns and logs the length of the given item as an integer.</doc>
@@ -799,12 +799,12 @@
 <assign>
 <var>${size}</var>
 </assign>
-<msg timestamp="20160925 23:23:22.217" level="INFO">Length is 2</msg>
-<msg timestamp="20160925 23:23:22.217" level="INFO">${size} = 2</msg>
-<status status="PASS" endtime="20160925 23:23:22.217" starttime="20160925 23:23:22.202"></status>
+<msg level="INFO" timestamp="20160926 00:34:42.692">Length is 2</msg>
+<msg level="INFO" timestamp="20160926 00:34:42.701">${size} = 2</msg>
+<status endtime="20160926 00:34:42.703" starttime="20160926 00:34:42.688" status="PASS"></status>
 </kw>
-<msg timestamp="20160925 23:23:22.217" level="INFO">${clients_new} = 2</msg>
-<status status="PASS" endtime="20160925 23:23:22.217" starttime="20160925 23:23:22.202"></status>
+<msg level="INFO" timestamp="20160926 00:34:42.711">${clients_new} = 2</msg>
+<status endtime="20160926 00:34:42.714" starttime="20160926 00:34:42.676" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Evaluate">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -814,8 +814,8 @@
 <assign>
 <var>${diff}</var>
 </assign>
-<msg timestamp="20160925 23:23:22.233" level="INFO">${diff} = -1</msg>
-<status status="PASS" endtime="20160925 23:23:22.233" starttime="20160925 23:23:22.217"></status>
+<msg level="INFO" timestamp="20160926 00:34:42.730">${diff} = -1</msg>
+<status endtime="20160926 00:34:42.732" starttime="20160926 00:34:42.715" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Should Be Equal As Integers">
 <doc>Fails if objects are unequal after converting them to integers.</doc>
@@ -823,14 +823,14 @@
 <arg>${diff}</arg>
 <arg>-1</arg>
 </arguments>
-<msg timestamp="20160925 23:23:22.233" level="INFO">Argument types are:
+<msg level="INFO" timestamp="20160926 00:34:42.735">Argument types are:
 &lt;type 'int'&gt;
 &lt;type 'unicode'&gt;</msg>
-<status status="PASS" endtime="20160925 23:23:22.233" starttime="20160925 23:23:22.233"></status>
+<status endtime="20160926 00:34:42.737" starttime="20160926 00:34:42.733" status="PASS"></status>
 </kw>
-<status status="PASS" critical="yes" endtime="20160925 23:23:22.233" starttime="20160925 23:23:22.124"></status>
+<status critical="yes" endtime="20160926 00:34:42.745" starttime="20160926 00:34:42.585" status="PASS"></status>
 </test>
-<test id="s1-s1-t14" name="Creating company with invalid name should fail">
+<test name="Creating company with invalid name should fail" id="s1-s1-t14">
 <kw name="Create company with invalid name">
 <arguments>
 <arg>hawkingsnowrickrobotclarkkenthor</arg>
@@ -852,19 +852,19 @@
 <arg>${name}</arg>
 <arg>bolivia</arg>
 </arguments>
-<msg timestamp="20160925 23:23:22.264" level="FAIL">ValidationException: Validation error: Name is too long, must have less than 25 characters</msg>
-<status status="FAIL" endtime="20160925 23:23:22.264" starttime="20160925 23:23:22.249"></status>
+<msg level="FAIL" timestamp="20160926 00:34:42.793">ValidationException: Validation error: Name is too long, must have less than 25 characters</msg>
+<status endtime="20160926 00:34:42.794" starttime="20160926 00:34:42.769" status="FAIL"></status>
 </kw>
-<msg timestamp="20160925 23:23:22.264" level="INFO">${message} = ValidationException: Validation error: Name is too long, must have less than 25 characters</msg>
-<status status="PASS" endtime="20160925 23:23:22.264" starttime="20160925 23:23:22.249"></status>
+<msg level="INFO" timestamp="20160926 00:34:42.796">${message} = ValidationException: Validation error: Name is too long, must have less than 25 characters</msg>
+<status endtime="20160926 00:34:42.797" starttime="20160926 00:34:42.766" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Log">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${message}</arg>
 </arguments>
-<msg timestamp="20160925 23:23:22.264" level="INFO">ValidationException: Validation error: Name is too long, must have less than 25 characters</msg>
-<status status="PASS" endtime="20160925 23:23:22.264" starttime="20160925 23:23:22.264"></status>
+<msg level="INFO" timestamp="20160926 00:34:42.805">ValidationException: Validation error: Name is too long, must have less than 25 characters</msg>
+<status endtime="20160926 00:34:42.807" starttime="20160926 00:34:42.801" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Should Be Equal">
 <doc>Fails if the given objects are unequal.</doc>
@@ -872,13 +872,13 @@
 <arg>${message}</arg>
 <arg>ValidationException: Validation error: ${error}</arg>
 </arguments>
-<status status="PASS" endtime="20160925 23:23:22.280" starttime="20160925 23:23:22.264"></status>
+<status endtime="20160926 00:34:42.814" starttime="20160926 00:34:42.809" status="PASS"></status>
 </kw>
-<status status="PASS" endtime="20160925 23:23:22.280" starttime="20160925 23:23:22.233"></status>
+<status endtime="20160926 00:34:42.818" starttime="20160926 00:34:42.755" status="PASS"></status>
 </kw>
-<status status="PASS" critical="yes" endtime="20160925 23:23:22.280" starttime="20160925 23:23:22.233"></status>
+<status critical="yes" endtime="20160926 00:34:42.819" starttime="20160926 00:34:42.750" status="PASS"></status>
 </test>
-<test id="s1-s1-t15" name="Creating company with invalid country should fail">
+<test name="Creating company with invalid country should fail" id="s1-s1-t15">
 <kw name="Create company with invalid country">
 <arguments>
 <arg>hawkingsnowrickrobotclarkkenthor</arg>
@@ -900,19 +900,19 @@
 <arg>detodo.com</arg>
 <arg>${country}</arg>
 </arguments>
-<msg timestamp="20160925 23:23:22.311" level="FAIL">ValidationException: Validation error: Country is too long, must have less than 25 characters</msg>
-<status status="FAIL" endtime="20160925 23:23:22.311" starttime="20160925 23:23:22.296"></status>
+<msg level="FAIL" timestamp="20160926 00:34:42.879">ValidationException: Validation error: Country is too long, must have less than 25 characters</msg>
+<status endtime="20160926 00:34:42.881" starttime="20160926 00:34:42.850" status="FAIL"></status>
 </kw>
-<msg timestamp="20160925 23:23:22.311" level="INFO">${message} = ValidationException: Validation error: Country is too long, must have less than 25 characters</msg>
-<status status="PASS" endtime="20160925 23:23:22.311" starttime="20160925 23:23:22.280"></status>
+<msg level="INFO" timestamp="20160926 00:34:42.882">${message} = ValidationException: Validation error: Country is too long, must have less than 25 characters</msg>
+<status endtime="20160926 00:34:42.883" starttime="20160926 00:34:42.846" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Log">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${message}</arg>
 </arguments>
-<msg timestamp="20160925 23:23:22.311" level="INFO">ValidationException: Validation error: Country is too long, must have less than 25 characters</msg>
-<status status="PASS" endtime="20160925 23:23:22.311" starttime="20160925 23:23:22.311"></status>
+<msg level="INFO" timestamp="20160926 00:34:42.886">ValidationException: Validation error: Country is too long, must have less than 25 characters</msg>
+<status endtime="20160926 00:34:42.888" starttime="20160926 00:34:42.885" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Should Be Equal">
 <doc>Fails if the given objects are unequal.</doc>
@@ -920,13 +920,13 @@
 <arg>${message}</arg>
 <arg>ValidationException: Validation error: ${error}</arg>
 </arguments>
-<status status="PASS" endtime="20160925 23:23:22.311" starttime="20160925 23:23:22.311"></status>
+<status endtime="20160926 00:34:42.897" starttime="20160926 00:34:42.889" status="PASS"></status>
 </kw>
-<status status="PASS" endtime="20160925 23:23:22.327" starttime="20160925 23:23:22.280"></status>
+<status endtime="20160926 00:34:42.898" starttime="20160926 00:34:42.840" status="PASS"></status>
 </kw>
-<status status="PASS" critical="yes" endtime="20160925 23:23:22.327" starttime="20160925 23:23:22.280"></status>
+<status critical="yes" endtime="20160926 00:34:42.900" starttime="20160926 00:34:42.824" status="PASS"></status>
 </test>
-<test id="s1-s1-t16" name="Creating company with blank first name should fail">
+<test name="Creating company with blank first name should fail" id="s1-s1-t16">
 <kw name="Create company with invalid name">
 <arguments>
 <arg>${BLANK COMPANY}</arg>
@@ -948,19 +948,19 @@
 <arg>${name}</arg>
 <arg>bolivia</arg>
 </arguments>
-<msg timestamp="20160925 23:23:22.358" level="FAIL">ValidationException: Validation error: Name can't be blank</msg>
-<status status="FAIL" endtime="20160925 23:23:22.358" starttime="20160925 23:23:22.327"></status>
+<msg level="FAIL" timestamp="20160926 00:34:42.936">ValidationException: Validation error: Name can't be blank</msg>
+<status endtime="20160926 00:34:42.937" starttime="20160926 00:34:42.918" status="FAIL"></status>
 </kw>
-<msg timestamp="20160925 23:23:22.358" level="INFO">${message} = ValidationException: Validation error: Name can't be blank</msg>
-<status status="PASS" endtime="20160925 23:23:22.358" starttime="20160925 23:23:22.327"></status>
+<msg level="INFO" timestamp="20160926 00:34:42.939">${message} = ValidationException: Validation error: Name can't be blank</msg>
+<status endtime="20160926 00:34:42.939" starttime="20160926 00:34:42.915" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Log">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${message}</arg>
 </arguments>
-<msg timestamp="20160925 23:23:22.358" level="INFO">ValidationException: Validation error: Name can't be blank</msg>
-<status status="PASS" endtime="20160925 23:23:22.358" starttime="20160925 23:23:22.358"></status>
+<msg level="INFO" timestamp="20160926 00:34:42.955">ValidationException: Validation error: Name can't be blank</msg>
+<status endtime="20160926 00:34:42.967" starttime="20160926 00:34:42.947" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Should Be Equal">
 <doc>Fails if the given objects are unequal.</doc>
@@ -968,13 +968,13 @@
 <arg>${message}</arg>
 <arg>ValidationException: Validation error: ${error}</arg>
 </arguments>
-<status status="PASS" endtime="20160925 23:23:22.374" starttime="20160925 23:23:22.358"></status>
+<status endtime="20160926 00:34:42.983" starttime="20160926 00:34:42.968" status="PASS"></status>
 </kw>
-<status status="PASS" endtime="20160925 23:23:22.374" starttime="20160925 23:23:22.327"></status>
+<status endtime="20160926 00:34:42.984" starttime="20160926 00:34:42.910" status="PASS"></status>
 </kw>
-<status status="PASS" critical="yes" endtime="20160925 23:23:22.374" starttime="20160925 23:23:22.327"></status>
+<status critical="yes" endtime="20160926 00:34:42.985" starttime="20160926 00:34:42.905" status="PASS"></status>
 </test>
-<test id="s1-s1-t17" name="Creating company already exist should fail">
+<test name="Creating company already exist should fail" id="s1-s1-t17">
 <kw name="Create company already exist">
 <arguments>
 <arg>detodo</arg>
@@ -985,7 +985,7 @@
 <arg>${name}</arg>
 <arg>${country}</arg>
 </arguments>
-<status status="PASS" endtime="20160925 23:23:22.421" starttime="20160925 23:23:22.374"></status>
+<status endtime="20160926 00:34:43.117" starttime="20160926 00:34:42.994" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Run Keyword And Expect Error">
 <doc>Runs the keyword and checks that the expected error occurred.</doc>
@@ -1003,19 +1003,19 @@
 <arg>${name}</arg>
 <arg>${country}</arg>
 </arguments>
-<msg timestamp="20160925 23:23:22.452" level="FAIL">ValidationException: Validation error: Company already exists</msg>
-<status status="FAIL" endtime="20160925 23:23:22.452" starttime="20160925 23:23:22.421"></status>
+<msg level="FAIL" timestamp="20160926 00:34:43.140">ValidationException: Validation error: Company already exists</msg>
+<status endtime="20160926 00:34:43.142" starttime="20160926 00:34:43.121" status="FAIL"></status>
 </kw>
-<msg timestamp="20160925 23:23:22.452" level="INFO">${message} = ValidationException: Validation error: Company already exists</msg>
-<status status="PASS" endtime="20160925 23:23:22.452" starttime="20160925 23:23:22.421"></status>
+<msg level="INFO" timestamp="20160926 00:34:43.143">${message} = ValidationException: Validation error: Company already exists</msg>
+<status endtime="20160926 00:34:43.143" starttime="20160926 00:34:43.118" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Log">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${message}</arg>
 </arguments>
-<msg timestamp="20160925 23:23:22.452" level="INFO">ValidationException: Validation error: Company already exists</msg>
-<status status="PASS" endtime="20160925 23:23:22.452" starttime="20160925 23:23:22.452"></status>
+<msg level="INFO" timestamp="20160926 00:34:43.145">ValidationException: Validation error: Company already exists</msg>
+<status endtime="20160926 00:34:43.146" starttime="20160926 00:34:43.144" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Should Be Equal">
 <doc>Fails if the given objects are unequal.</doc>
@@ -1023,13 +1023,13 @@
 <arg>${message}</arg>
 <arg>ValidationException: Validation error: ${ALREADY COMPANY}</arg>
 </arguments>
-<status status="PASS" endtime="20160925 23:23:22.467" starttime="20160925 23:23:22.467"></status>
+<status endtime="20160926 00:34:43.149" starttime="20160926 00:34:43.146" status="PASS"></status>
 </kw>
-<status status="PASS" endtime="20160925 23:23:22.467" starttime="20160925 23:23:22.374"></status>
+<status endtime="20160926 00:34:43.150" starttime="20160926 00:34:42.991" status="PASS"></status>
 </kw>
-<status status="PASS" critical="yes" endtime="20160925 23:23:22.467" starttime="20160925 23:23:22.374"></status>
+<status critical="yes" endtime="20160926 00:34:43.151" starttime="20160926 00:34:42.987" status="PASS"></status>
 </test>
-<test id="s1-s1-t18" name="Creating user with invalid username should fail">
+<test name="Creating user with invalid username should fail" id="s1-s1-t18">
 <kw name="Create user with invalid username">
 <arguments>
 <arg>hawkingsnowrickrobotclarkkenthor</arg>
@@ -1042,7 +1042,7 @@
 <arg>user.create</arg>
 <arg>${name}</arg>
 <arg>abc123456</arg>
-<arg>1</arg>
+<arg>2</arg>
 </arguments>
 <assign>
 <var>${message}</var>
@@ -1051,21 +1051,21 @@
 <arguments>
 <arg>${name}</arg>
 <arg>abc123456</arg>
-<arg>1</arg>
+<arg>2</arg>
 </arguments>
-<msg timestamp="20160925 23:23:22.499" level="FAIL">ValidationException: Validation error: Username is too long, must have less than 10 characters</msg>
-<status status="FAIL" endtime="20160925 23:23:22.499" starttime="20160925 23:23:22.483"></status>
+<msg level="FAIL" timestamp="20160926 00:34:43.175">ValidationException: Validation error: Username is too long, must have less than 10 characters</msg>
+<status endtime="20160926 00:34:43.175" starttime="20160926 00:34:43.162" status="FAIL"></status>
 </kw>
-<msg timestamp="20160925 23:23:22.499" level="INFO">${message} = ValidationException: Validation error: Username is too long, must have less than 10 characters</msg>
-<status status="PASS" endtime="20160925 23:23:22.499" starttime="20160925 23:23:22.483"></status>
+<msg level="INFO" timestamp="20160926 00:34:43.176">${message} = ValidationException: Validation error: Username is too long, must have less than 10 characters</msg>
+<status endtime="20160926 00:34:43.177" starttime="20160926 00:34:43.160" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Log">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${message}</arg>
 </arguments>
-<msg timestamp="20160925 23:23:22.514" level="INFO">ValidationException: Validation error: Username is too long, must have less than 10 characters</msg>
-<status status="PASS" endtime="20160925 23:23:22.514" starttime="20160925 23:23:22.499"></status>
+<msg level="INFO" timestamp="20160926 00:34:43.179">ValidationException: Validation error: Username is too long, must have less than 10 characters</msg>
+<status endtime="20160926 00:34:43.180" starttime="20160926 00:34:43.178" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Should Be Equal">
 <doc>Fails if the given objects are unequal.</doc>
@@ -1073,9 +1073,9 @@
 <arg>${message}</arg>
 <arg>ValidationException: Validation error: ${error}</arg>
 </arguments>
-<status status="PASS" endtime="20160925 23:23:22.514" starttime="20160925 23:23:22.514"></status>
+<status endtime="20160926 00:34:43.184" starttime="20160926 00:34:43.181" status="PASS"></status>
 </kw>
-<status status="PASS" endtime="20160925 23:23:22.514" starttime="20160925 23:23:22.467"></status>
+<status endtime="20160926 00:34:43.185" starttime="20160926 00:34:43.155" status="PASS"></status>
 </kw>
 <kw name="Create user with invalid username">
 <arguments>
@@ -1089,7 +1089,7 @@
 <arg>user.create</arg>
 <arg>${name}</arg>
 <arg>abc123456</arg>
-<arg>1</arg>
+<arg>2</arg>
 </arguments>
 <assign>
 <var>${message}</var>
@@ -1098,21 +1098,21 @@
 <arguments>
 <arg>${name}</arg>
 <arg>abc123456</arg>
-<arg>1</arg>
+<arg>2</arg>
 </arguments>
-<msg timestamp="20160925 23:23:22.530" level="FAIL">ValidationException: Validation error: Username is too short, must have more than 4 characters</msg>
-<status status="FAIL" endtime="20160925 23:23:22.530" starttime="20160925 23:23:22.514"></status>
+<msg level="FAIL" timestamp="20160926 00:34:43.204">ValidationException: Validation error: Username is too short, must have more than 4 characters</msg>
+<status endtime="20160926 00:34:43.205" starttime="20160926 00:34:43.193" status="FAIL"></status>
 </kw>
-<msg timestamp="20160925 23:23:22.530" level="INFO">${message} = ValidationException: Validation error: Username is too short, must have more than 4 characters</msg>
-<status status="PASS" endtime="20160925 23:23:22.546" starttime="20160925 23:23:22.514"></status>
+<msg level="INFO" timestamp="20160926 00:34:43.206">${message} = ValidationException: Validation error: Username is too short, must have more than 4 characters</msg>
+<status endtime="20160926 00:34:43.207" starttime="20160926 00:34:43.190" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Log">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${message}</arg>
 </arguments>
-<msg timestamp="20160925 23:23:22.546" level="INFO">ValidationException: Validation error: Username is too short, must have more than 4 characters</msg>
-<status status="PASS" endtime="20160925 23:23:22.546" starttime="20160925 23:23:22.546"></status>
+<msg level="INFO" timestamp="20160926 00:34:43.210">ValidationException: Validation error: Username is too short, must have more than 4 characters</msg>
+<status endtime="20160926 00:34:43.211" starttime="20160926 00:34:43.208" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Should Be Equal">
 <doc>Fails if the given objects are unequal.</doc>
@@ -1120,9 +1120,9 @@
 <arg>${message}</arg>
 <arg>ValidationException: Validation error: ${error}</arg>
 </arguments>
-<status status="PASS" endtime="20160925 23:23:22.546" starttime="20160925 23:23:22.546"></status>
+<status endtime="20160926 00:34:43.214" starttime="20160926 00:34:43.211" status="PASS"></status>
 </kw>
-<status status="PASS" endtime="20160925 23:23:22.546" starttime="20160925 23:23:22.514"></status>
+<status endtime="20160926 00:34:43.215" starttime="20160926 00:34:43.186" status="PASS"></status>
 </kw>
 <kw name="Create user with invalid username">
 <arguments>
@@ -1136,7 +1136,7 @@
 <arg>user.create</arg>
 <arg>${name}</arg>
 <arg>abc123456</arg>
-<arg>1</arg>
+<arg>2</arg>
 </arguments>
 <assign>
 <var>${message}</var>
@@ -1145,21 +1145,21 @@
 <arguments>
 <arg>${name}</arg>
 <arg>abc123456</arg>
-<arg>1</arg>
+<arg>2</arg>
 </arguments>
-<msg timestamp="20160925 23:23:22.577" level="FAIL">ValidationException: Validation error: Username can't be only a number, must have letters</msg>
-<status status="FAIL" endtime="20160925 23:23:22.577" starttime="20160925 23:23:22.561"></status>
+<msg level="FAIL" timestamp="20160926 00:34:43.226">ValidationException: Validation error: Username can't be only a number, must have letters</msg>
+<status endtime="20160926 00:34:43.227" starttime="20160926 00:34:43.218" status="FAIL"></status>
 </kw>
-<msg timestamp="20160925 23:23:22.592" level="INFO">${message} = ValidationException: Validation error: Username can't be only a number, must have letters</msg>
-<status status="PASS" endtime="20160925 23:23:22.592" starttime="20160925 23:23:22.561"></status>
+<msg level="INFO" timestamp="20160926 00:34:43.228">${message} = ValidationException: Validation error: Username can't be only a number, must have letters</msg>
+<status endtime="20160926 00:34:43.229" starttime="20160926 00:34:43.217" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Log">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${message}</arg>
 </arguments>
-<msg timestamp="20160925 23:23:22.592" level="INFO">ValidationException: Validation error: Username can't be only a number, must have letters</msg>
-<status status="PASS" endtime="20160925 23:23:22.592" starttime="20160925 23:23:22.592"></status>
+<msg level="INFO" timestamp="20160926 00:34:43.231">ValidationException: Validation error: Username can't be only a number, must have letters</msg>
+<status endtime="20160926 00:34:43.232" starttime="20160926 00:34:43.229" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Should Be Equal">
 <doc>Fails if the given objects are unequal.</doc>
@@ -1167,9 +1167,9 @@
 <arg>${message}</arg>
 <arg>ValidationException: Validation error: ${error}</arg>
 </arguments>
-<status status="PASS" endtime="20160925 23:23:22.592" starttime="20160925 23:23:22.592"></status>
+<status endtime="20160926 00:34:43.236" starttime="20160926 00:34:43.233" status="PASS"></status>
 </kw>
-<status status="PASS" endtime="20160925 23:23:22.592" starttime="20160925 23:23:22.546"></status>
+<status endtime="20160926 00:34:43.237" starttime="20160926 00:34:43.215" status="PASS"></status>
 </kw>
 <kw name="Create user with invalid username">
 <arguments>
@@ -1183,7 +1183,7 @@
 <arg>user.create</arg>
 <arg>${name}</arg>
 <arg>abc123456</arg>
-<arg>1</arg>
+<arg>2</arg>
 </arguments>
 <assign>
 <var>${message}</var>
@@ -1192,21 +1192,21 @@
 <arguments>
 <arg>${name}</arg>
 <arg>abc123456</arg>
-<arg>1</arg>
+<arg>2</arg>
 </arguments>
-<msg timestamp="20160925 23:23:22.624" level="FAIL">ValidationException: Validation error: Username can't be blank</msg>
-<status status="FAIL" endtime="20160925 23:23:22.624" starttime="20160925 23:23:22.608"></status>
+<msg level="FAIL" timestamp="20160926 00:34:43.250">ValidationException: Validation error: Username can't be blank</msg>
+<status endtime="20160926 00:34:43.252" starttime="20160926 00:34:43.244" status="FAIL"></status>
 </kw>
-<msg timestamp="20160925 23:23:22.624" level="INFO">${message} = ValidationException: Validation error: Username can't be blank</msg>
-<status status="PASS" endtime="20160925 23:23:22.624" starttime="20160925 23:23:22.608"></status>
+<msg level="INFO" timestamp="20160926 00:34:43.253">${message} = ValidationException: Validation error: Username can't be blank</msg>
+<status endtime="20160926 00:34:43.254" starttime="20160926 00:34:43.241" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Log">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${message}</arg>
 </arguments>
-<msg timestamp="20160925 23:23:22.639" level="INFO">ValidationException: Validation error: Username can't be blank</msg>
-<status status="PASS" endtime="20160925 23:23:22.639" starttime="20160925 23:23:22.624"></status>
+<msg level="INFO" timestamp="20160926 00:34:43.255">ValidationException: Validation error: Username can't be blank</msg>
+<status endtime="20160926 00:34:43.256" starttime="20160926 00:34:43.254" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Should Be Equal">
 <doc>Fails if the given objects are unequal.</doc>
@@ -1214,13 +1214,13 @@
 <arg>${message}</arg>
 <arg>ValidationException: Validation error: ${error}</arg>
 </arguments>
-<status status="PASS" endtime="20160925 23:23:22.639" starttime="20160925 23:23:22.639"></status>
+<status endtime="20160926 00:34:43.261" starttime="20160926 00:34:43.257" status="PASS"></status>
 </kw>
-<status status="PASS" endtime="20160925 23:23:22.639" starttime="20160925 23:23:22.592"></status>
+<status endtime="20160926 00:34:43.262" starttime="20160926 00:34:43.238" status="PASS"></status>
 </kw>
-<status status="PASS" critical="yes" endtime="20160925 23:23:22.639" starttime="20160925 23:23:22.467"></status>
+<status critical="yes" endtime="20160926 00:34:43.263" starttime="20160926 00:34:43.153" status="PASS"></status>
 </test>
-<test id="s1-s1-t19" name="Creating user with invalid password should fail">
+<test name="Creating user with invalid password should fail" id="s1-s1-t19">
 <kw name="Create user with invalid password">
 <arguments>
 <arg>hawkingsnowrickrobotclarkkenthor</arg>
@@ -1233,7 +1233,7 @@
 <arg>user.create</arg>
 <arg>jd123ab</arg>
 <arg>${password}</arg>
-<arg>1</arg>
+<arg>2</arg>
 </arguments>
 <assign>
 <var>${message}</var>
@@ -1242,21 +1242,21 @@
 <arguments>
 <arg>jd123ab</arg>
 <arg>${password}</arg>
-<arg>1</arg>
+<arg>2</arg>
 </arguments>
-<msg timestamp="20160925 23:23:22.671" level="FAIL">ValidationException: Validation error: Password is too long, must have less than 25 characters</msg>
-<status status="FAIL" endtime="20160925 23:23:22.671" starttime="20160925 23:23:22.655"></status>
+<msg level="FAIL" timestamp="20160926 00:34:43.286">ValidationException: Validation error: Password is too long, must have less than 25 characters</msg>
+<status endtime="20160926 00:34:43.288" starttime="20160926 00:34:43.272" status="FAIL"></status>
 </kw>
-<msg timestamp="20160925 23:23:22.671" level="INFO">${message} = ValidationException: Validation error: Password is too long, must have less than 25 characters</msg>
-<status status="PASS" endtime="20160925 23:23:22.671" starttime="20160925 23:23:22.655"></status>
+<msg level="INFO" timestamp="20160926 00:34:43.289">${message} = ValidationException: Validation error: Password is too long, must have less than 25 characters</msg>
+<status endtime="20160926 00:34:43.290" starttime="20160926 00:34:43.269" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Log">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${message}</arg>
 </arguments>
-<msg timestamp="20160925 23:23:22.671" level="INFO">ValidationException: Validation error: Password is too long, must have less than 25 characters</msg>
-<status status="PASS" endtime="20160925 23:23:22.671" starttime="20160925 23:23:22.671"></status>
+<msg level="INFO" timestamp="20160926 00:34:43.293">ValidationException: Validation error: Password is too long, must have less than 25 characters</msg>
+<status endtime="20160926 00:34:43.294" starttime="20160926 00:34:43.291" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Should Be Equal">
 <doc>Fails if the given objects are unequal.</doc>
@@ -1264,9 +1264,9 @@
 <arg>${message}</arg>
 <arg>ValidationException: Validation error: ${error}</arg>
 </arguments>
-<status status="PASS" endtime="20160925 23:23:22.671" starttime="20160925 23:23:22.671"></status>
+<status endtime="20160926 00:34:43.297" starttime="20160926 00:34:43.295" status="PASS"></status>
 </kw>
-<status status="PASS" endtime="20160925 23:23:22.671" starttime="20160925 23:23:22.639"></status>
+<status endtime="20160926 00:34:43.298" starttime="20160926 00:34:43.266" status="PASS"></status>
 </kw>
 <kw name="Create user with invalid password">
 <arguments>
@@ -1280,7 +1280,7 @@
 <arg>user.create</arg>
 <arg>jd123ab</arg>
 <arg>${password}</arg>
-<arg>1</arg>
+<arg>2</arg>
 </arguments>
 <assign>
 <var>${message}</var>
@@ -1289,21 +1289,21 @@
 <arguments>
 <arg>jd123ab</arg>
 <arg>${password}</arg>
-<arg>1</arg>
+<arg>2</arg>
 </arguments>
-<msg timestamp="20160925 23:23:22.702" level="FAIL">ValidationException: Validation error: Password is too short, must have more than 6 characters</msg>
-<status status="FAIL" endtime="20160925 23:23:22.702" starttime="20160925 23:23:22.686"></status>
+<msg level="FAIL" timestamp="20160926 00:34:43.313">ValidationException: Validation error: Password is too short, must have more than 6 characters</msg>
+<status endtime="20160926 00:34:43.315" starttime="20160926 00:34:43.304" status="FAIL"></status>
 </kw>
-<msg timestamp="20160925 23:23:22.702" level="INFO">${message} = ValidationException: Validation error: Password is too short, must have more than 6 characters</msg>
-<status status="PASS" endtime="20160925 23:23:22.702" starttime="20160925 23:23:22.686"></status>
+<msg level="INFO" timestamp="20160926 00:34:43.317">${message} = ValidationException: Validation error: Password is too short, must have more than 6 characters</msg>
+<status endtime="20160926 00:34:43.317" starttime="20160926 00:34:43.302" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Log">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${message}</arg>
 </arguments>
-<msg timestamp="20160925 23:23:22.702" level="INFO">ValidationException: Validation error: Password is too short, must have more than 6 characters</msg>
-<status status="PASS" endtime="20160925 23:23:22.702" starttime="20160925 23:23:22.702"></status>
+<msg level="INFO" timestamp="20160926 00:34:43.320">ValidationException: Validation error: Password is too short, must have more than 6 characters</msg>
+<status endtime="20160926 00:34:43.325" starttime="20160926 00:34:43.317" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Should Be Equal">
 <doc>Fails if the given objects are unequal.</doc>
@@ -1311,9 +1311,9 @@
 <arg>${message}</arg>
 <arg>ValidationException: Validation error: ${error}</arg>
 </arguments>
-<status status="PASS" endtime="20160925 23:23:22.717" starttime="20160925 23:23:22.702"></status>
+<status endtime="20160926 00:34:43.328" starttime="20160926 00:34:43.326" status="PASS"></status>
 </kw>
-<status status="PASS" endtime="20160925 23:23:22.717" starttime="20160925 23:23:22.686"></status>
+<status endtime="20160926 00:34:43.328" starttime="20160926 00:34:43.299" status="PASS"></status>
 </kw>
 <kw name="Create user with invalid password">
 <arguments>
@@ -1327,7 +1327,7 @@
 <arg>user.create</arg>
 <arg>jd123ab</arg>
 <arg>${password}</arg>
-<arg>1</arg>
+<arg>2</arg>
 </arguments>
 <assign>
 <var>${message}</var>
@@ -1336,21 +1336,21 @@
 <arguments>
 <arg>jd123ab</arg>
 <arg>${password}</arg>
-<arg>1</arg>
+<arg>2</arg>
 </arguments>
-<msg timestamp="20160925 23:23:22.733" level="FAIL">ValidationException: Validation error: Password can't be only a number, must have letters</msg>
-<status status="FAIL" endtime="20160925 23:23:22.733" starttime="20160925 23:23:22.717"></status>
+<msg level="FAIL" timestamp="20160926 00:34:43.345">ValidationException: Validation error: Password can't be only a number, must have letters</msg>
+<status endtime="20160926 00:34:43.356" starttime="20160926 00:34:43.333" status="FAIL"></status>
 </kw>
-<msg timestamp="20160925 23:23:22.733" level="INFO">${message} = ValidationException: Validation error: Password can't be only a number, must have letters</msg>
-<status status="PASS" endtime="20160925 23:23:22.733" starttime="20160925 23:23:22.717"></status>
+<msg level="INFO" timestamp="20160926 00:34:43.359">${message} = ValidationException: Validation error: Password can't be only a number, must have letters</msg>
+<status endtime="20160926 00:34:43.359" starttime="20160926 00:34:43.331" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Log">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${message}</arg>
 </arguments>
-<msg timestamp="20160925 23:23:22.749" level="INFO">ValidationException: Validation error: Password can't be only a number, must have letters</msg>
-<status status="PASS" endtime="20160925 23:23:22.749" starttime="20160925 23:23:22.749"></status>
+<msg level="INFO" timestamp="20160926 00:34:43.363">ValidationException: Validation error: Password can't be only a number, must have letters</msg>
+<status endtime="20160926 00:34:43.365" starttime="20160926 00:34:43.360" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Should Be Equal">
 <doc>Fails if the given objects are unequal.</doc>
@@ -1358,13 +1358,13 @@
 <arg>${message}</arg>
 <arg>ValidationException: Validation error: ${error}</arg>
 </arguments>
-<status status="PASS" endtime="20160925 23:23:22.749" starttime="20160925 23:23:22.749"></status>
+<status endtime="20160926 00:34:43.380" starttime="20160926 00:34:43.366" status="PASS"></status>
 </kw>
-<status status="PASS" endtime="20160925 23:23:22.749" starttime="20160925 23:23:22.717"></status>
+<status endtime="20160926 00:34:43.382" starttime="20160926 00:34:43.329" status="PASS"></status>
 </kw>
 <kw name="Create user with invalid password">
 <arguments>
-<arg>helloworl</arg>
+<arg>helloworld</arg>
 <arg>${USER PASSWORD ONLY LETTERS}</arg>
 </arguments>
 <kw library="BuiltIn" name="Run Keyword And Expect Error">
@@ -1374,7 +1374,7 @@
 <arg>user.create</arg>
 <arg>jd123ab</arg>
 <arg>${password}</arg>
-<arg>1</arg>
+<arg>2</arg>
 </arguments>
 <assign>
 <var>${message}</var>
@@ -1383,14 +1383,31 @@
 <arguments>
 <arg>jd123ab</arg>
 <arg>${password}</arg>
-<arg>1</arg>
+<arg>2</arg>
 </arguments>
-<status status="PASS" endtime="20160925 23:23:22.811" starttime="20160925 23:23:22.764"></status>
+<msg level="FAIL" timestamp="20160926 00:34:43.407">ValidationException: Validation error: Password can't be only a letters, must have numbers</msg>
+<status endtime="20160926 00:34:43.410" starttime="20160926 00:34:43.389" status="FAIL"></status>
 </kw>
-<msg timestamp="20160925 23:23:22.811" level="FAIL">Expected error '*' did not occur.</msg>
-<status status="FAIL" endtime="20160925 23:23:22.811" starttime="20160925 23:23:22.764"></status>
+<msg level="INFO" timestamp="20160926 00:34:43.412">${message} = ValidationException: Validation error: Password can't be only a letters, must have numbers</msg>
+<status endtime="20160926 00:34:43.415" starttime="20160926 00:34:43.387" status="PASS"></status>
 </kw>
-<status status="FAIL" endtime="20160925 23:23:22.827" starttime="20160925 23:23:22.749"></status>
+<kw library="BuiltIn" name="Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${message}</arg>
+</arguments>
+<msg level="INFO" timestamp="20160926 00:34:43.420">ValidationException: Validation error: Password can't be only a letters, must have numbers</msg>
+<status endtime="20160926 00:34:43.429" starttime="20160926 00:34:43.416" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Should Be Equal">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${message}</arg>
+<arg>ValidationException: Validation error: ${error}</arg>
+</arguments>
+<status endtime="20160926 00:34:43.440" starttime="20160926 00:34:43.431" status="PASS"></status>
+</kw>
+<status endtime="20160926 00:34:43.449" starttime="20160926 00:34:43.383" status="PASS"></status>
 </kw>
 <kw name="Create user with invalid password">
 <arguments>
@@ -1404,7 +1421,7 @@
 <arg>user.create</arg>
 <arg>jd123ab</arg>
 <arg>${password}</arg>
-<arg>1</arg>
+<arg>2</arg>
 </arguments>
 <assign>
 <var>${message}</var>
@@ -1413,21 +1430,21 @@
 <arguments>
 <arg>jd123ab</arg>
 <arg>${password}</arg>
-<arg>1</arg>
+<arg>2</arg>
 </arguments>
-<msg timestamp="20160925 23:23:22.842" level="FAIL">ValidationException: Validation error: Password can't be blank</msg>
-<status status="FAIL" endtime="20160925 23:23:22.842" starttime="20160925 23:23:22.827"></status>
+<msg level="FAIL" timestamp="20160926 00:34:43.538">ValidationException: Validation error: Password can't be blank</msg>
+<status endtime="20160926 00:34:43.541" starttime="20160926 00:34:43.482" status="FAIL"></status>
 </kw>
-<msg timestamp="20160925 23:23:22.842" level="INFO">${message} = ValidationException: Validation error: Password can't be blank</msg>
-<status status="PASS" endtime="20160925 23:23:22.842" starttime="20160925 23:23:22.827"></status>
+<msg level="INFO" timestamp="20160926 00:34:43.543">${message} = ValidationException: Validation error: Password can't be blank</msg>
+<status endtime="20160926 00:34:43.544" starttime="20160926 00:34:43.469" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Log">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${message}</arg>
 </arguments>
-<msg timestamp="20160925 23:23:22.842" level="INFO">ValidationException: Validation error: Password can't be blank</msg>
-<status status="PASS" endtime="20160925 23:23:22.842" starttime="20160925 23:23:22.842"></status>
+<msg level="INFO" timestamp="20160926 00:34:43.549">ValidationException: Validation error: Password can't be blank</msg>
+<status endtime="20160926 00:34:43.550" starttime="20160926 00:34:43.545" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Should Be Equal">
 <doc>Fails if the given objects are unequal.</doc>
@@ -1435,13 +1452,13 @@
 <arg>${message}</arg>
 <arg>ValidationException: Validation error: ${error}</arg>
 </arguments>
-<status status="PASS" endtime="20160925 23:23:22.858" starttime="20160925 23:23:22.842"></status>
+<status endtime="20160926 00:34:43.559" starttime="20160926 00:34:43.551" status="PASS"></status>
 </kw>
-<status status="PASS" endtime="20160925 23:23:22.858" starttime="20160925 23:23:22.827"></status>
+<status endtime="20160926 00:34:43.562" starttime="20160926 00:34:43.451" status="PASS"></status>
 </kw>
-<status status="FAIL" critical="yes" endtime="20160925 23:23:22.858" starttime="20160925 23:23:22.639">Expected error '*' did not occur.</status>
+<status critical="yes" endtime="20160926 00:34:43.571" starttime="20160926 00:34:43.264" status="PASS"></status>
 </test>
-<test id="s1-s1-t20" name="Creating user already exist should fail">
+<test name="Creating user already exist should fail" id="s1-s1-t20">
 <kw name="Create user already exist">
 <arguments>
 <arg>ps123abc</arg>
@@ -1451,9 +1468,9 @@
 <arguments>
 <arg>${name}</arg>
 <arg>${password}</arg>
-<arg>1</arg>
+<arg>2</arg>
 </arguments>
-<status status="PASS" endtime="20160925 23:23:22.858" starttime="20160925 23:23:22.858"></status>
+<status endtime="20160926 00:34:43.634" starttime="20160926 00:34:43.588" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Run Keyword And Expect Error">
 <doc>Runs the keyword and checks that the expected error occurred.</doc>
@@ -1462,7 +1479,7 @@
 <arg>user.create</arg>
 <arg>${name}</arg>
 <arg>${password}</arg>
-<arg>1</arg>
+<arg>2</arg>
 </arguments>
 <assign>
 <var>${message}</var>
@@ -1471,21 +1488,21 @@
 <arguments>
 <arg>${name}</arg>
 <arg>${password}</arg>
-<arg>1</arg>
+<arg>2</arg>
 </arguments>
-<msg timestamp="20160925 23:23:22.889" level="FAIL">ValidationException: Validation error: Username already exist</msg>
-<status status="FAIL" endtime="20160925 23:23:22.889" starttime="20160925 23:23:22.874"></status>
+<msg level="FAIL" timestamp="20160926 00:34:43.656">ValidationException: Validation error: Username already exist</msg>
+<status endtime="20160926 00:34:43.657" starttime="20160926 00:34:43.640" status="FAIL"></status>
 </kw>
-<msg timestamp="20160925 23:23:22.889" level="INFO">${message} = ValidationException: Validation error: Username already exist</msg>
-<status status="PASS" endtime="20160925 23:23:22.889" starttime="20160925 23:23:22.874"></status>
+<msg level="INFO" timestamp="20160926 00:34:43.659">${message} = ValidationException: Validation error: Username already exist</msg>
+<status endtime="20160926 00:34:43.659" starttime="20160926 00:34:43.636" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Log">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${message}</arg>
 </arguments>
-<msg timestamp="20160925 23:23:22.889" level="INFO">ValidationException: Validation error: Username already exist</msg>
-<status status="PASS" endtime="20160925 23:23:22.889" starttime="20160925 23:23:22.889"></status>
+<msg level="INFO" timestamp="20160926 00:34:43.662">ValidationException: Validation error: Username already exist</msg>
+<status endtime="20160926 00:34:43.663" starttime="20160926 00:34:43.660" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Should Be Equal">
 <doc>Fails if the given objects are unequal.</doc>
@@ -1493,13 +1510,13 @@
 <arg>${message}</arg>
 <arg>ValidationException: Validation error: ${ALREADY USER}</arg>
 </arguments>
-<status status="PASS" endtime="20160925 23:23:22.905" starttime="20160925 23:23:22.889"></status>
+<status endtime="20160926 00:34:43.667" starttime="20160926 00:34:43.664" status="PASS"></status>
 </kw>
-<status status="PASS" endtime="20160925 23:23:22.905" starttime="20160925 23:23:22.858"></status>
+<status endtime="20160926 00:34:43.669" starttime="20160926 00:34:43.586" status="PASS"></status>
 </kw>
-<status status="PASS" critical="yes" endtime="20160925 23:23:22.905" starttime="20160925 23:23:22.858"></status>
+<status critical="yes" endtime="20160926 00:34:43.669" starttime="20160926 00:34:43.580" status="PASS"></status>
 </test>
-<test id="s1-s1-t21" name="Delete non existent user">
+<test name="Delete non existent user" id="s1-s1-t21">
 <kw library="user" name="Delete User">
 <arguments>
 <arg>jd12345</arg>
@@ -1507,8 +1524,8 @@
 <assign>
 <var>${response}</var>
 </assign>
-<msg timestamp="20160925 23:23:22.921" level="INFO">${response} = 2</msg>
-<status status="PASS" endtime="20160925 23:23:22.921" starttime="20160925 23:23:22.905"></status>
+<msg level="INFO" timestamp="20160926 00:34:43.689">${response} = 2</msg>
+<status endtime="20160926 00:34:43.689" starttime="20160926 00:34:43.676" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Should Be Equal As Integers">
 <doc>Fails if objects are unequal after converting them to integers.</doc>
@@ -1516,38 +1533,38 @@
 <arg>${response}</arg>
 <arg>2</arg>
 </arguments>
-<msg timestamp="20160925 23:23:22.921" level="INFO">Argument types are:
+<msg level="INFO" timestamp="20160926 00:34:43.692">Argument types are:
 &lt;type 'int'&gt;
 &lt;type 'unicode'&gt;</msg>
-<status status="PASS" endtime="20160925 23:23:22.921" starttime="20160925 23:23:22.921"></status>
+<status endtime="20160926 00:34:43.694" starttime="20160926 00:34:43.690" status="PASS"></status>
 </kw>
-<status status="PASS" critical="yes" endtime="20160925 23:23:22.921" starttime="20160925 23:23:22.905"></status>
+<status critical="yes" endtime="20160926 00:34:43.694" starttime="20160926 00:34:43.671" status="PASS"></status>
 </test>
-<test id="s1-s1-t22" name="Delete existent user">
+<test name="Delete existent user" id="s1-s1-t22">
 <kw name="Create user">
 <arguments>
-<arg>jd456746</arg>
+<arg>jd4567467</arg>
 <arg>juan12345</arg>
 </arguments>
 <kw library="user" name="Create">
 <arguments>
 <arg>${username}</arg>
 <arg>${password}</arg>
-<arg>1</arg>
+<arg>2</arg>
 </arguments>
 <assign>
 <var>${message}</var>
 </assign>
-<msg timestamp="20160925 23:23:22.936" level="INFO">${message} = None</msg>
-<status status="PASS" endtime="20160925 23:23:22.936" starttime="20160925 23:23:22.936"></status>
+<msg level="INFO" timestamp="20160926 00:34:43.710">${message} = None</msg>
+<status endtime="20160926 00:34:43.710" starttime="20160926 00:34:43.701" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Log">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${message}</arg>
 </arguments>
-<msg timestamp="20160925 23:23:22.952" level="INFO">None</msg>
-<status status="PASS" endtime="20160925 23:23:22.952" starttime="20160925 23:23:22.936"></status>
+<msg level="INFO" timestamp="20160926 00:34:43.712">None</msg>
+<status endtime="20160926 00:34:43.713" starttime="20160926 00:34:43.711" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Should Be Equal">
 <doc>Fails if the given objects are unequal.</doc>
@@ -1555,9 +1572,9 @@
 <arg>${message}</arg>
 <arg>${None}</arg>
 </arguments>
-<status status="PASS" endtime="20160925 23:23:22.952" starttime="20160925 23:23:22.952"></status>
+<status endtime="20160926 00:34:43.716" starttime="20160926 00:34:43.713" status="PASS"></status>
 </kw>
-<status status="PASS" endtime="20160925 23:23:22.952" starttime="20160925 23:23:22.936"></status>
+<status endtime="20160926 00:34:43.716" starttime="20160926 00:34:43.699" status="PASS"></status>
 </kw>
 <kw name="Count users">
 <assign>
@@ -1570,8 +1587,8 @@
 <assign>
 <var>${users}</var>
 </assign>
-<msg timestamp="20160925 23:23:22.983" level="INFO">${users} = []</msg>
-<status status="PASS" endtime="20160925 23:23:22.983" starttime="20160925 23:23:22.967"></status>
+<msg level="INFO" timestamp="20160926 00:34:43.731">${users} = [bo.edu.ucbcba.videoclub.model.User@9124278, bo.edu.ucbcba.videoclub.model.User@524250ec]</msg>
+<status endtime="20160926 00:34:43.732" starttime="20160926 00:34:43.719" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Get Length">
 <doc>Returns and logs the length of the given item as an integer.</doc>
@@ -1581,22 +1598,22 @@
 <assign>
 <var>${size}</var>
 </assign>
-<msg timestamp="20160925 23:23:22.983" level="INFO">Length is 0</msg>
-<msg timestamp="20160925 23:23:22.983" level="INFO">${size} = 0</msg>
-<status status="PASS" endtime="20160925 23:23:22.983" starttime="20160925 23:23:22.983"></status>
+<msg level="INFO" timestamp="20160926 00:34:43.735">Length is 2</msg>
+<msg level="INFO" timestamp="20160926 00:34:43.736">${size} = 2</msg>
+<status endtime="20160926 00:34:43.737" starttime="20160926 00:34:43.733" status="PASS"></status>
 </kw>
-<msg timestamp="20160925 23:23:22.983" level="INFO">${users} = 0</msg>
-<status status="PASS" endtime="20160925 23:23:22.983" starttime="20160925 23:23:22.952"></status>
+<msg level="INFO" timestamp="20160926 00:34:43.738">${users} = 2</msg>
+<status endtime="20160926 00:34:43.739" starttime="20160926 00:34:43.717" status="PASS"></status>
 </kw>
 <kw library="user" name="Delete User">
 <arguments>
-<arg>jd456746</arg>
+<arg>jd4567467</arg>
 </arguments>
 <assign>
 <var>${response}</var>
 </assign>
-<msg timestamp="20160925 23:23:22.999" level="INFO">${response} = 1</msg>
-<status status="PASS" endtime="20160925 23:23:22.999" starttime="20160925 23:23:22.983"></status>
+<msg level="INFO" timestamp="20160926 00:34:43.754">${response} = 1</msg>
+<status endtime="20160926 00:34:43.754" starttime="20160926 00:34:43.740" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Should Be Equal As Integers">
 <doc>Fails if objects are unequal after converting them to integers.</doc>
@@ -1604,10 +1621,10 @@
 <arg>${response}</arg>
 <arg>1</arg>
 </arguments>
-<msg timestamp="20160925 23:23:23.014" level="INFO">Argument types are:
+<msg level="INFO" timestamp="20160926 00:34:43.757">Argument types are:
 &lt;type 'int'&gt;
 &lt;type 'unicode'&gt;</msg>
-<status status="PASS" endtime="20160925 23:23:23.014" starttime="20160925 23:23:22.999"></status>
+<status endtime="20160926 00:34:43.758" starttime="20160926 00:34:43.755" status="PASS"></status>
 </kw>
 <kw name="Count users">
 <assign>
@@ -1620,8 +1637,8 @@
 <assign>
 <var>${users}</var>
 </assign>
-<msg timestamp="20160925 23:23:23.014" level="INFO">${users} = []</msg>
-<status status="PASS" endtime="20160925 23:23:23.014" starttime="20160925 23:23:23.014"></status>
+<msg level="INFO" timestamp="20160926 00:34:43.766">${users} = [bo.edu.ucbcba.videoclub.model.User@7d8802cf]</msg>
+<status endtime="20160926 00:34:43.767" starttime="20160926 00:34:43.761" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Get Length">
 <doc>Returns and logs the length of the given item as an integer.</doc>
@@ -1631,12 +1648,12 @@
 <assign>
 <var>${size}</var>
 </assign>
-<msg timestamp="20160925 23:23:23.030" level="INFO">Length is 0</msg>
-<msg timestamp="20160925 23:23:23.030" level="INFO">${size} = 0</msg>
-<status status="PASS" endtime="20160925 23:23:23.030" starttime="20160925 23:23:23.030"></status>
+<msg level="INFO" timestamp="20160926 00:34:43.771">Length is 1</msg>
+<msg level="INFO" timestamp="20160926 00:34:43.772">${size} = 1</msg>
+<status endtime="20160926 00:34:43.773" starttime="20160926 00:34:43.768" status="PASS"></status>
 </kw>
-<msg timestamp="20160925 23:23:23.030" level="INFO">${users_new} = 0</msg>
-<status status="PASS" endtime="20160925 23:23:23.030" starttime="20160925 23:23:23.014"></status>
+<msg level="INFO" timestamp="20160926 00:34:43.776">${users_new} = 1</msg>
+<status endtime="20160926 00:34:43.776" starttime="20160926 00:34:43.759" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Evaluate">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -1646,8 +1663,8 @@
 <assign>
 <var>${diff}</var>
 </assign>
-<msg timestamp="20160925 23:23:23.046" level="INFO">${diff} = 0</msg>
-<status status="PASS" endtime="20160925 23:23:23.046" starttime="20160925 23:23:23.030"></status>
+<msg level="INFO" timestamp="20160926 00:34:43.792">${diff} = -1</msg>
+<status endtime="20160926 00:34:43.792" starttime="20160926 00:34:43.777" status="PASS"></status>
 </kw>
 <kw library="BuiltIn" name="Should Be Equal As Integers">
 <doc>Fails if objects are unequal after converting them to integers.</doc>
@@ -1655,28 +1672,27 @@
 <arg>${diff}</arg>
 <arg>-1</arg>
 </arguments>
-<msg timestamp="20160925 23:23:23.046" level="INFO">Argument types are:
+<msg level="INFO" timestamp="20160926 00:34:43.795">Argument types are:
 &lt;type 'int'&gt;
 &lt;type 'unicode'&gt;</msg>
-<msg timestamp="20160925 23:23:23.046" level="FAIL">0 != -1</msg>
-<status status="FAIL" endtime="20160925 23:23:23.046" starttime="20160925 23:23:23.046"></status>
+<status endtime="20160926 00:34:43.796" starttime="20160926 00:34:43.793" status="PASS"></status>
 </kw>
-<status status="FAIL" critical="yes" endtime="20160925 23:23:23.046" starttime="20160925 23:23:22.921">0 != -1</status>
+<status critical="yes" endtime="20160926 00:34:43.796" starttime="20160926 00:34:43.697" status="PASS"></status>
 </test>
-<status status="FAIL" endtime="20160925 23:23:23.061" starttime="20160925 23:23:10.622"></status>
+<status endtime="20160926 00:34:43.809" starttime="20160926 00:34:37.266" status="PASS"></status>
 </suite>
-<status status="FAIL" endtime="20160925 23:23:23.092" starttime="20160925 23:23:10.419"></status>
+<status endtime="20160926 00:34:43.852" starttime="20160926 00:34:36.885" status="PASS"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="20" fail="2">Critical Tests</stat>
-<stat pass="20" fail="2">All Tests</stat>
+<stat pass="22" fail="0">Critical Tests</stat>
+<stat pass="22" fail="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="20" id="s1" fail="2" name="Robot Test">Robot Test</stat>
-<stat pass="20" id="s1-s1" fail="2" name="Client Test Cases">Robot Test.Client Test Cases</stat>
+<stat pass="22" fail="0" name="Robot Test" id="s1">Robot Test</stat>
+<stat pass="22" fail="0" name="Client Test Cases" id="s1-s1">Robot Test.Client Test Cases</stat>
 </suite>
 </statistics>
 <errors>
