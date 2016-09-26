@@ -312,7 +312,7 @@ This controller is in charged of create users who are going to use the different
 		${size} =   Get Length   ${users}
 		[Return]    ${size}
 
-CONCLUSIONS
+Conclusions
 -----------
 
 Robot framework with JAVA seem to work pretty good. The implementation does not require the installation of python.
