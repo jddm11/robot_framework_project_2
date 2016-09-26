@@ -15,8 +15,8 @@ About this project
 ------------------
 
 VideoClub is a JAVA application built using the MVC architecture.
-It consists ......................
-
+It consists in a store to sell videogames, movies and music. It was developed
+in Bolivia for students from Bolivian Catholic University "San Pablo" from Cochabamba.
 
 Robot Framework overview
 ------------------------
@@ -42,75 +42,106 @@ demo projects, list of available test libraries and other tools, and so on.
 Project application
 -------------------
 
+To build this project you need to use the following command::
+
+	>gradle build
+	
+To run this project you need to use the following command::
+
+	>gradle run
+	
+To test this project you need to use the following command::
+
+	>gradle runTest
+
 .. code:: robotframework
 
 	*** Settings ***
 	
-	Library  bo.edu.ucbcba.videoclub.controller.ClientController
+	Library  bo.edu.ucbcba.videoclub.controller.ClientController  WITH NAME  client
 	
 	*** Variables ***
-	${USERNAME}             janedoe
-	${PASSWORD}             J4n3D0e
-	${NEW PASSWORD}         e0D3n4J
 	${FIRSTNAME TOO LONG}   First Name is too long, must have less than 25 characters
 	${FIRSTNAME TOO SHORT}  First Name is too short, must have more than 2 characters
 	${LASTNAME TOO LONG}    Last Name is too long, must have less than 25 characters
 	${LASTNAME TOO SHORT}   Last Name is too short, must have more than 2 characters
-	${CI TOO LONG}		CI can't have more than 10 characters
-	${CI TOO SHORT}		CI can't have less than 7 characters
-	${ALREADY USER}		Already exist a Client with CI:
+	${CI TOO LONG}		    CI can't have more than 10 characters
+	${CI TOO SHORT}		    CI can't have less than 7 characters
+	${ALREADY CLIENT}		Already exist a Client with CI:
 	
 	*** Test Cases ***
-	Creating user with invalid firstname should fail
+	Creating client with invalid firstname should fail
 	    [Template]			   Invalid firstname
 	    jhonsnowrickrobotclarkkenthor  ${FIRSTNAME TOO LONG}
 	    k            		   ${FIRSTNAME TOO SHORT}  
 	
-	Creating user with invalid lastname should fail
+	Creating client with invalid lastname should fail
 	    [Template]    		      Invalid lastname
 	    hawkingsnowrickrobotclarkkenthor  ${LASTNAME TOO LONG}
 	    D  				      ${LASTNAME TOO SHORT}
 	
-	Creating user with invalid identification should fail
+	Creating client with invalid identification should fail
 	    [Template]	    Invalid identification
 	    12345678910     ${CI TOO LONG}
 	    12345  	    ${CI TOO SHORT}
 	    
-	Creating user with valid information
+	Creating client with valid information
 		Create user  1299456745  juan_d  perez  nowhere
 		
-	Creating user already exists should fail
-		Create user duplicated  111111114  ${ALREADY USER}	    
+	Creating client already exists should fail
+		Create user duplicated  111111114  ${ALREADY CLIENT}	    
 		
 	*** Keywords ***
 	Invalid firstname
 	    [Arguments]    ${firstname}    ${error}
-	    ${message} =  Run Keyword And Expect Error	*  create  12345678  ${firstname}  hawking  nowhere
+	    ${message} =  Run Keyword And Expect Error	*  client.create  12345678  ${firstname}  hawking  nowhere
 	    log  ${message}
 	    Should Be Equal  ${message}  ValidationException: Validation error: ${error}
 	    
 	Invalid lastname
 	    [Arguments]    ${lastname}    ${error}
-	    ${message} =  Run Keyword And Expect Error  *  create  12345678  jhon_doe  ${lastname}  nowhere
+	    ${message} =  Run Keyword And Expect Error  *  client.create  12345678  jhon_doe  ${lastname}  nowhere
 	    log  ${message}
 	    Should Be Equal  ${message}  ValidationException: Validation error: ${error}
 	    
 	Invalid identification
 	    [Arguments]    ${ci}    ${error}
-	    ${message} =  Run Keyword And Expect Error	*  create  ${ci}  jhon_doe  hawking  nowhere
+	    ${message} =  Run Keyword And Expect Error	*  client.create  ${ci}  jhon_doe  hawking  nowhere
 	    log  ${message}
 	    Should Be Equal  ${message}  ValidationException: Validation error: ${error}  
 	          
 	Create user
 	    [Arguments]  ${ci}  ${firstname}  ${lastname}  ${address}
-	    ${message} =  create  ${ci}  ${firstname}  ${lastname}  ${address}
+	    ${message} =  client.create  ${ci}  ${firstname}  ${lastname}  ${address}
 	    log  ${message}
 	    Should Be Equal  ${message}  ${None}
 	    
 	Create user duplicated
 	    [Arguments]  ${ci}  ${error}
-	    		    create  ${ci}  jhon_doe  hawking  nowhere
-	    ${message} =    Run Keyword And Expect Error  *  create  ${ci}  jhon_doe  hawking  nowhere
+	    		    client.create  ${ci}  jhon_doe  hawking  nowhere
+	    ${message} =    Run Keyword And Expect Error  *  client.create  ${ci}  jhon_doe  hawking  nowhere
 	    log  ${message}
 	    Should Be Equal  ${message}  ValidationException: Validation error: ${error} '${ci}'
-	   
+		
+
+.. code:: robotframework
+
+	*** Settings ***
+	
+	Library  bo.edu.ucbcba.videoclub.controller.CompanyController  WITH NAME  company
+	
+	*** Variables ***
+	${NAME TOO LONG}    Name is too long, must have less than 25 characters
+	
+	*** Test Cases ***
+	Creating company with invalid name should fail
+	    [Template]    		      Invalid name
+	    hawkingsnowrickrobotclarkkenthor  ${NAME TOO LONG}
+	
+	*** Keywords ***
+	Invalid name
+	    [Arguments]    ${name}    ${error}
+	    ${message} =  Run Keyword And Expect Error  *  company.create  ${name}  bolivia
+	    log  ${message}
+	    Should Be Equal  ${message}  ValidationException: Validation error: ${error}
+	    
