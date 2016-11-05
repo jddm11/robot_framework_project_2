@@ -65,9 +65,9 @@ Client Controller
 This controller is in charged of create and delete clients who are going to buy videogames and movies.
 
 .. image:: images/createClient.png
-   :height: 100px
-   :width: 100px
-   :scale: 50%
+   :height: 100 px
+   :width: 100 px
+   :scale: 50 %
 
 .. figure:: images/createClient.png
    :width: 100px
