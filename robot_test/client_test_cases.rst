@@ -327,6 +327,13 @@ This controller is in charged of create directors for the movies that the softwa
 .. image:: images/updateDirector.png
    :width: 40pt
 
+ .. list-table:: Test paths needed for Node coverage
+    :widths: 15 10 30
+    :header-rows: 1
+
+    * - [n0,n1,n2,n3,n9]
+    * - [n0,n1,n2,n4,n5,n6,n7,n8,n9]
+
 
 .. code:: robotframework
 
