@@ -62,7 +62,12 @@ Test Cases
 Client Controller
 ..................
 
-This controller is in charged of create and delete clients who are going to buy videogames and movies. 	
+This controller is in charged of create and delete clients who are going to buy videogames and movies.
+
+![alt tag](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
+
+![My image](username.github.com/repository/img/image.jpg)
+
 
 .. code:: robotframework
 
@@ -76,10 +81,10 @@ This controller is in charged of create and delete clients who are going to buy 
    ${LAST_NAME TOO LONG}    Last Name is too long, must have less than 25 characters
    ${LAST_NAME TOO SHORT}   Last Name is too short, must have more than 2 characters
    ${LAST_NAME BLANK}       Last Name can't be blank
-   ${CI TOO LONG}		    CI can't have more than 10 characters
-   ${CI TOO SHORT}		    CI can't have less than 7 characters
+   ${CI TOO LONG}		        CI can't have more than 10 characters
+   ${CI TOO SHORT}		      CI can't have less than 7 characters
    ${CI BLANK}              CI can't be blank
-   ${ALREADY CLIENT}		Already exist a Client with CI:
+   ${ALREADY CLIENT}		    Already exist a Client with CI:
    ${BLANK}
 
    *** Test Cases ***
@@ -175,7 +180,7 @@ This controller is in charged of create and delete clients who are going to buy 
 Company Controller
 ...................
 
-This controller is in charged of create companies which are going to be used in the software. 		   
+This controller is in charged of create companies which are going to be used in the software.
 
 .. code:: robotframework
 
@@ -228,7 +233,7 @@ This controller is in charged of create companies which are going to be used in 
 User Controller
 ................
 
-This controller is in charged of create users who are going to use the differents features of the software. 		   
+This controller is in charged of create users who are going to use the differents features of the software.
 
 .. code:: robotframework
 
@@ -281,7 +286,7 @@ This controller is in charged of create users who are going to use the different
         Should Be Equal As Integers     ${diff}  -1
 
     *** Keywords ***
-	
+
     Create user with invalid username
         [Arguments]    ${name}    ${error}
         ${message} =  Run Keyword And Expect Error  *  user.create  ${name}  abc123456  2
@@ -389,4 +394,3 @@ Conclusions
 
 Robot framework with JAVA seem to work pretty good. The implementation does not require the installation of python.
 We obtained a good impression of this tool and it is possible that we use it for future projects.
-
