@@ -189,7 +189,7 @@ This controller is in charged of create companies which are going to be used in 
 
 **Graph for searchCompany Method:**
 
-.. image:: images/searchCompany.png
+.. image:: images/searchClient.png
    :width: 40pt
 
 .. code:: robotframework
