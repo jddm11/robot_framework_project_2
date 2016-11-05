@@ -1,4 +1,4 @@
-##Robot framework project
+##Robot framework project 2nd version
 ## VideoClub store JAVA
 ###Pablo Sanabria - Juan Diego Diaz
 [you can view the report here](https://github.com/jddm11/robot_framework_project_2/blob/master/robot_test/client_test_cases.rst)
