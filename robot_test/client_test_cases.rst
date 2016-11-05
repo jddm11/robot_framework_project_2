@@ -327,14 +327,6 @@ This controller is in charged of create directors for the movies that the softwa
 .. image:: images/updateDirector.png
    :width: 40pt
 
- =====  =====  =======
-   A      B    A and B
- =====  =====  =======
- False  False  False
- True   False  False
- False  True   False
- True   True   True
- =====  =====  =======
 
 .. code:: robotframework
 
