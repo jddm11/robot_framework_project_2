@@ -44,7 +44,7 @@ Test Cases
 Client Controller
 ..................
 
-This controller is in charged of create and delete clients who are going to buy videogames and movies.
+This controller is in charge of creating and deleting clients who are going to buy videogames and movies.
 
 For this controller we stablished the application of graph coverage by nodes. The test case ahead cover
 all the possibilities for code traces.
@@ -54,10 +54,30 @@ all the possibilities for code traces.
 .. image:: images/createClient.png
    :width: 40pt
 
+ .. list-table::
+    :widths: 15
+    :header-rows: 1
+
+    * - Test paths needed for Node coverage
+    * - [N0,N1,N2,N3,N22]
+    * - [N0,N1,N2,N4,N5,N6,N7,N8,N9,N10,N11,N12,N13,N14,N15,N16,N17,N18,N19,N21,N22]
+    * - [N0,N1,N2,N4,N5,N6,N7,N8,N9,N10,N11,N12,N13,N14,N15,N16,N17,N18,N19,N20,N22]
+
+
 **Graph for deleteClient Method:**
 
 .. image:: images/deleteClient.png
    :width: 40pt
+
+ .. list-table::
+    :widths: 15
+    :header-rows: 1
+
+    * - Test paths needed for Node coverage
+    * - [N0,N1,N2,N5,N7,N8,N9]
+    * - [N0,N1,N2,N5,N6,N9]
+    * - [N0,N1,N2,N3,N4,N9]
+
 
 .. code:: robotframework
 
@@ -170,7 +190,7 @@ all the possibilities for code traces.
 Company Controller
 ...................
 
-This controller is in charged of create companies which are going to be used in the software.
+This controller is in charge of creating companies which are going to be used in the software.
 
 .. code:: robotframework
 
@@ -223,12 +243,21 @@ This controller is in charged of create companies which are going to be used in 
 User Controller
 ................
 
-This controller is in charged of create users who are going to use the differents features of the software.
+This controller is in charge of creating users who are going to use the differents features of the software.
 
 **Graph for changePassword Method:**
 
 .. image:: images/changePassword.png
    :width: 40pt
+
+ .. list-table::
+    :widths: 15
+    :header-rows: 1
+
+    * - Test paths needed for Node coverage
+    * - [N0,N1,N2,N10]
+    * - [N0,N1,N3,N4,N5,N7,N8,N10]
+    * - [N0,N1,N3,N4,N5,N6,N9,N10]
 
 .. code:: robotframework
 
@@ -315,25 +344,33 @@ This controller is in charged of create users who are going to use the different
 Directors Controller
 ....................
 
-This controller is in charged of create directors for the movies that the software needs for movies
+This controller is in charge of creating directors for the movies that the software needs for movies
 
 **Graph for createDirector Method:**
 
 .. image:: images/createDirector.png
    :width: 40pt
 
+ .. list-table::
+    :widths: 15
+    :header-rows: 1
+
+    * - Test paths needed for Node coverage
+    * - [N0,N1,N2,N3,N9]
+    * - [N0,N1,N2,N4,N5,N6,N7,N8,N9]
+
 **Graph for updateDirector Method:**
 
 .. image:: images/updateDirector.png
    :width: 40pt
 
- .. list-table:: Test paths needed for Node coverage
-    :widths: 15 10 30
+ .. list-table::
+    :widths: 15
     :header-rows: 1
 
-    * - [n0,n1,n2,n3,n9]
-    * - [n0,n1,n2,n4,n5,n6,n7,n8,n9]
-
+    * - Test paths needed for Node coverage
+    * - [N0,N1,N2,N3,N9]
+    * - [N0,N1,N2,N4,N5,N6,N7,N8,N9]
 
 .. code:: robotframework
 
@@ -405,12 +442,26 @@ This controller is in charged of create directors for the movies that the softwa
 Games Controller
 ....................
 
-This controller is in charged of create games for the store.
+This controller is in charge of creating games for the store.
 
 **Graph for searchGame Method:**
 
 .. image:: images/searchGame.png
    :width: 40pt
+
+ .. list-table::
+    :widths: 15
+    :header-rows: 1
+
+    * - Test paths needed for Node coverage
+    * - [N0,N1,N14,N15,N17,N18,N19,N20]
+    * - [N0,N1,N14,N15,N16,N18,N19,N20]
+    * - [N0,N1,N2,N3,N5,N18,N19,N20]
+    * - [N0,N1,N2,N3,N4,N18,N19,N20]
+    * - [N0,N1,N6,N7,N9,N18,N19,N20]
+    * - [N0,N1,N6,N7,N8,N18,N19,N20]
+    * - [N0,N1,N10,N11,N13,N18,N19,N20]
+    * - [N0,N1,N10,N11,N12,N18,N19,N20]
 
 Conclusions
 -----------
