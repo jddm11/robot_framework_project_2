@@ -54,14 +54,14 @@ all the possibilities for code traces.
 .. image:: images/createClient.png
    :width: 40pt
 
- .. list-table::
-    :widths: 15
-    :header-rows: 1
+.. list-table::
+  :widths: 15
+  :header-rows: 1
 
-    * - Test paths needed for Node coverage
-    * - [N0,N1,N2,N3,N22]
-    * - [N0,N1,N2,N4,N5,N6,N7,N8,N9,N10,N11,N12,N13,N14,N15,N16,N17,N18,N19,N21,N22]
-    * - [N0,N1,N2,N4,N5,N6,N7,N8,N9,N10,N11,N12,N13,N14,N15,N16,N17,N18,N19,N20,N22]
+  * - Test paths needed for Node coverage
+  * - [N0,N1,N2,N3,N22]
+  * - [N0,N1,N2,N4,N5,N6,N7,N8,N9,N10,N11,N12,N13,N14,N15,N16,N17,N18,N19,N21,N22]
+  * - [N0,N1,N2,N4,N5,N6,N7,N8,N9,N10,N11,N12,N13,N14,N15,N16,N17,N18,N19,N20,N22]
 
 
 **Graph for deleteClient Method:**
@@ -69,14 +69,14 @@ all the possibilities for code traces.
 .. image:: images/deleteClient.png
    :width: 40pt
 
- .. list-table::
-    :widths: 15
-    :header-rows: 1
+.. list-table::
+  :widths: 15
+  :header-rows: 1
 
-    * - Test paths needed for Node coverage
-    * - [N0,N1,N2,N5,N7,N8,N9]
-    * - [N0,N1,N2,N5,N6,N9]
-    * - [N0,N1,N2,N3,N4,N9]
+  * - Test paths needed for Node coverage
+  * - [N0,N1,N2,N5,N7,N8,N9]
+  * - [N0,N1,N2,N5,N6,N9]
+  * - [N0,N1,N2,N3,N4,N9]
 
 
 .. code:: robotframework
@@ -250,14 +250,14 @@ This controller is in charge of creating users who are going to use the differen
 .. image:: images/changePassword.png
    :width: 40pt
 
- .. list-table::
-    :widths: 15
-    :header-rows: 1
+.. list-table::
+  :widths: 15
+  :header-rows: 1
 
-    * - Test paths needed for Node coverage
-    * - [N0,N1,N2,N10]
-    * - [N0,N1,N3,N4,N5,N7,N8,N10]
-    * - [N0,N1,N3,N4,N5,N6,N9,N10]
+  * - Test paths needed for Node coverage
+  * - [N0,N1,N2,N10]
+  * - [N0,N1,N3,N4,N5,N7,N8,N10]
+  * - [N0,N1,N3,N4,N5,N6,N9,N10]
 
 .. code:: robotframework
 
@@ -351,13 +351,13 @@ This controller is in charge of creating directors for the movies that the softw
 .. image:: images/createDirector.png
    :width: 40pt
 
- .. list-table::
-    :widths: 15
-    :header-rows: 1
+.. list-table::
+  :widths: 15
+  :header-rows: 1
 
-    * - Test paths needed for Node coverage
-    * - [N0,N1,N2,N3,N9]
-    * - [N0,N1,N2,N4,N5,N6,N7,N8,N9]
+  * - Test paths needed for Node coverage
+  * - [N0,N1,N2,N3,N9]
+  * - [N0,N1,N2,N4,N5,N6,N7,N8,N9]
 
 **Graph for updateDirector Method:**
 
@@ -449,19 +449,19 @@ This controller is in charge of creating games for the store.
 .. image:: images/searchGame.png
    :width: 40pt
 
- .. list-table::
-    :widths: 15
-    :header-rows: 1
+.. list-table::
+  :widths: 15
+  :header-rows: 1
 
-    * - Test paths needed for Node coverage
-    * - [N0,N1,N14,N15,N17,N18,N19,N20]
-    * - [N0,N1,N14,N15,N16,N18,N19,N20]
-    * - [N0,N1,N2,N3,N5,N18,N19,N20]
-    * - [N0,N1,N2,N3,N4,N18,N19,N20]
-    * - [N0,N1,N6,N7,N9,N18,N19,N20]
-    * - [N0,N1,N6,N7,N8,N18,N19,N20]
-    * - [N0,N1,N10,N11,N13,N18,N19,N20]
-    * - [N0,N1,N10,N11,N12,N18,N19,N20]
+  * - Test paths needed for Node coverage
+  * - [N0,N1,N14,N15,N17,N18,N19,N20]
+  * - [N0,N1,N14,N15,N16,N18,N19,N20]
+  * - [N0,N1,N2,N3,N5,N18,N19,N20]
+  * - [N0,N1,N2,N3,N4,N18,N19,N20]
+  * - [N0,N1,N6,N7,N9,N18,N19,N20]
+  * - [N0,N1,N6,N7,N8,N18,N19,N20]
+  * - [N0,N1,N10,N11,N13,N18,N19,N20]
+  * - [N0,N1,N10,N11,N12,N18,N19,N20]
 
 Conclusions
 -----------
