@@ -66,7 +66,7 @@ This controller is in charged of create and delete clients who are going to buy 
 
 .. image:: images/createClient.png
    :height: 100px
-   :width: 100 px
+   :width: 100px
    :scale: 50%
 
 .. figure:: images/createClient.png
