@@ -64,12 +64,12 @@ Client Controller
 
 This controller is in charged of create and delete clients who are going to buy videogames and movies.
  
-Graph for createClient Method:
+**Graph for createClient Method:**
 
 .. image:: images/createClient.png
    :width: 40pt
   
-Graph for deleteClient Method:  
+**Graph for deleteClient Method:**  
   
 .. image:: images/deleteClient.png
    :width: 40pt
@@ -187,6 +187,11 @@ Company Controller
 
 This controller is in charged of create companies which are going to be used in the software.
 
+**Graph for searchCompany Method:**
+
+.. image:: images/searchCompany.png
+   :width: 40pt
+
 .. code:: robotframework
 
     *** Settings ***
@@ -239,6 +244,11 @@ User Controller
 ................
 
 This controller is in charged of create users who are going to use the differents features of the software.
+
+**Graph for changePassword Method:**
+
+.. image:: images/changePassword.png
+   :width: 40pt
 
 .. code:: robotframework
 
@@ -326,6 +336,16 @@ Directors Controller
 ....................
 
 This controller is in charged of create directors for the movies that the software needs for movies
+
+**Graph for createDirector Method:**
+
+.. image:: images/createDirector.png
+   :width: 40pt
+   
+**Graph for updateDirector Method:**
+
+.. image:: images/updateDirector.png
+   :width: 40pt
 
 .. code:: robotframework
 
