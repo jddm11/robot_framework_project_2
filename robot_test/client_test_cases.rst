@@ -65,6 +65,12 @@ Client Controller
 This controller is in charged of create and delete clients who are going to buy videogames and movies.
 
 .. image:: images/createClient.png
+   :scale: 50 %
+   :align: left
+   
+.. image:: images/deleteClient.png
+   :scale: 50 %
+   :align: right
 
 .. code:: robotframework
 
