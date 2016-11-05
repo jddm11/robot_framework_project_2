@@ -187,11 +187,6 @@ Company Controller
 
 This controller is in charged of create companies which are going to be used in the software.
 
-**Graph for searchCompany Method:**
-
-.. image:: images/searchClient.png
-   :width: 40pt
-
 .. code:: robotframework
 
     *** Settings ***
@@ -413,6 +408,16 @@ This controller is in charged of create directors for the movies that the softwa
         ${directors} =  director.getAlldirectors
         ${size} =   Get Length   ${directors}
         [Return]    ${size}
+            
+Games Controller
+....................
+
+This controller is in charged of create games for the store.
+
+**Graph for searchGame Method:**
+
+.. image:: images/searchGame.png
+   :width: 40pt        
 
 Conclusions
 -----------
