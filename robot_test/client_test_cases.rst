@@ -64,10 +64,7 @@ Client Controller
 
 This controller is in charged of create and delete clients who are going to buy videogames and movies.
 
-![alt tag](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
-
-![My image](username.github.com/repository/img/image.jpg)
-
+.. image:: images/createClient.png
 
 .. code:: robotframework
 
