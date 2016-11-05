@@ -1,7 +1,7 @@
 .. default-role:: code
 
 =============================================================
-Robot Framework Project by Pablo Sanabria and Juan Diego Diaz
+Robot Framework Project 2nd version by Pablo Sanabria and Juan Diego Diaz
 =============================================================
 
 .. contents:: Table of contents:
@@ -11,33 +11,15 @@ Robot Framework Project by Pablo Sanabria and Juan Diego Diaz
 Introduction
 ============
 
+In this opportunity, we will use graph and logic coverage in methods that
+we used in the 1st report and in some new methods as well.
+
 About this project
 ------------------
 
 VideoClub is a JAVA application built using the MVC architecture.
 It consists in a store to sell videogames and movies. It was developed
 in Bolivia for students from Bolivian Catholic University "San Pablo" from Cochabamba.
-
-Robot Framework overview
-------------------------
-
-`Robot Framework`_ is a generic open source test automation framework for
-acceptance testing and acceptance test-driven development (ATDD). It has
-easy-to-use tabular test data syntax and it utilizes the keyword-driven
-testing approach. Its testing capabilities can be extended by test libraries
-implemented either with Python or Java, and users can create new higher-level
-keywords from existing ones using the same syntax that is used for creating
-test cases.
-
-Robot Framework is operating system and application independent. The core
-framework is implemented using `Python <http://python.org>`_ and runs also on
-`Jython <http://jython.org>`_ (JVM) and `IronPython <http://ironpython.net>`_
-(.NET). The framework has a rich ecosystem around it consisting of various
-generic test libraries and tools that are developed as separate projects.
-
-For more information about Robot Framework and the ecosystem, see
-http://robotframework.org. There you can find plenty more documentation,
-demo projects, list of available test libraries and other tools, and so on.
 
 Project application
 -------------------
@@ -63,17 +45,20 @@ Client Controller
 ..................
 
 This controller is in charged of create and delete clients who are going to buy videogames and movies.
- 
+
+For this controller we stablished the application of graph coverage by nodes. The test case ahead cover
+all the possibilities for code traces.
+
 **Graph for createClient Method:**
 
 .. image:: images/createClient.png
    :width: 40pt
-  
-**Graph for deleteClient Method:**  
-  
+
+**Graph for deleteClient Method:**
+
 .. image:: images/deleteClient.png
    :width: 40pt
-  
+
 .. code:: robotframework
 
    *** Settings ***
@@ -336,7 +321,7 @@ This controller is in charged of create directors for the movies that the softwa
 
 .. image:: images/createDirector.png
    :width: 40pt
-   
+
 **Graph for updateDirector Method:**
 
 .. image:: images/updateDirector.png
@@ -408,7 +393,7 @@ This controller is in charged of create directors for the movies that the softwa
         ${directors} =  director.getAlldirectors
         ${size} =   Get Length   ${directors}
         [Return]    ${size}
-            
+
 Games Controller
 ....................
 
@@ -417,7 +402,7 @@ This controller is in charged of create games for the store.
 **Graph for searchGame Method:**
 
 .. image:: images/searchGame.png
-   :width: 40pt        
+   :width: 40pt
 
 Conclusions
 -----------
