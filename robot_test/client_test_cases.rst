@@ -1,8 +1,8 @@
 .. default-role:: code
 
-=============================================================
+=========================================================================
 Robot Framework Project 2nd version by Pablo Sanabria and Juan Diego Diaz
-=============================================================
+=========================================================================
 
 .. contents:: Table of contents:
    :local:
@@ -11,8 +11,8 @@ Robot Framework Project 2nd version by Pablo Sanabria and Juan Diego Diaz
 Introduction
 ============
 
-In this opportunity, we will use graph and logic coverage in methods that
-we used in the 1st report and in some new methods as well.
+In this opportunity, we will use graph and logic coverage in methods 
+used in the 1st report and in some new methods as well.
 
 About this project
 ------------------
@@ -42,11 +42,11 @@ Test Cases
 ----------
 
 Client Controller
-..................
+.................
 
 This controller is in charge of creating and deleting clients who are going to buy videogames and movies.
 
-For this controller we stablished the application of graph coverage by nodes. The test case ahead cover
+For this controller we stablished the application of graph coverage by nodes. The test cases ahead cover
 all the possibilities for code traces.
 
 **Graph for createClient Method:**
@@ -91,13 +91,17 @@ all the possibilities for code traces.
    ${LAST_NAME TOO LONG}    Last Name is too long, must have less than 25 characters
    ${LAST_NAME TOO SHORT}   Last Name is too short, must have more than 2 characters
    ${LAST_NAME BLANK}       Last Name can't be blank
-   ${CI TOO LONG}		        CI can't have more than 10 characters
-   ${CI TOO SHORT}		      CI can't have less than 7 characters
+   ${CI TOO LONG}		       CI can't have more than 10 characters
+   ${CI TOO SHORT}		    CI can't have less than 7 characters
    ${CI BLANK}              CI can't be blank
    ${ALREADY CLIENT}		    Already exist a Client with CI:
    ${BLANK}
 
    *** Test Cases ***
+   #### Create Client Method
+   #### Here we cover all test paths going to error
+   #### Test path passing through N3 and N21 
+   
    Creating client with blank first name should fail
        Create client with invalid first name   ${BLANK}    ${FIRST_NAME BLANK}
 
@@ -124,7 +128,14 @@ all the possibilities for code traces.
 
    Creating client with short CI should fail
        Create client with invalid CI  123    ${CI TOO SHORT}
-
+       
+   Creating client already exists should fail
+       Create client duplicated  111111114  ${ALREADY CLIENT}
+       
+   #######################################################
+   
+   #### Here we covered test paths going successfully (N20)
+   
    Creating client with valid information
        ${clients} =    Count clients
        Create client  1299456745  juan_d  perez  nowhere
@@ -132,12 +143,18 @@ all the possibilities for code traces.
        ${diff} =   Evaluate    $clients_new-$clients
        Should Be Equal As Integers     ${diff}  1
 
-   Creating client already exists should fail
-       Create client duplicated  111111114  ${ALREADY CLIENT}
-
+   #######################################################
+   
+   #### Delete Client Method
+   #### Here we covered test paths failed (N20)
+   
    Delete non existent client
        ${response} =   client.deleteClient    123
        Should Be Equal As Integers    ${response}     2
+
+   ########################################################
+   
+   #### Here we covered test paths going successfully (N8)
 
    Delete existent client
        Create client  1299456746  juan_d  perez  nowhere
@@ -188,7 +205,7 @@ all the possibilities for code traces.
 
 
 Company Controller
-...................
+..................
 
 This controller is in charge of creating companies which are going to be used in the software.
 
@@ -241,7 +258,7 @@ This controller is in charge of creating companies which are going to be used in
 
 
 User Controller
-................
+...............
 
 This controller is in charge of creating users who are going to use the differents features of the software.
 
@@ -440,7 +457,7 @@ This controller is in charge of creating directors for the movies that the softw
         [Return]    ${size}
 
 Games Controller
-....................
+................
 
 This controller is in charge of creating games for the store.
 
@@ -463,8 +480,60 @@ This controller is in charge of creating games for the store.
   * - [N0,N1,N10,N11,N13,N18,N19,N20]
   * - [N0,N1,N10,N11,N12,N18,N19,N20]
 
+.. code:: robotframework
+
+    *** Settings ***
+
+    Library     bo.edu.ucbcba.videoclub.controller.GameController  WITH NAME   game
+
+    *** Variables ***
+    ${FIRST_NAME_BLANK_DIR}     First Name can't be blank
+    ${LAST_NAME_BLANK_DIR}      Last Name can't be blank
+    ${FIRST_NAME_LONG_DIR}      First Name is too long, must have less than 25 characters
+    ${LAST_NAME_LONG_DIR}       Last Name is too long, must have less than 25 characters
+    ${DIR_ALREADY_EXISTS}       director already exists
+    ${BLANK}
+
+    *** Test Cases ***
+    Search games order by year ASC
+        Search games   gameOne    Year    ASC
+        
+    Search games order by year DESC
+        Search games   gameOne    Year    DESC
+        
+    Search games order by company ASC
+        Search games   gameOne    Company    ASC
+        
+    Search games order by company DESC
+        Search games   gameOne    Company    DESC
+        
+    Search games order by rating ASC
+        Search games   gameOne    Rating    ASC                
+
+    Search games order by rating DESC
+        Search games   gameOne    Rating    DESC
+        
+    Search games order by price ASC
+        Search games   gameOne    Price    ASC                
+
+    Search games order by price DESC
+        Search games   gameOne    Price    DESC        
+
+    *** Keywords ***
+    Search games
+        [Arguments]    ${query}    ${order}    ${sence} 
+        ${message} =  director.searchGames  ${query}    ${order}    ${sence}
+        log  ${message}
+        Should Be Equal  ${message}
+
 Conclusions
 -----------
 
-Robot framework with JAVA seem to work pretty good. The implementation does not require the installation of python.
-We obtained a good impression of this tool and it is possible that we use it for future projects.
+We used graphs with node coverage because it seems to be the option with less test paths in all the cases.
+In some methods we applied logic coverage aiming for better understanding about Coverage criteria strategies.
+
+While we were doing this report, we consider that all the process aforementioned could be a bit much for 
+this project (VideoClub). However, this could be a great approach for bigger applications.
+
+ 
+
