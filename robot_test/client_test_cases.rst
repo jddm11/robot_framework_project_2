@@ -64,6 +64,11 @@ Client Controller
 
 This controller is in charged of create and delete clients who are going to buy videogames and movies.
 
+.. image:: images/createClient.png
+   :height: 100px
+   :width: 100 px
+   :scale: 50%
+
 .. figure:: images/createClient.png
    :width: 100px
    :align: left
@@ -71,12 +76,11 @@ This controller is in charged of create and delete clients who are going to buy 
    :alt: alternate text
    :figclass: align-center
     
-    Graph for createClient Method
-   
-   
+   Graph for createClient Method
+      
 .. figure:: images/deleteClient.png
    :width: 100px
-   :align: rigth
+   :align: right
    :height: 100px
    :alt: alternate text
    :figclass: align-center
