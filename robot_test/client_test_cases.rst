@@ -65,21 +65,23 @@ Client Controller
 This controller is in charged of create and delete clients who are going to buy videogames and movies.
 
 .. figure:: images/createClient.png
-    :width: 300px
-    :align: center
-    :height: 100px
-    :alt: alternate text
-    :figclass: align-center
+   :width: 300px
+   :align: center
+   :height: 100px
+   :alt: alternate text
+   :figclass: align-center
+    
     Graph for createClient Method
    
    
 .. figure:: images/deleteClient.png
-    :width: 300px
-    :align: center
-    :height: 100px
-    :alt: alternate text
-    :figclass: align-center
-    Graph for deleteClient Method
+   :width: 300px
+   :align: center
+   :height: 100px
+   :alt: alternate text
+   :figclass: align-center
+   
+   Graph for deleteClient Method
 
 .. code:: robotframework
 
