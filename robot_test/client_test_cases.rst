@@ -1,7 +1,7 @@
 .. default-role:: code
 
 =============================================================
-Robot Framework Project by Pablo Sanabria and Juan Diego Diaz
+Robot Framework Project 2nd version by Pablo Sanabria and Juan Diego Diaz
 =============================================================
 
 .. contents:: Table of contents:
