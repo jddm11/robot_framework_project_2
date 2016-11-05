@@ -381,13 +381,13 @@ This controller is in charge of creating directors for the movies that the softw
 .. image:: images/updateDirector.png
    :width: 40pt
 
- .. list-table::
-    :widths: 15
-    :header-rows: 1
+.. list-table::
+ :widths: 15
+ :header-rows: 1
 
-    * - Test paths needed for Node coverage
-    * - [N0,N1,N2,N3,N9]
-    * - [N0,N1,N2,N4,N5,N6,N7,N8,N9]
+ * - Test paths needed for Node coverage
+ * - [N0,N1,N2,N3,N9]
+ * - [N0,N1,N2,N4,N5,N6,N7,N8,N9]
 
 .. code:: robotframework
 
@@ -522,7 +522,7 @@ This controller is in charge of creating games for the store.
     *** Keywords ***
     Search games
         [Arguments]    ${query}    ${order}    ${sence} 
-        ${message} =  director.searchGames  ${query}    ${order}    ${sence}
+        ${message} =  game.searchGames  ${query}    ${order}    ${sence}
         log  ${message}
         Should Be Equal  ${message}
 
