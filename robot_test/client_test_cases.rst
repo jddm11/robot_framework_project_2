@@ -264,7 +264,7 @@ This controller is in charge of creating users who are going to use the differen
 
 **Graph for changePassword Method:**
 
-.. image:: images/changePassword.png
+.. image:: images/changePasswordUser.png
    :width: 40pt
 
 .. list-table::
