@@ -520,11 +520,17 @@ This controller is in charge of creating games for the store.
         Search games   gameOne    Price    DESC        
 
     *** Keywords ***
+    
+    Create game
+        ${message} =    game.save   gameOne    any    2011    4    30000    capcom 
+        [Return]   ${message}
+    
     Search games
         [Arguments]    ${query}    ${order}    ${sence} 
+        create game
         ${message} =  game.searchGames  ${query}    ${order}    ${sence}
         log  ${message}
-        Should Be Equal  ${message}
+        Should Not Be Empty  ${message}
 
 Conclusions
 -----------
