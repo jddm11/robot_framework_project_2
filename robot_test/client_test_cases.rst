@@ -549,7 +549,7 @@ Create method
 -------------
 For the create method the details about the truth table and the expression are on `this page`_.
 
-.. _`this page`: gacc_create_game.html
+.. _`this page`: http://htmlpreview.github.io/?https://github.com/jddm11/robot_framework_project_2/blob/master/robot_test/gacc_create_game.html
 
 The detailed expressions are listed below:
 
