@@ -522,7 +522,7 @@ This controller is in charge of creating games for the store.
     *** Keywords ***
     
     Create game
-        ${message} =    game.save   gameOne    any    2011    4    30000    capcom 
+        ${message} =    game.create   gameOne    any    2011    4    30000    capcom
         [Return]   ${message}
     
     Search games
@@ -531,6 +531,44 @@ This controller is in charge of creating games for the store.
         ${message} =  game.searchGames  ${query}    ${order}    ${sence}
         log  ${message}
         Should Not Be Empty  ${message}
+
+Test Cases with Logic Coverage
+------------------------------
+Games controller
+----------------
+This controller was tested using a RACC logic coverage, details about the truth table
+and the expression are on `This page <gacc_create_game.html>`
+The tests are:
+
+.. code:: robotframework
+
+    *** Settings ***
+
+    Library     bo.edu.ucbcba.videoclub.controller.GameController  WITH NAME   game
+    Library     bo.edu.ucbcba.videoclub.controller.CompanyController  WITH NAME   company
+
+    *** Variables ***
+
+    ${BLANK}
+    ${c}    Create company
+
+    *** Test Cases ***
+
+    Create game with blank name
+        Create invalid game     ${BLANK}    Test    1991    2   10.0    ${c}
+
+    Create valid game
+        Create invalid game     Game name    Test    1991    2   10.0  ${c}
+
+    *** Keywords ***
+    Create invalid game
+        [Arguments]     ${title}    ${description}  ${releaseYear}  ${rating}   ${price}    ${company}
+        Run Keyword And Expect Error  *  game.create  ${title}    ${description}  ${releaseYear}  ${rating}   ${price}    ${company}
+
+    Create company
+        company.create  "Test"  "Chile"
+        ${list} =   company.getAllCompanies
+        [Return]    ${list}.get     0
 
 Conclusions
 -----------

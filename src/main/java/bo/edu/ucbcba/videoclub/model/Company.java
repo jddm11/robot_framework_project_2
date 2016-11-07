@@ -9,7 +9,7 @@ import java.util.StringTokenizer;
  * Created by Samuel on 29/05/2016.
  */
 @Entity
-public class Company {
+public class Company implements Comparable<Company> {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private  int id;
@@ -61,4 +61,9 @@ public class Company {
 
     @Override
     public String toString(){return String.format("%s %s", name, country);  }
+
+    @Override
+    public int compareTo(Company o) {
+        return name.compareTo(o.name);
+    }
 }

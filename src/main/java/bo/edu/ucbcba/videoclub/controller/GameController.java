@@ -24,7 +24,7 @@ public class GameController {
         //--------------------Validaciones de espacios en blanco
 
         if (description.isEmpty()) {
-            description = " ";
+            throw new ValidationException("Description can't be blank");
         }
         if (releaseYear.isEmpty()) {
             throw new ValidationException("Year can't be blank");
