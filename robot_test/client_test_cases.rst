@@ -547,7 +547,10 @@ Games controller
 This controller was tested using a RACC logic coverage
 Create method
 -------------
-For the create method the details about the truth table and the expression are on `This page <gacc_create_game.html>`.
+For the create method the details about the truth table and the expression are on `this page`_.
+
+.. _`this page`: gacc_create_game.html
+
 The detailed expressions are listed below:
 
 - A: description.isEmpty()
@@ -665,6 +668,7 @@ Parameters: ``q, order, sence``
 - E: order.equals("Price")
 
 Individual logical expressions:
+
 - A & B
 - C & B
 - D & B
@@ -673,6 +677,7 @@ Individual logical expressions:
 In this case we can't reduce the expression as a single one because the logical expressions drive the software to
 different results unlike the create method that a false expression leads to raise an exception, in this case the logical
 coverage is more difficult and we would require an individual analysis of each expression.
+
 Conclusions
 -----------
 
