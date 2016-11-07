@@ -544,8 +544,10 @@ Test Cases with Logic Coverage
 ------------------------------
 Games controller
 ----------------
-This controller was tested using a RACC logic coverage, details about the truth table
-and the expression are on `This page <gacc_create_game.html>`
+This controller was tested using a RACC logic coverage
+Create method
+-------------
+For the create method the details about the truth table and the expression are on `This page <gacc_create_game.html>`.
 The detailed expressions are listed below:
 
 - A: description.isEmpty()
@@ -561,6 +563,7 @@ The detailed expressions are listed below:
 - K: validatePresence(title) > 0
 
 The final expression is: A | B | C | D | !E | !F | !(G & H) | I | J | K
+
 The tests are:
 
 .. code:: robotframework
@@ -598,6 +601,37 @@ The tests are:
     Create game with empty release year
         Create invalid game     Game name   Test    ${BLANK}    2   10
 
+    #Case 1992
+    Create something with not number release year
+        Create invalid game     Game name   Test    abc    2   10
+
+    #Case 1960
+    Create something with not number price
+        Create invalid game     Game name   Test    1991    2   abc
+
+    #Case 1944
+    Create something with release year greater than actual year
+        Create invalid game     Game name   Test    5991    2   10
+
+    #Case 1936
+    Create something with year less than 1947
+        Create invalid game     Game name   Test    1920    2   10
+
+    #Case 1928
+    Create something with title long length
+        ${string}=  Generate Random String     101
+        Create invalid game     ${string}   Test    1991    2   10
+
+    #Case 1928
+    Create something with short description
+        ${string}=  Generate Random String     300
+        Create invalid game     Game name   ${string}   1991    2   10
+
+    #Case 1928
+    Create something with repeated title
+        Create valid game     Game name repeated   Test    1991    2   10
+        Create invalid game     Game name repeated   Test    1991    2   10
+
     *** Keywords ***
     Create valid game
         [Arguments]     ${title}    ${description}  ${releaseYear}  ${rating}   ${price}
@@ -618,6 +652,27 @@ The tests are:
         ${company} =    Get From List   ${list}     -1
         [Return]    ${company}
 
+Search method
+-------------
+In the case of search method
+
+Parameters: ``q, order, sence``
+
+- A: order.equals("Year")
+- B: sence.equals("Ascendant")
+- C: order.equals("Company")
+- D: order.equals("Rating")
+- E: order.equals("Price")
+
+Individual logical expressions:
+- A & B
+- C & B
+- D & B
+- E & B
+
+In this case we can't reduce the expression as a single one because the logical expressions drive the software to
+different results unlike the create method that a false expression leads to raise an exception, in this case the logical
+coverage is more difficult and we would require an individual analysis of each expression.
 Conclusions
 -----------
 
