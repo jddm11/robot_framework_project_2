@@ -485,6 +485,7 @@ This controller is in charge of creating games for the store.
     *** Settings ***
 
     Library     bo.edu.ucbcba.videoclub.controller.GameController  WITH NAME   game
+    Library     bo.edu.ucbcba.videoclub.controller.CompanyController  WITH NAME   company
 
     *** Variables ***
     ${FIRST_NAME_BLANK_DIR}     First Name can't be blank
@@ -493,44 +494,51 @@ This controller is in charge of creating games for the store.
     ${LAST_NAME_LONG_DIR}       Last Name is too long, must have less than 25 characters
     ${DIR_ALREADY_EXISTS}       director already exists
     ${BLANK}
+    ${c}                        Create company param
 
     *** Test Cases ***
     Search games order by year ASC
-        Search games   gameOne    Year    ASC
+        Search games   gameone1    Year    Ascendant
         
     Search games order by year DESC
-        Search games   gameOne    Year    DESC
+        Search games   gameone2    Year    Descendant
         
     Search games order by company ASC
-        Search games   gameOne    Company    ASC
+        Search games   gameone3    Company    Ascendant
         
     Search games order by company DESC
-        Search games   gameOne    Company    DESC
+        Search games   gameone4    Company    Descendant
         
     Search games order by rating ASC
-        Search games   gameOne    Rating    ASC                
+        Search games   gameone5    Rating    Ascendant                
 
     Search games order by rating DESC
-        Search games   gameOne    Rating    DESC
+        Search games   gameone6    Rating    Descendant
         
     Search games order by price ASC
-        Search games   gameOne    Price    ASC                
+        Search games   gameone7    Price    Ascendant                
 
     Search games order by price DESC
-        Search games   gameOne    Price    DESC        
+        Search games   gameone8    Price    Descendant        
 
     *** Keywords ***
-    
     Create game
-        ${message} =    game.create   gameOne    any    2011    4    30000    capcom
-        [Return]   ${message}
+        [Arguments]     ${title}    ${description}  ${releaseYear}  ${rating}   ${price}    ${company}
+        Run Keyword And Expect Error  *  game.create  ${title}    ${description}  ${releaseYear}  ${rating}   ${price}    ${company}
+    
+    Create company param
+        company.create  "Test2"  "Uruguay"
+        ${list} =   company.getAllCompanies
+        [Return]    ${list}.get     0
     
     Search games
         [Arguments]    ${query}    ${order}    ${sence} 
-        create game
+        Create game     ${query}    Any    2011    4   11.0  ${c}
         ${message} =  game.searchGames  ${query}    ${order}    ${sence}
         log  ${message}
-        Should Not Be Empty  ${message}
+        Should Be Empty  ${message}
+        
+        
 
 Test Cases with Logic Coverage
 ------------------------------
