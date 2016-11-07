@@ -546,6 +546,21 @@ Games controller
 ----------------
 This controller was tested using a RACC logic coverage, details about the truth table
 and the expression are on `This page <gacc_create_game.html>`
+The detailed expressions are listed below:
+
+- A: description.isEmpty()
+- B: releaseYear.isEmpty()
+- C: price.isEmpty()
+- D: title.isEmpty()
+- E: releaseYear.matches("[0-9]+")
+- F: price.matches("[0-9]+")
+- G: year <= releaseYear
+- H: year >= 1947
+- I: title.length > 100
+- J: description.length > 250
+- K: validatePresence(title) > 0
+
+The final expression is: A | B | C | D | !E | !F | !(G & H) | I | J | K
 The tests are:
 
 .. code:: robotframework
@@ -554,29 +569,54 @@ The tests are:
 
     Library     bo.edu.ucbcba.videoclub.controller.GameController  WITH NAME   game
     Library     bo.edu.ucbcba.videoclub.controller.CompanyController  WITH NAME   company
+    Library     String
+    Library     Collections
 
     *** Variables ***
 
     ${BLANK}
-    ${c}    Create company
 
     *** Test Cases ***
 
-    Create game with blank name
-        Create invalid game     ${BLANK}    Test    1991    2   10.0    ${c}
-
+    # Case 1928
     Create valid game
-        Create invalid game     Game name    Test    1991    2   10.0  ${c}
+        Create valid game     Game name    Test    1991    2   10
+
+    # Case 1800
+    Create game with blank name
+        Create invalid game     ${BLANK}    Test    1991    2   10
+
+    # Case 904
+    Create game with blank description
+        Create invalid game     Game name   ${BLANK}    1991    2   10
+
+    # Case 1672
+    Create game with empty price
+        Create invalid game     Game name   Test    1991    2   ${BLANK}
+
+    # Case 1416
+    Create game with empty release year
+        Create invalid game     Game name   Test    ${BLANK}    2   10
 
     *** Keywords ***
+    Create valid game
+        [Arguments]     ${title}    ${description}  ${releaseYear}  ${rating}   ${price}
+        ${company} =    Create company
+        game.create  ${title}    ${description}  ${releaseYear}  ${rating}   ${price}    ${company}
+        ${response} =   game.validatePresence   ${title}
+        Should Be Equal As Integers     1   ${response}
+
     Create invalid game
-        [Arguments]     ${title}    ${description}  ${releaseYear}  ${rating}   ${price}    ${company}
+        [Arguments]     ${title}    ${description}  ${releaseYear}  ${rating}   ${price}
+        ${company} =    Create company
         Run Keyword And Expect Error  *  game.create  ${title}    ${description}  ${releaseYear}  ${rating}   ${price}    ${company}
 
     Create company
-        company.create  "Test"  "Chile"
+        ${name} =   Generate Random String
+        company.create  ${name}  Chile
         ${list} =   company.getAllCompanies
-        [Return]    ${list}.get     0
+        ${company} =    Get From List   ${list}     -1
+        [Return]    ${company}
 
 Conclusions
 -----------
