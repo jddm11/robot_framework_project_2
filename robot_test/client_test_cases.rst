@@ -539,17 +539,17 @@ Games controller
 This controller was tested using a RACC logic coverage, details about the truth table
 and the expression are on `This page <gacc_create_game.html>`
 The detailed expressions are listed below:
-- A: description.isEmpty()
-- B: releaseYear.isEmpty()
-- C: price.isEmpty()
-- D: title.isEmpty()
-- E: releaseYear.matches("[0-9]+")
-- F: price.matches("[0-9]+")
-- G: year <= releaseYear
-- H: year >= 1947
-- I: title.length > 100
-- J: description.length > 250
-- K: validatePresence(title) > 0
+* A: description.isEmpty()
+* B: releaseYear.isEmpty()
+* C: price.isEmpty()
+* D: title.isEmpty()
+* E: releaseYear.matches("[0-9]+")
+* F: price.matches("[0-9]+")
+* G: year <= releaseYear
+* H: year >= 1947
+* I: title.length > 100
+* J: description.length > 250
+* K: validatePresence(title) > 0
 The final expression is: A | B | C | D | !E | !F | !(G & H) | I | J | K
 The tests are:
 
